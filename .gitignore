@@ -1,5 +1,7 @@
 libs
 public
-*.html
+release
+index.html
+details.html
 node_modules
 *.log

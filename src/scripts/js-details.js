@@ -130,29 +130,22 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  var product = getURLParameter('product');
-  var title;
-  var subtitle;
-  var local;
-  if (product == 'raft') {
-    title = 'Raft';
-    subtitle = 'Subtítulo';
-    local = 'Três Coroas, RS';
-  } else if (product == 'paintball') {
-    title = 'Paintball';
-    subtitle = 'Subtítulo';
-    local = 'Porto Alegre, RS';
-  } else if (product == 'standup') {
-    title = 'Stand Up Paddle';
-    subtitle = 'Subtítulo';
-    local = 'Porto Alegre, RS';
-  }
-  $('#detail-title').text(title);
-  $('#detail-subtitle').text(subtitle);
-  $('#local').text(local);
+  var product;
+  var url = window.location.href.toString();
+  if (url.indexOf('_rafting')) {
+    product = 'raft';
+  } else if (url.indexOf('_paintball')) {
+    product = 'paintball';
+  }  else if (url.indexOf('_standup')) {
+    product = 'standup';
+  } 
   var index;
   for (index = 1; index <= 6; index++) {
     $('#carousel').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
     $('#pager').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" width="120" height="68" alt=""/>'));
   }
 });	
+
+$('#modal').on('shown.bs.modal', function () {
+  $('#input-email').focus();
+});

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drop Life - Vivendo a vida ao máximo</title>
+  <title>DropLife - Vivendo a vida ao máximo</title>
 
   <!-- Bootstrap -->
   <link rel='stylesheet' type='text/css' href="styles/custom.bootstrap.css" media="screen">
@@ -50,6 +50,14 @@
 </head>
 <body id="top" class="thebg">
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="navbar-wrapper2 navbar-fixed-top">
   <div class="container">
@@ -64,8 +72,7 @@
             <span class="icon-bar"></span>
           </button>
           <a href="index.html" class="navbar-brand">
-            <span class="lato size28 slim caps orange">Drop</span>
-            <span class="lato size28 slim caps white">Life</span>
+            <span class="lato size28 slim caps orange">Drop</span><span class="lato size28 slim caps white">Life</span>
           </a>
         </div>
         <div class="navbar-collapse collapse">
@@ -144,7 +151,7 @@
       <br/>
 
       <div class="hpadding20">
-        <a href="#" class="booknow margtop20 btnmarg">Eu Quero</a>
+        <button class="button-buy button-success" data-toggle="modal" data-target="#modal"><span class="glyphicon"><span class="glyphicon-chevron-down"></span></span>EU QUERO</button>
       </div>
     </div>
     <!-- END OF RIGHT INFO -->
@@ -248,18 +255,31 @@
   <div class="container">
     <a href="#top" id="gotop2" class="gotop"><img src="images/spacer.png" alt=""/></a>
 
-    <footer>
-      <div class="footer">
-        <div class="fb-like fb_edge_widget_with_comment fb_iframe_widget"
-             data-href="https://www.facebook.com/beebabyapp" data-layout="button_count" data-action="like"
-             data-show-faces="true" data-share="true" fb-xfbml-state="rendered"><span
-            style="height: 20px; width: 167px;"><iframe id="f1fe9b4648" name="fbe938dcc" scrolling="no"
-                                                        title="Like this content on Facebook." class="fb_ltr"
-                                                        src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df337e57a6c%26domain%3Dbeebabyapp.com%26origin%3Dhttp%253A%252F%252Fbeebabyapp.com%252Ff3ffa55bc%26relation%3Dparent.parent&amp;colorscheme=light&amp;extended_social_context=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fbeebabyapp&amp;layout=button_count&amp;locale=pt_BR&amp;node_type=link&amp;sdk=joey&amp;share=true&amp;show_faces=false&amp;width=150"
-                                                        style="border: none; overflow: hidden; height: 20px; width: 167px;"></iframe></span>
+      <footer>
+        <div class="footer">
+          <span class="fb-like" data-href="https://www.facebook.com/droplifers" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-width="167"></span>
+          <span class="offset-1"></span>
+          <span class="g-plusone" data-annotation="inline" data-width="38"></span>
+        </div>
+      </footer>
+  </div>
+</div>
+
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <span class="lblue"><b>Odiamos spam tanto quanto você!</b></span>
+        <br>Seu e-mail é apenas para informá-lo sobre este produto.
+        <div class="input-group">
+          <input id="input-email" type="text" class="form-control" placeholder="Seu e-mail aqui">
+          <span class="input-group-btn">
+            <button class="btn button-success" type="button" onclick="euQuero()">Enviar</button>
+          </span>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </div>
 
@@ -286,5 +306,24 @@
 <script type='text/javascript' src='libs/jquery.customSelect/jquery.customSelect.js'></script>
 
 <script type='text/javascript' src="libs/bootstrap/dist/js/bootstrap.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46493116-3', 'droplife.com.br');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
 </body>
 </html>

@@ -1908,7 +1908,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #999;
   vertical-align: middle;
   background-color: #ffffff;
-  border: 2px solid #ebebeb;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);*/
@@ -1917,7 +1917,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form-control:focus {
-  border-color: #ffcc66;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -2200,6 +2199,7 @@ textarea.input-lg {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  margin-left: -1px;
 }
 
 .btn:focus {
@@ -5299,8 +5299,7 @@ a.thumbnail:focus {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -5876,19 +5875,14 @@ a.list-group-item:focus {
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+  color: #666;
 }
 
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #999;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 button.close {
@@ -5979,12 +5973,17 @@ body.modal-open,
 
 .modal-header {
   min-height: 16.428571429px;
-  padding: 15px;
+  padding: 6px;
   border-bottom: 1px solid #e5e5e5;
+  background: #15262f;
+}
+
+.modal-header > div {
+  margin-left: 10px;
 }
 
 .modal-header .close {
-  margin-top: -2px;
+  margin: 7px 8px 0px 0px;
 }
 
 .modal-title {
@@ -5992,14 +5991,21 @@ body.modal-open,
   line-height: 1.428571429;
 }
 
+.modal-body .button-success {
+  width: 90px;
+}
+
+.modal-body .input-group {
+  margin-top: 10px;
+}
+
 .modal-body {
   position: relative;
-  padding: 20px;
+  padding: 10px;
 }
 
 .modal-footer {
-  padding: 19px 20px 20px;
-  margin-top: 15px;
+  padding: 10px 10px 10px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
@@ -6041,9 +6047,9 @@ body.modal-open,
   .modal-dialog {
     right: auto;
     left: 50%;
-    width: 600px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 500px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .modal-content {
