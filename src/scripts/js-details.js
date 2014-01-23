@@ -1,218 +1,213 @@
 //------------------------------
 //Picker
 //------------------------------
-jQuery(function() {
-"use strict";
-	jQuery( "#datepicker,#datepicker2,#datepicker3,#datepicker4,#datepicker5,#datepicker6,#datepicker7,#datepicker8" ).datepicker();
+jQuery(function () {
+  "use strict";
+  jQuery("#datepicker,#datepicker2,#datepicker3,#datepicker4,#datepicker5,#datepicker6,#datepicker7,#datepicker8").datepicker();
 });
-
 
 
 //------------------------------
 //Custom select
 //------------------------------
-jQuery(document).ready(function(){
-"use strict";
-	jQuery('.mySelectBoxClass').customSelect();
+jQuery(document).ready(function () {
+  "use strict";
+  jQuery('.mySelectBoxClass').customSelect();
 
-	/* -OR- set a custom class name for the stylable element */
-	//jQuery('.mySelectBoxClass').customSelect({customClass:'mySelectBoxClass'});
+  /* -OR- set a custom class name for the stylable element */
+  //jQuery('.mySelectBoxClass').customSelect({customClass:'mySelectBoxClass'});
 });
 
-function mySelectUpdate(){
-"use strict";
-	setTimeout(function (){
-		$('.mySelectBoxClass').trigger('update');
-	}, 200);
+function mySelectUpdate() {
+  "use strict";
+  setTimeout(function () {
+    $('.mySelectBoxClass').trigger('update');
+  }, 200);
 }
 
-$(window).resize(function() {
-"use strict";
-	mySelectUpdate();
+$(window).resize(function () {
+  "use strict";
+  mySelectUpdate();
 });
-		
-		
-		
+
+
 //------------------------------
 //Animations for this page
 //------------------------------
-$(document).ready(function(){
-"use strict";
-	$('.tip-arrow').css({'bottom':1+'px'});
-	$('.tip-arrow').animate({'bottom':-9+'px'},{ duration: 700, queue: false });	
-	
-	$('.bookfilters').css({'margin-top':-40+'px'});
-	$('.bookfilters').animate({'margin-top':0+'px'},{ duration: 1000, queue: false });	
-	
-	$('.topsortby').css({'opacity':0});
-	$('.topsortby').animate({'opacity':1},{ duration: 1000, queue: false });	
+$(document).ready(function () {
+  "use strict";
+  $('.tip-arrow').css({'bottom': 1 + 'px'});
+  $('.tip-arrow').animate({'bottom': -9 + 'px'}, { duration: 700, queue: false });
 
-	$('.itemscontainer').css({'opacity':0});
-	$('.itemscontainer').animate({'opacity':1},{ duration: 1000, queue: false });			
+  $('.bookfilters').css({'margin-top': -40 + 'px'});
+  $('.bookfilters').animate({'margin-top': 0 + 'px'}, { duration: 1000, queue: false });
+
+  $('.topsortby').css({'opacity': 0});
+  $('.topsortby').animate({'opacity': 1}, { duration: 1000, queue: false });
+
+  $('.itemscontainer').css({'opacity': 0});
+  $('.itemscontainer').animate({'opacity': 1}, { duration: 1000, queue: false });
 });
 
 
 //------------------------------
 //Counter
 //------------------------------
-jQuery(function($) {
-"use strict";
-	$('.countprice').countTo({
-		from: 5,
-		to: 36,
-		speed: 1000,
-		refreshInterval: 50,
-		onComplete: function(value) {
-			console.debug(this);
-		}
-	});
-	$('.counthotel').countTo({
-		from: 1,
-		to: 53,
-		speed: 2000,
-		refreshInterval: 50,
-		onComplete: function(value) {
-			console.debug(this);
-		}
-	});			
+jQuery(function ($) {
+  "use strict";
+  $('.countprice').countTo({
+    from: 5,
+    to: 36,
+    speed: 1000,
+    refreshInterval: 50,
+    onComplete: function (value) {
+      console.debug(this);
+    }
+  });
+  $('.counthotel').countTo({
+    from: 1,
+    to: 53,
+    speed: 2000,
+    refreshInterval: 50,
+    onComplete: function (value) {
+      console.debug(this);
+    }
+  });
 });
 
 
 //------------------------------
 //Nicescroll
 //------------------------------
-jQuery(document).ready(function() {
-"use strict";
-	var nice = jQuery("html").niceScroll({
+jQuery(document).ready(function () {
+  "use strict";
+  var nice = jQuery("html").niceScroll({
 
-		cursorcolor:"#ccc",
-		//background:"#fff",	
-		cursorborder :"0px solid #fff",			
-		railpadding:{top:0,right:0,left:0,bottom:0},
-		cursorwidth:"5px",
-		cursorborderradius:"0px",
-		cursoropacitymin:0,
-		cursoropacitymax:0.7,
-		boxzoom:true,
-		autohidemode:false
-	});  
-	
-	jQuery(".hotelstab").niceScroll({horizrailenabled:false});
-	jQuery(".flightstab").niceScroll({horizrailenabled:false});
-	jQuery(".vacationstab").niceScroll({horizrailenabled:false});
-	jQuery(".carstab").niceScroll({horizrailenabled:false});
-	jQuery(".cruisestab").niceScroll({horizrailenabled:false});
-	jQuery(".flighthotelcartab").niceScroll({horizrailenabled:false});
-	jQuery(".flighthoteltab").niceScroll({horizrailenabled:false});
-	jQuery(".flightcartab").niceScroll({horizrailenabled:false});
-	jQuery(".hotelcartab").niceScroll({horizrailenabled:false});
-	
+    cursorcolor: "#ccc",
+    //background:"#fff",
+    cursorborder: "0px solid #fff",
+    railpadding: {top: 0, right: 0, left: 0, bottom: 0},
+    cursorwidth: "5px",
+    cursorborderradius: "0px",
+    cursoropacitymin: 0,
+    cursoropacitymax: 0.7,
+    boxzoom: true,
+    autohidemode: false
+  });
 
-	jQuery('html').addClass('no-overflow-y');
-	
+  jQuery(".hotelstab").niceScroll({horizrailenabled: false});
+  jQuery(".flightstab").niceScroll({horizrailenabled: false});
+  jQuery(".vacationstab").niceScroll({horizrailenabled: false});
+  jQuery(".carstab").niceScroll({horizrailenabled: false});
+  jQuery(".cruisestab").niceScroll({horizrailenabled: false});
+  jQuery(".flighthotelcartab").niceScroll({horizrailenabled: false});
+  jQuery(".flighthoteltab").niceScroll({horizrailenabled: false});
+  jQuery(".flightcartab").niceScroll({horizrailenabled: false});
+  jQuery(".hotelcartab").niceScroll({horizrailenabled: false});
+
+
+  jQuery('html').addClass('no-overflow-y');
+
 });
-
 
 
 //------------------------------
 //Add rooms
 //------------------------------
-		function addroom2(){
-		"use strict";
-			$('.room2').addClass('block');
-			$('.room2').removeClass('none');
-			$('.addroom1').removeClass('block');
-			$('.addroom1').addClass('none');
-			
-		}
-		function removeroom2(){
-		"use strict";
-			$('.room2').addClass('none');
-			$('.room2').removeClass('block');
-			
-			$('.addroom1').removeClass('none');
-			$('.addroom1').addClass('block');
-		}
-		function addroom3(){
-		"use strict";
-			$('.room3').addClass('block');
-			$('.room3').removeClass('none');
-			
-			$('.addroom2').removeClass('block');
-			$('.addroom2').addClass('none');
-		}
-		function removeroom3(){
-		"use strict";
-			$('.room3').addClass('none');
-			$('.room3').removeClass('block');
-			
-			$('.addroom2').removeClass('none');
-			$('.addroom2').addClass('block');			
-		}
-	
-	
+function addroom2() {
+  "use strict";
+  $('.room2').addClass('block');
+  $('.room2').removeClass('none');
+  $('.addroom1').removeClass('block');
+  $('.addroom1').addClass('none');
 
-	
+}
+function removeroom2() {
+  "use strict";
+  $('.room2').addClass('none');
+  $('.room2').removeClass('block');
+
+  $('.addroom1').removeClass('none');
+  $('.addroom1').addClass('block');
+}
+function addroom3() {
+  "use strict";
+  $('.room3').addClass('block');
+  $('.room3').removeClass('none');
+
+  $('.addroom2').removeClass('block');
+  $('.addroom2').addClass('none');
+}
+function removeroom3() {
+  "use strict";
+  $('.room3').addClass('none');
+  $('.room3').removeClass('block');
+
+  $('.addroom2').removeClass('none');
+  $('.addroom2').addClass('block');
+}
+
+
 //------------------------------
 //slider parallax effect
 //------------------------------
 
-jQuery(document).ready(function($){
-"use strict";
-var $scrollTop;
-var $headerheight;
-var $loggedin = false;
-	
-if($loggedin == false){
-  //$headerheight = $('.navbar-wrapper2').height() - 20;
-} else {
-  //$headerheight = $('.navbar-wrapper2').height() + 100;
-}
+jQuery(document).ready(function ($) {
+  "use strict";
+  var $scrollTop;
+  var $headerheight;
+  var $loggedin = false;
+
+  if ($loggedin == false) {
+    //$headerheight = $('.navbar-wrapper2').height() - 20;
+  } else {
+    //$headerheight = $('.navbar-wrapper2').height() + 100;
+  }
 
 
-$(window).scroll(function(){
-"use strict";
-  var $iw = $('body').innerWidth();
-  $scrollTop = $(window).scrollTop();	   
-	  if ( $iw < 992 ) {
-	 
-	  }
-	  else{
-	   //$('.navbar-wrapper2').css({'min-height' : 110-($scrollTop/2) +'px'});
-	  }
-  $('#dajy').css({'top': ((- $scrollTop / 5)+ $headerheight)  + 'px' });
-  //$(".sboxpurple").css({'opacity' : 1-($scrollTop/300)});
-  $(".scrolleffect").css({'top': ((- $scrollTop / 5)+ $headerheight) + 50  + 'px' });
-  $(".tp-leftarrow").css({'left' : 20-($scrollTop/2) +'px'});
-  $(".tp-rightarrow").css({'right' : 20-($scrollTop/2) +'px'});
+  $(window).scroll(function () {
+    "use strict";
+    var $iw = $('body').innerWidth();
+    $scrollTop = $(window).scrollTop();
+    if ($iw < 992) {
+
+    }
+    else {
+      //$('.navbar-wrapper2').css({'min-height' : 110-($scrollTop/2) +'px'});
+    }
+    $('#dajy').css({'top': ((-$scrollTop / 5) + $headerheight) + 'px' });
+    //$(".sboxpurple").css({'opacity' : 1-($scrollTop/300)});
+    $(".scrolleffect").css({'top': ((-$scrollTop / 5) + $headerheight) + 50 + 'px' });
+    $(".tp-leftarrow").css({'left': 20 - ($scrollTop / 2) + 'px'});
+    $(".tp-rightarrow").css({'right': 20 - ($scrollTop / 2) + 'px'});
+  });
+
 });
 
-});
-
-jQuery(document).ready(function($){
-	var product = getURLParameter('product');
-	var title;
-	var subtitle;
-	var local;
-	if (product == 'raft') {
-		title = 'Raft';
-		subtitle = 'Subtítulo';
-		local = 'Três Coroas, RS';
-	} else if (product == 'paintball') {
-		title = 'Paintball';
-		subtitle = 'Subtítulo';
-		local = 'Porto Alegre, RS';
-	} else if (product == 'standup') {
-		title = 'Stand Up Paddle';
-		subtitle = 'Subtítulo';
-		local = 'Porto Alegre, RS';
-	}
-	$('#detail-title').text(title);
-	$('#detail-subtitle').text(subtitle);
-	$('#local').text(local);
-	var index;
-	for (index = 1; index <= 6; index++) {
-		$('#carousel').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
-		$('#pager').append($('<img src="images/products/'  + product + '/slide'+ index + '.jpg" width="120" height="68" alt=""/>'));
-	}
+jQuery(document).ready(function ($) {
+  var product = getURLParameter('product');
+  var title;
+  var subtitle;
+  var local;
+  if (product == 'raft') {
+    title = 'Raft';
+    subtitle = 'Subtítulo';
+    local = 'Três Coroas, RS';
+  } else if (product == 'paintball') {
+    title = 'Paintball';
+    subtitle = 'Subtítulo';
+    local = 'Porto Alegre, RS';
+  } else if (product == 'standup') {
+    title = 'Stand Up Paddle';
+    subtitle = 'Subtítulo';
+    local = 'Porto Alegre, RS';
+  }
+  $('#detail-title').text(title);
+  $('#detail-subtitle').text(subtitle);
+  $('#local').text(local);
+  var index;
+  for (index = 1; index <= 6; index++) {
+    $('#carousel').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
+    $('#pager').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" width="120" height="68" alt=""/>'));
+  }
 });	
