@@ -36,6 +36,10 @@ gulp.task('default', function () {
     gulp.run('scripts');
   });
 
+  gulp.watch(srcViews, function (event) {
+    gulp.run('views');
+  });
+
 });
 
 gulp.task('scripts', function () {
