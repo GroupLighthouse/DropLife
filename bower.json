@@ -1,0 +1,34 @@
+{
+  "name": "droplife",
+  "version": "0.0.0",
+  "authors": [
+    "Pedro Viegas <pedroasv@gmail.com>"
+  ],
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "respond": "~1.4.2",
+    "bootstrap": "~3.0.3",
+    "jquery-ui": "~1.10.3",
+    "html5shiv": "~3.7.0",
+    "jquery.nicescroll": "*",
+    "jquery.easing": "~1.3.0",
+    "jquery.customSelect": "*",
+    "jquery-mousewheel": "~3.0.6",
+    "jquery-touchswipe": "~1.6.4",
+    "jquery.transit": "~0.9.9",
+    "jquery-throttle-debounce": "*",
+    "font-awesome": "~4.0.3",
+    "jslider": "*",
+    "carouFredSel": "*"
+  }
+}
