@@ -41,6 +41,7 @@ gulp.task('default', function () {
 gulp.task('scripts', function () {
   return gulp.src([srcScripts, "!src/scripts/rs-plugin/**"])
       .pipe(uglify())
+      .pipe(replace(/images\//g, "public/images/"))
       .pipe(gulp.dest(publicScripts));
 });
 
@@ -67,7 +68,7 @@ gulp.task('images', function () {
 
 gulp.task('views', function () {
   return gulp.src(srcViews)
-      .pipe(htmlmin())
+      .pipe(htmlmin({ removeComments: true, collapseWhitespace: true, removeCommentsFromCDATA: true}))
       .pipe(replace(/styles\//g, "public/styles/"))
       .pipe(replace(/scripts\//g, "public/scripts/"))
       .pipe(replace(/images\//g, "public/images/"))

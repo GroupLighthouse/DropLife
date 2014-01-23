@@ -1,11 +1,11 @@
 {
   "name": "droplife",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
-    "Pedro Viegas <pedroasv@gmail.com>"
+    "lighthouse"
   ],
   "main": "gulpfile.js",
-  "license": "MIT",
+  "license": "EULA",
   "private": true,
   "ignore": [
     "**/.*",

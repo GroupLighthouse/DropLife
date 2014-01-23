@@ -1,14 +1,15 @@
 {
   "name": "droplife",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Vivendo a vida ao máximo",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node web-server.js"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD",
+  "repository": "http://github.com/GroupLighthouse/droplife",
+  "author": "lighthouse",
+  "license": "EULA",
   "devDependencies": {
     "bower": "~1.2.8",
     "gulp": "~3.4.0",
