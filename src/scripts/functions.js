@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
     });
 
     // scroll body to 0px on click
-    jQuery('#back-top a').click(function () {
+    jQuery('#back-top').find('a').click(function () {
       jQuery('body,html').animate({
         scrollTop: 0
       }, 500);
@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
 
 function getURLParameter(name) {
   return decodeURI(
-      (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
+      (new RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
   );
 }
 

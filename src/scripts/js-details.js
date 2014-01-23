@@ -33,17 +33,22 @@ $(window).resize(function () {
 //------------------------------
 $(document).ready(function () {
   "use strict";
-  $('.tip-arrow').css({'bottom': 1 + 'px'});
-  $('.tip-arrow').animate({'bottom': -9 + 'px'}, { duration: 700, queue: false });
 
-  $('.bookfilters').css({'margin-top': -40 + 'px'});
-  $('.bookfilters').animate({'margin-top': 0 + 'px'}, { duration: 1000, queue: false });
+  var $tip = $('.tip-arrow');
+  $tip.css({'bottom': 1 + 'px'});
+  $tip.animate({'bottom': -9 + 'px'}, { duration: 700, queue: false });
 
-  $('.topsortby').css({'opacity': 0});
-  $('.topsortby').animate({'opacity': 1}, { duration: 1000, queue: false });
+  var $bookfilters = $('.bookfilters');
+  $bookfilters.css({'margin-top': -40 + 'px'});
+  $bookfilters.animate({'margin-top': 0 + 'px'}, { duration: 1000, queue: false });
 
-  $('.itemscontainer').css({'opacity': 0});
-  $('.itemscontainer').animate({'opacity': 1}, { duration: 1000, queue: false });
+  var $topsortby = $('.topsortby');
+  $topsortby.css({'opacity': 0});
+  $topsortby.animate({'opacity': 1}, { duration: 1000, queue: false });
+
+  var $itemscontainer = $('.itemscontainer');
+  $itemscontainer.css({'opacity': 0});
+  $itemscontainer.animate({'opacity': 1}, { duration: 1000, queue: false });
 });
 
 
