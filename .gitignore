@@ -2,6 +2,8 @@ src/libs/
 public/
 release/
 index.html
-details.html
+details_paintball.html
+details_rafting.html
+details_standup.html
 node_modules
 *.log
