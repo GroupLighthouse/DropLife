@@ -271,11 +271,11 @@ a:hover.green2{color:#339933; font-weight:normal; text-decoration:none;}
 /*bg*/
 .sliderbg{
 position:fixed; 
-background:url('../../rs-plugin/assets/slider-bg.png') #333 scroll center center;
+background:url('../scripts/rs-plugin/assets/slider-bg.png') #333 scroll center center;
 }
 .sliderbg2{
 position:fixed; 
-background:url('../../images/bg.jpg') #ff9900 scroll center -50px no-repeat;
+background:url('../images/bg.jpg') #ff9900 scroll center -50px no-repeat;
 Width:100%; height:720px; 
 }
 
