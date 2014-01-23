@@ -2,5 +2,5 @@ brew install nvm
 source $(brew --prefix nvm)/nvm.sh
 nvm use
 npm install
-bower install
-gulp compile
+./node_modules/.bin/bower install
+./node_modules/.bin/gulp compile
