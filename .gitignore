@@ -1,5 +1,6 @@
-libs
-public
-*.html
+src/libs
+public/
+release/
 node_modules
 *.log
+*.html
