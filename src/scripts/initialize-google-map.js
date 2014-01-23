@@ -74,15 +74,11 @@ function initialize() {
     }
   ];
 
-
   var myLatlng = new google.maps.LatLng(36.5110, -4.8825);
-
 
   // Create a new StyledMapType object, passing it the array of styles,
   // as well as the name to be displayed on the map type control.
-  var styledMap = new google.maps.StyledMapType(styles,
-      {name: "Styled Map"});
-
+  var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
   // Create a map object, and include the MapTypeId to add
   // to the map type control.
@@ -97,30 +93,8 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    title: 'Hello World!'
-  });
-
-
   //Associate the styled map with the MapTypeId and set it to display.
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
-}
-
-
-function loadScript() {
-  "use strict";
-  setTimeout(function () {
-    $('#map-canvas').css({'display': 'block'});
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-        'callback=initialize';
-    document.body.appendChild(script);
-
-    google.maps.event.trigger(map, 'resize');
-  }, 500);
 }
 	

@@ -6,7 +6,6 @@ jQuery(function () {
   jQuery("#datepicker,#datepicker2,#datepicker3,#datepicker4,#datepicker5,#datepicker6,#datepicker7,#datepicker8").datepicker();
 });
 
-
 //------------------------------
 //Custom select
 //------------------------------
@@ -14,8 +13,6 @@ jQuery(document).ready(function () {
   "use strict";
   jQuery('.mySelectBoxClass').customSelect();
 
-  /* -OR- set a custom class name for the stylable element */
-  //jQuery('.mySelectBoxClass').customSelect({customClass:'mySelectBoxClass'});
 });
 
 function mySelectUpdate() {
@@ -81,10 +78,8 @@ jQuery(function ($) {
 //------------------------------
 jQuery(document).ready(function () {
   "use strict";
-  var nice = jQuery("html").niceScroll({
-
+  jQuery("html").niceScroll({
     cursorcolor: "#ccc",
-    //background:"#fff",
     cursorborder: "0px solid #fff",
     railpadding: {top: 0, right: 0, left: 0, bottom: 0},
     cursorwidth: "5px",
@@ -105,48 +100,9 @@ jQuery(document).ready(function () {
   jQuery(".flightcartab").niceScroll({horizrailenabled: false});
   jQuery(".hotelcartab").niceScroll({horizrailenabled: false});
 
-
   jQuery('html').addClass('no-overflow-y');
 
 });
-
-
-//------------------------------
-//Add rooms
-//------------------------------
-function addroom2() {
-  "use strict";
-  $('.room2').addClass('block');
-  $('.room2').removeClass('none');
-  $('.addroom1').removeClass('block');
-  $('.addroom1').addClass('none');
-
-}
-function removeroom2() {
-  "use strict";
-  $('.room2').addClass('none');
-  $('.room2').removeClass('block');
-
-  $('.addroom1').removeClass('none');
-  $('.addroom1').addClass('block');
-}
-function addroom3() {
-  "use strict";
-  $('.room3').addClass('block');
-  $('.room3').removeClass('none');
-
-  $('.addroom2').removeClass('block');
-  $('.addroom2').addClass('none');
-}
-function removeroom3() {
-  "use strict";
-  $('.room3').addClass('none');
-  $('.room3').removeClass('block');
-
-  $('.addroom2').removeClass('none');
-  $('.addroom2').addClass('block');
-}
-
 
 //------------------------------
 //slider parallax effect
@@ -156,27 +112,12 @@ jQuery(document).ready(function ($) {
   "use strict";
   var $scrollTop;
   var $headerheight;
-  var $loggedin = false;
-
-  if ($loggedin == false) {
-    //$headerheight = $('.navbar-wrapper2').height() - 20;
-  } else {
-    //$headerheight = $('.navbar-wrapper2').height() + 100;
-  }
-
 
   $(window).scroll(function () {
     "use strict";
-    var $iw = $('body').innerWidth();
     $scrollTop = $(window).scrollTop();
-    if ($iw < 992) {
 
-    }
-    else {
-      //$('.navbar-wrapper2').css({'min-height' : 110-($scrollTop/2) +'px'});
-    }
     $('#dajy').css({'top': ((-$scrollTop / 5) + $headerheight) + 'px' });
-    //$(".sboxpurple").css({'opacity' : 1-($scrollTop/300)});
     $(".scrolleffect").css({'top': ((-$scrollTop / 5) + $headerheight) + 50 + 'px' });
     $(".tp-leftarrow").css({'left': 20 - ($scrollTop / 2) + 'px'});
     $(".tp-rightarrow").css({'right': 20 - ($scrollTop / 2) + 'px'});

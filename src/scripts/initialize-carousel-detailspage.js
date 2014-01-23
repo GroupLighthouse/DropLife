@@ -1,17 +1,11 @@
-// ##################################
-// INICTIALIZE CAROUSEL DETAILS PAGE
-// #################################
-
 $(function () {
   "use strict";
   var $carousel = $('#carousel'),
       $pager = $('#pager');
 
   function getCenterThumb() {
-    var $visible = $pager.triggerHandler('currentVisible'),
-        center = Math.floor($visible.length / 2);
-
-    return center;
+    var $visible = $pager.triggerHandler('currentVisible');
+    return Math.floor($visible.length / 2);
   }
 
   $carousel.carouFredSel({

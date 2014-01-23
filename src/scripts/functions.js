@@ -1,21 +1,6 @@
 jQuery(document).ready(function () {
   "use strict";
-  /* GETS 100% HEIGHT FOR FILTERS BG*/
-//var jQuerypgc = jQuery('.pagecontainer').height();
-//jQuery('.filters').css({'height':jQuerypgc+'px'});
 
-
-});
-
-// ########################
-// BACK TO TOP FUNCTION
-// ########################
-
-
-jQuery(document).ready(function () {
-  "use strict";
-
-  // hide #back-top first
   jQuery("#back-top").hide();
 
   // fade in #back-top
@@ -44,11 +29,10 @@ jQuery(document).ready(function () {
       return false;
     });
 
-    var jQueryih = jQuery('body').innerHeight();
-
+    var body = jQuery('body').innerHeight();
     jQuery(".scroll").click(function (event) {
       event.preventDefault();
-      jQuery('html,body').animate({scrollTop: jQuery(this.hash).offset().top - jQueryih}, 1500);
+      jQuery('html,body').animate({scrollTop: jQuery(this.hash).offset().top - body}, 1500);
     });
 
 
