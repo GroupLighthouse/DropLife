@@ -87,12 +87,11 @@ gulp.task('lint', function() {
       .pipe(jshint.reporter('default'));
 });
 
-gulp.task('compile', function () {
-  gulp.run("lint");
-  gulp.run("libs");
-  gulp.run("styles");
-  gulp.run("rs-plugin");
-  gulp.run("scripts");
-  gulp.run("images");
-  gulp.run("views");
+gulp.task('package', ["compile"], function () {
+  return gulp.src("public/**")
+      .pipe(gulp.dest("release/public"))
+      .pipe(gulp.src(publicViews + "/*.html"))
+      .pipe(gulp.dest("release/"));
 });
+
+gulp.task('compile', ["lint", "libs", "styles", "rs-plugin", "scripts", "images", "views"]);
