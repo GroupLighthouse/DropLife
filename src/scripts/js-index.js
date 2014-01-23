@@ -88,7 +88,7 @@ one.parent()
       jQuery(this).find(".mhover").addClass("block").removeClass("none");
       jQuery(this).find(".ctitle").addClass("background-hover");
       jQuery(this).find(".icon").stop().animate(options, 100);
-    })
+    });
 one.parent()
     .mouseleave(function () {
       jQuery(this).find(".mhover").addClass("none").removeClass("block");
