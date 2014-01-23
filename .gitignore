@@ -1,6 +1,6 @@
-libs
-public
-release
+src/libs/
+public/
+release/
 index.html
 details.html
 node_modules
