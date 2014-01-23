@@ -119,7 +119,6 @@ jQuery(document).ready(function ($) {
   var $headerheight;
 
   $(window).scroll(function () {
-    "use strict";
     $scrollTop = $(window).scrollTop();
 
     $('#dajy').css({'top': ((-$scrollTop / 5) + $headerheight) + 'px' });

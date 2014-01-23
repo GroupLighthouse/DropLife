@@ -5,6 +5,7 @@ var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var replace = require('gulp-replace');
+var jshint = require('gulp-jshint');
 
 const srcLibs = 'src/libs/*';
 const srcStyles = 'src/styles/*.css';
@@ -80,7 +81,14 @@ gulp.task('views', function () {
       .pipe(gulp.dest(publicViews));
 });
 
+gulp.task('lint', function() {
+  return gulp.src([srcScripts, "!src/scripts/rs-plugin/**"])
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'));
+});
+
 gulp.task('compile', function () {
+  gulp.run("lint");
   gulp.run("libs");
   gulp.run("styles");
   gulp.run("rs-plugin");
