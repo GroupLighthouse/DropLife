@@ -70,7 +70,10 @@ jQuery(document).ready(function (jQuery) {
     jQuery(".scrolleffect").css({'top': ((-jQueryscrollTop / 5) + jQueryheaderheight) + 30 + 'px' });
     jQuery(".tp-leftarrow").css({'left': 20 - (jQueryscrollTop / 2) + 'px'});
     jQuery(".tp-rightarrow").css({'right': 20 - (jQueryscrollTop / 2) + 'px'});
+    jQuery('.sliderbg').css('background', '#fff');
   });
+
+  jQuery('img').css('opacity', '1');
 
 });
 

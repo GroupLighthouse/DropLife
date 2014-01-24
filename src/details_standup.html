@@ -151,7 +151,16 @@
       <br/>
 
       <div class="hpadding20">
-        <button class="button-buy button-success" data-toggle="modal" data-target="#modal"><span class="glyphicon"><span class="glyphicon-chevron-down"></span></span>EU QUERO</button>
+        <!-- Paypal -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHbwYJKoZIhvcNAQcEoIIHYDCCB1wCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAW2KJU21kYRJry15H952ZhhwjSYVlIPaSO7e/UlAz4LsVGREpqKRQB+kDCQio8W8RyIPki2vqXei3/+/GUjqa7c2LGaBYbP2kl6JciVU85qDsgE0mwrjvC81XHn6Yfpw8ZhpY977mWCWnU3ug6D1mOjm5oAgY+ZNiDsm9xMWBcSTELMAkGBSsOAwIaBQAwgewGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQInEkb49qp5EuAgcgGFg2+HSTmWq0ECt48Is3aYEK6LrNqjw6XJuLp0H/tUxD4V7yItWKxugEEWt4ZfDvto64IecLMY7R8augeTnVvfQtpNIFGH4EQxJNBJXLzDgDKRfUk0mJiknzkWGxqighfu5neRTPykxvpmUrCR72mODGtBEkBsloljDojUV4+oYPZR2rpkaE1ZTDKPkhdgmnNGOK/JxULZzh7aUXttecMs1YVnJNrYum5eFrJRObWIapF6erm9M3AAbAfU8bOJsMc1lsXje74IaCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE0MDEyNDEzMjIwMFowIwYJKoZIhvcNAQkEMRYEFK3Ua3yrst2cLz4K0VnLs/SRhvp6MA0GCSqGSIb3DQEBAQUABIGASXSPtWIh4wAALzC+jLI/Qg8llQii3KD+YRjq9VioKrJb1jqLlYpBSycC5R4glhCV0NTs0Y2psk5Fe0XyLfaCc8Uo3GwjiHd4ukkuHalKppXTpohvqKkbVymNOIAOyqA8cfjqQDWNfWGvaIkDj02NCJB9X2yeleIAQqIEGqUVZg8=-----END PKCS7-----
+          ">
+
+          <!-- Botão customizado -->
+          <button class="button-buy button-success" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!"><span class="glyphicon glyphicon-shopping-cart"></span>Comprar Agora</button>
+
+        </form>
       </div>
     </div>
     <!-- END OF RIGHT INFO -->
@@ -214,11 +223,11 @@
 
           <div id="collapse6" class="collapse in">
             <div class="hpadding20">
-              <div class="col-md-4">
-                <ul class="checklist glyphicon">
-                    <li>Aluguel de todo equipamento</li>
-                    <li>Professor dedicado</li>
-                    <li>O Guaíba!</li>
+              <div class="col-md-12">
+                <ul class="checklist">
+                    <li><span class="glyphicon glyphicon-ok"></span>Aluguel de todo equipamento</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>Professor dedicado</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>O Guaíba!</li>
                 </ul>
               </div>
               <!-- Espaço para mais colunas -->

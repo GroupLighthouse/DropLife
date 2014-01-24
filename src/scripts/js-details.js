@@ -130,15 +130,8 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  var product;
   var url = window.location.href.toString();
-  if (url.indexOf('_rafting')) {
-    product = 'raft';
-  } else if (url.indexOf('_paintball')) {
-    product = 'paintball';
-  }  else if (url.indexOf('_standup')) {
-    product = 'standup';
-  } 
+  var product = url.substring(url.indexOf('_') + 1, url.indexOf('.'));
   var index;
   for (index = 1; index <= 6; index++) {
     $('#carousel').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
