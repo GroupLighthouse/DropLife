@@ -11,7 +11,7 @@ const srcLibs = 'src/libs/*';
 const srcStyles = 'src/styles/*.css';
 const srcImages = 'src/images/**';
 const srcScripts = 'src/scripts/**/*.js';
-const srcViews = 'src/*.html';
+const srcViews = ['src/*.html', 'src/*.php'];
 
 const publicLibs = 'public/libs/';
 const publicStyles = 'public/styles/';
@@ -91,6 +91,8 @@ gulp.task('package', ["compile"], function () {
   return gulp.src("public/**")
       .pipe(gulp.dest("release/public"))
       .pipe(gulp.src(publicViews + "/*.html"))
+      .pipe(gulp.dest("release/"))
+      .pipe(gulp.src(publicViews + "/*.php"))
       .pipe(gulp.dest("release/"));
 });
 
