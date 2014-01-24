@@ -50,9 +50,9 @@ function euQuero() {
 }
 
 function sendEmail(subject, message) {
-  jQuery.get('email.php?subject=' + subject + '&message=' + message, {}
-  , function() {
-      jQuery('#input-email').val('');
-      jQuery('#modal').modal('hide')
-  }, 'text');
+  jQuery.get('email.php?subject=' + subject + '&message=' + message, {},
+      function () {
+        jQuery('#input-email').val('');
+        jQuery('#modal').modal('hide');
+      }, 'text');
 }
