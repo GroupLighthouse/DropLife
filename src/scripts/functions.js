@@ -1,3 +1,14 @@
+var firebase = new Firebase("https://droplife.firebaseio.com/");
+
+function getCounter() {
+  return firebase.child($('#product').data("name"));
+}
+$(document).ready(function () {
+  getCounter().on('value', function f(s) {
+    $product.data("count", 0 + s.val());
+  });
+});
+
 jQuery(document).ready(function () {
   "use strict";
 
@@ -43,6 +54,12 @@ function getURLParameter(name) {
   return decodeURI(
       (new RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
   );
+}
+
+function raiseCount(){
+  getCounter().transaction(function (current_value) {
+    return current_value + 1;
+  });
 }
 
 function euQuero() {

@@ -29,6 +29,7 @@
     "jquery-throttle-debounce": "*",
     "font-awesome": "~4.0.3",
     "jslider": "*",
-    "carouFredSel": "*"
+    "carouFredSel": "*",
+    "firebase": "~1.0.2"
   }
 }

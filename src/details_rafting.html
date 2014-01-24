@@ -45,6 +45,7 @@
   <script type="text/javascript" src="libs/jslider/js/jquery.dependClass-0.1.js"></script>
   <script type="text/javascript" src="libs/jslider/js/draggable-0.1.js"></script>
   <script type="text/javascript" src="libs/jslider/js/jquery.slider.js"></script>
+  <script type="text/javascript" src="libs/firebase/firebase.js"></script>
   <!-- end -->
 
 </head>
@@ -58,6 +59,8 @@
   js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<input id="product" hidden="hidden" data-count="0" data-name="raft"><input>
 
 <div class="navbar-wrapper2 navbar-fixed-top">
   <div class="container">
@@ -151,7 +154,7 @@
       <br/>
 
       <div class="hpadding20">
-        <button class="button-buy button-success" data-toggle="modal" data-target="#modal"><span class="glyphicon"><span class="glyphicon-chevron-down"></span></span>EU QUERO</button>
+        <button class="button-buy button-success" onclick="raiseCount()" data-toggle="modal" data-target="#modal"><span class="glyphicon"><span class="glyphicon-chevron-down"></span></span>EU QUERO</button>
       </div>
     </div>
     <!-- END OF RIGHT INFO -->
