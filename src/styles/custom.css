@@ -169,7 +169,7 @@ img.logo {
 }
 
 div.product {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .background-hover {
@@ -657,8 +657,23 @@ a:hover.green2 {
   }
 }
 
+.tp-caption.scrolleffect.sft.start {
+    top: 25% !important;
+  }
+
+.tp-rightarrow.tparrows.default,
+.tp-leftarrow.tparrows.default {
+  top: 40% !important;
+}
+
 #index img {
   opacity: 0;
+}
+
+@media (max-width: 380px) {
+  .fwi img {
+    width: 120%;
+  }
 }
 
 /*bg*/
