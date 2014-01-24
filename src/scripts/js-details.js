@@ -131,7 +131,7 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   var url = window.location.href.toString();
-  var product = url.substring(url.indexOf('_') + 1, url.indexOf('.'));
+  var product = url.substring(url.indexOf('_') + 1, url.indexOf('.', url.indexOf('_')));
   var index;
   for (index = 1; index <= 6; index++) {
     $('#carousel').append($('<img src="images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
