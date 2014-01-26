@@ -1,18 +1,34 @@
 const gulp = require("gulp");
 const clean = require('gulp-clean');
+const paths = require('./helper/paths');
 
 const defaults = [];
 const cleanSrcs = [];
 const compileTasks = [];
 
+function logtask(task) {
+  console.log("configuting: " + task.name);
+  console.log("   watch: " + task.watch);
+  console.log("   src:     " + paths.src(task.name));
+  console.log("   release: " + paths.release(task.name));
+}
+
 module.exports = {
   configure: function (taskfn) {
     var task = taskfn(gulp);
+    var src = paths.src(task.name);
+    var release = paths.release(task.name);
+
     gulp.task(task.name, task.fn);
 
-    if (task.watch) defaults.push([task.name, task.src]);
+    if (task.watch && src) {
+      defaults.push([task.name, src]);
+    }
 
-    cleanSrcs.push(task.release);
+    if (release) {
+      cleanSrcs.push(release);
+    }
+
     compileTasks.push(task.name);
   },
   initialize: function () {

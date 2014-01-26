@@ -1,18 +1,16 @@
 const minifyCSS = require('gulp-minify-css');
+const paths = require('./helper/paths');
 
-const srcStyles = 'src/styles/*.css';
-const publicStyles = 'public/styles/';
+const name = "styles";
 
 module.exports = function (gulp) {
   return {
-    name: "styles",
+    name: name,
     fn: function () {
-      return gulp.src(srcStyles)
+      return gulp.src(paths.src(name))
           .pipe(minifyCSS())
-          .pipe(gulp.dest(publicStyles));
+          .pipe(gulp.dest(paths.release(name)));
     },
-    watch: true,
-    src: srcStyles,
-    release: publicStyles
+    watch: true
   };
-}
+};

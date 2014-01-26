@@ -1,18 +1,16 @@
 const imagemin = require('gulp-imagemin');
+const paths = require('./helper/paths');
 
-const srcImages = 'src/images/**';
-const publicImages = 'public/images/';
+const name = "images";
 
 module.exports = function (gulp) {
   return {
-    name: "images",
+    name: name,
     fn: function () {
-      return gulp.src(srcImages)
+      return gulp.src(paths.src(name))
           .pipe(imagemin())
-          .pipe(gulp.dest(publicImages));
+          .pipe(gulp.dest(paths.release(name)));
     },
-    watch: true,
-    src: srcImages,
-    release: publicImages
+    watch: true
   };
 };

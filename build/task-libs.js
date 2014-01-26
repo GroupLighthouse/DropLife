@@ -1,17 +1,15 @@
 const bower = require('gulp-bower');
+const paths = require('./helper/paths');
 
-const srcLibs = 'src/libs/*';
-const publicLibs = 'public/libs/';
+const name = "libs";
 
 module.exports = function (gulp) {
   return {
-    name: "libs",
+    name: name,
     fn: function () {
-      return bower().pipe(gulp.dest(publicLibs));
+      return bower().pipe(gulp.dest(paths.release(name)));
     },
-    watch: true,
-    src: srcLibs,
-    release: publicLibs
+    watch: true
   };
 };
 

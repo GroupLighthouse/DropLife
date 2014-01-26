@@ -38,21 +38,3 @@ jQuery(document).ready(function () {
 
   });
 });
-
-function getURLParameter(name) {
-  return decodeURI(
-      (new RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
-  );
-}
-
-function euQuero() {
-  sendEmail('Eu Quero', 'E-mail: ' + jQuery('#input-email').val());
-}
-
-function sendEmail(subject, message) {
-  jQuery.get('email.php?subject=' + subject + '&message=' + message, {},
-      function () {
-        jQuery('#input-email').val('');
-        jQuery('#modal').modal('hide');
-      }, 'text');
-}

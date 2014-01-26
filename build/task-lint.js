@@ -1,19 +1,19 @@
 const jshint = require('gulp-jshint');
+const paths = require('./helper/paths');
 
-const srcScripts = 'src/scripts/**/*.js';
-const publicScripts = 'public/scripts/';
+const name = "lint";
 
 module.exports = function (gulp) {
   return {
-    name: "lint",
+    name: name,
     fn: function () {
-      return gulp.src([srcScripts, "!src/scripts/rs-plugin/**"])
+      var exclude = paths.exclude("rsplugin");
+      console.log(exclude)
+      return gulp.src([paths.src("scripts"), exclude])
           .pipe(jshint())
           .pipe(jshint.reporter('default'));
     },
-    watch: true,
-    src: srcScripts,
-    release: publicScripts
+    watch: false
   };
 };
 

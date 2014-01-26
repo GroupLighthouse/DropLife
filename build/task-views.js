@@ -1,20 +1,16 @@
 const htmlmin = require('gulp-htmlmin');
-const replace = require('./helper/fix-paths');
+const paths = require('./helper/paths');
 
-const srcViews = ['src/*.html', 'src/*.php'];
-const publicViews = '.';
+const name = "views";
 
 module.exports = function (gulp) {
   return {
-    name: "views",
+    name: name,
     fn: function () {
-      return gulp.src(srcViews)
+      return gulp.src(paths.src(name))
           .pipe(htmlmin({ removeComments: true, collapseWhitespace: true, removeCommentsFromCDATA: true}))
-          .pipe(replace())
-          .pipe(gulp.dest(publicViews));
+          .pipe(gulp.dest(paths.release(name)));
     },
-    watch: true,
-    src: srcViews,
-    release: ['*.html', '*.php']
+    watch: true
   };
 };

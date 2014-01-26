@@ -1,23 +1,19 @@
 const uglify = require('gulp-uglify');
-const replace = require('./helper/fix-paths');
+const paths = require('./helper/paths');
 
-const srcScripts = 'src/scripts/**/*.js';
-const publicScripts = 'public/scripts/';
-const excludeRsplugin = "!src/scripts/rs-plugin/**";
+const name = "scripts";
 
 module.exports = function (gulp) {
   return  {
-    name: "scripts",
+    name: name,
     fn: function () {
-      return gulp.src([srcScripts, excludeRsplugin])
+      const excludeRsplugin = paths.exclude("rsplugin");
+      return gulp.src([paths.src(name), excludeRsplugin])
           .pipe(uglify())
-          .pipe(replace())
-          .pipe(gulp.dest(publicScripts))
+          .pipe(gulp.dest(paths.release(name)))
           .pipe(gulp.src(excludeRsplugin))
-          .pipe(gulp.dest(publicScripts + "rs-plugin"));
+          .pipe(gulp.dest(paths.release(name) + "rs-plugin"));
     },
-    watch: true,
-    src: srcScripts,
-    release: publicScripts
+    watch: true
   };
 };
