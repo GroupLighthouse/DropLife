@@ -1,6 +1,6 @@
 require("../../libs/jquery.nicescroll/jquery.nicescroll.min.js");
 
-module.exports = function () {
+module.exports = function (jQuery) {
   "use strict";
 
   jQuery("html").niceScroll({
