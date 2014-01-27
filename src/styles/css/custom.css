@@ -24,7 +24,6 @@
 .lightcaret {
   width: 10px;
   height: 5px;
-  background: url('../../images/caret.png') scroll 0 0 no-repeat;
   display: inline-block;
   margin-left: 2px;
   vertical-align: middle;
@@ -684,7 +683,6 @@ a:hover.green2 {
 
 .sliderbg2 {
   position: fixed;
-  background: url('../images/bg.jpg') #ff9900 scroll center -50px no-repeat;
   Width: 100%;
   height: 720px;
 }
@@ -1402,7 +1400,6 @@ a.add2fav {
   width: 100%;
   height: 52px;
   border: 1px solid #e5e5e5;
-  background: url('../../images/btn-plus.png') #fff no-repeat 20px 0;
   padding: 15px 10px 10px 10px;
   display: block;
   text-align: center;
@@ -1424,7 +1421,6 @@ a:hover.add2fav {
   text-decoration: none;
   color: #666 !important;
   border: 1px solid #ccc;
-  background: url('../../images/btn-plus-over.png') #fff no-repeat 20px 0;
 }
 
 a:link.add2fav {
@@ -1568,7 +1564,6 @@ a:visited.booknow {
 
 .gridbtn {
   width: 25px;
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -2px 0px;
   border: 2px solid #ebebeb;
   padding: 5px 15px 5px 15px;
 
@@ -1582,13 +1577,11 @@ a:visited.booknow {
 }
 
 .gridbtn:hover {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px 0px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .gridbtn.active {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px 0px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: not-allowed;
@@ -1596,7 +1589,6 @@ a:visited.booknow {
 
 .listbtn {
   width: 25px;
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -2px -31px;
   border: 2px solid #ebebeb;
   padding: 5px 15px 5px 15px;
 
@@ -1610,13 +1602,11 @@ a:visited.booknow {
 }
 
 .listbtn:hover {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px -31px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .listbtn.active {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px -31px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: not-allowed;
@@ -1624,7 +1614,6 @@ a:visited.booknow {
 
 .grid2btn {
   width: 25px;
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -2px -62px;
   border: 2px solid #ebebeb;
   padding: 5px 15px 5px 15px;
 
@@ -1638,13 +1627,11 @@ a:visited.booknow {
 }
 
 .grid2btn:hover {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px -62px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .grid2btn.active {
-  background: url('../../images/grid-icon.png') #fff no-repeat scroll -33px -62px;
   color: #666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: not-allowed;
@@ -2977,7 +2964,6 @@ button:hover.next2 img {
 
 ul.footerlist {
   padding-left: 20px;
-  list-style-image: url('../../images/li.png');
 }
 
 ul.footerlist li {
@@ -2995,7 +2981,6 @@ ul.footerlist li a:hover {
 
 ul.footerlistblack {
   padding-left: 20px;
-  list-style-image: url('../../images/li2.png');
 }
 
 ul.footerlistblack li {
@@ -3039,7 +3024,6 @@ ul.footerlistblack li a:hover {
 .btncustom {
   width: 32px;
   height: 32px;
-  background: url('../../images/arrow.png') #ff9900 -5px -5px;
   border: 0px;
   text-indent: -100px;
   -webkit-border-radius: 0px;
@@ -3056,7 +3040,6 @@ ul.footerlistblack li a:hover {
 }
 
 .btncustom:hover {
-  background: url('../../images/arrow.png') #72bf66 37px -5px;
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -3213,7 +3196,6 @@ a.social4b {
 .customSelect {
   /* This is the default class that is used */
   /* Put whatever custom styles you want here */
-  background: url('../../images/select.png') #fff no-repeat right;
   border: 2px solid #ebebeb;
 }
 
@@ -3223,7 +3205,6 @@ a.social4b {
 
 .customSelect.customSelectOpen {
   /* Styles for when the select box is open */
-  background: url('../../images/select-over.png') #fff no-repeat right;
   border-color: #ffcc66;
   outline: 0;
 
@@ -3243,7 +3224,6 @@ a.social4b {
 .customSelect2 {
   /* This is the default class that is used */
   /* Put whatever custom styles you want here */
-  background: url('../../images/select-intro.png') #e7e2e2 no-repeat right;
   border: 0px solid #fff;
   color: #999;
   -webkit-border-radius: 2px;
@@ -3253,7 +3233,6 @@ a.social4b {
 
 .customSelect2.customSelect2Open {
   /* Styles for when the select box is open */
-  background: url('../../images/select-over.png') #e7e2e2 no-repeat right;
   border: 0px solid #72bf66;
   color: #999;
   outline: 0;
@@ -3262,12 +3241,10 @@ a.social4b {
 }
 
 .mySelectCalendar {
-  background: url('../../images/calendar.png') #fff no-repeat right;
   background-position: 98% 1px;
 }
 
 .mySelectCalendar2 {
-  background: url('../../images/calendar2.png') #fff no-repeat right;
   background-position: 98% 1px;
 }
 
@@ -3395,17 +3372,6 @@ span.cruise-ico {
   background: url('../../images/sprite.png') -88px -215px;
 }
 
-.hotelstab, .flightstab, .vacationstab, .carstab, .cruisestab, .flighthotelcartab, .flighthoteltab, .flightcartab, .hotelcartab {
-  height: 205px;
-  overflow: hidden;
-}
-
-.hotelstab2, .flightstab2, .vacationstab2, .carstab2, .cruisestab2, .flighthotelcartab2, .flighthoteltab2, .flightcartab2, .hotelcartab2 {
-}
-
-.flighttab3, .hoteltab3, .cartab3, .suitcasetab3, .flighthoteltab3, .cruisetab3, .hotelcartab3, .flighthotelcartab3 {
-}
-
 .slideup {
   position: absolute;
   top: -446px;
@@ -3438,7 +3404,6 @@ span.cruise-ico {
   width: 558px;
   height: 504px;
   display: block;
-  background: url('../../images/slider/couple.png') no-repeat;
 }
 
 /*CSS FOR DETAILS PAGE*/
@@ -3570,16 +3535,6 @@ span.cruise-ico {
   color: #fff;
 }
 
-.tip-arrow {
-  width: 33px;
-  height: 9px;
-  background: url('../../images/tip-arrow.png');
-  position: absolute;
-  bottom: -9px;
-  left: 50%;
-  margin-left: -15px;
-}
-
 .breadcrub {
   margin-top: 70px;
   color: #ccc;
@@ -3596,7 +3551,6 @@ span.cruise-ico {
   height: 8px;
   width: 100%;
   margin-top: 10px;
-  background: url('../../images/breadcrumb.png');
 }
 
 ul.bcrumbs {
@@ -3621,53 +3575,6 @@ ul.bcrumbs li a:hover {
 
 ul.bcrumbs li a.active {
   color: #999;
-}
-
-a.homebtn {
-  width: 21px;
-  height: 21px;
-  background: url('../../images/home-icon.png') #fff no-repeat scroll -16px -10px;
-  color: #222;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s
-}
-
-a:hover.homebtn {
-  background: url('../../images/home-icon.png') #222 no-repeat scroll -16px -33px;
-}
-
-a.backbtn {
-  width: 21px;
-  height: 21px;
-  background: url('../../images/back-icon.png') #fff no-repeat scroll -16px -12px;
-  color: #222;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s
-}
-
-a:hover.backbtn {
-  background: url('../../images/back-icon.png') #222 no-repeat scroll -16px -31px;
-}
-
-.bookfilters {
-  position: relative;
-  font-size: 12px;
-  padding-bottom: 60px;
-  padding-top: 20px;
-}
-
-.topsortby {
-  padding-top: 30px;
-  padding-bottom: 69px;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .itemlabel {
@@ -3857,7 +3764,6 @@ a:hover.backbtn {
 .fav-icon {
   width: 25px;
   height: 23px;
-  background: url('../../images/fav-book-icons.png') scroll 0 -70px no-repeat;
   position: absolute;
   top: 0px;
 }
@@ -3865,7 +3771,6 @@ a:hover.backbtn {
 .fav-icon:hover {
   width: 25px;
   height: 23px;
-  background: url('../../images/fav-book-icons.png') scroll 0 -93px no-repeat;
   position: absolute;
   top: 0px;
 }
@@ -3873,7 +3778,6 @@ a:hover.backbtn {
 .book-icon {
   width: 25px;
   height: 23px;
-  background: url('../../images/fav-book-icons.png') scroll 0 0 no-repeat;
   position: absolute;
   top: 0px;
 }
@@ -3881,7 +3785,6 @@ a:hover.backbtn {
 .book-icon:hover {
   width: 25px;
   height: 23px;
-  background: url('../../images/fav-book-icons.png') scroll 0 -23px no-repeat;
   position: absolute;
   top: 0px;
 }
@@ -3908,7 +3811,6 @@ a:hover.backbtn {
   height: 8px;
   float: right;
   margin-top: 10px;
-  background: url('../../images/collapsearrow.png') scroll 0 -8px no-repeat;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   transition: .3s;
@@ -3919,7 +3821,6 @@ a:hover.backbtn {
   height: 8px;
   float: right;
   margin-top: 10px;
-  background: url('../../images/collapsearrow.png') scroll 0 0px no-repeat;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   transition: .3s;
@@ -3948,7 +3849,6 @@ a:hover.backbtn {
   height: 8px;
   float: right;
   margin-top: 10px;
-  background: url('../../images/collapsearrow.png') scroll 0 -8px no-repeat;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   transition: .3s;
@@ -3959,7 +3859,6 @@ a:hover.backbtn {
   height: 8px;
   float: right;
   margin-top: 10px;
-  background: url('../../images/collapsearrow.png') scroll 0 0px no-repeat;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   transition: .3s;
@@ -3975,7 +3874,6 @@ a:hover.backbtn {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
-  background: url('../../images/arrows.png') scroll 0 -6px no-repeat;
 }
 
 .collapsebtn3.collapsed {
@@ -3988,7 +3886,6 @@ a:hover.backbtn {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
-  background: url('../../images/arrows.png') scroll 0 0 no-repeat;
 }
 
 /*PREFERENCE LIST*/
@@ -4014,193 +3911,6 @@ ul.hotelpreferences {
   margin-left: 2px;
 }
 
-.hotelpreferences li:hover {
-}
-
-.hotelpreferences li.icohp-internet {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -3px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-internet {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -3px no-repeat;
-}
-
-.hotelpreferences li.icohp-air {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -33px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-air {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -33px no-repeat;
-}
-
-.hotelpreferences li.icohp-pool {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -63px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-pool {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -63px no-repeat;
-}
-
-.hotelpreferences li.icohp-childcare {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -93px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-childcare {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -93px no-repeat;
-}
-
-.hotelpreferences li.icohp-fitness {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -123px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-fitness {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -123px no-repeat;
-}
-
-.hotelpreferences li.icohp-breakfast {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -153px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-breakfast {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -153px no-repeat;
-}
-
-.hotelpreferences li.icohp-parking {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -183px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-parking {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -183px no-repeat;
-}
-
-.hotelpreferences li.icohp-pets {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -213px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-pets {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -213px no-repeat;
-}
-
-.hotelpreferences li.icohp-spa {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -243px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-spa {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -243px no-repeat;
-}
-
-.hotelpreferences li.icohp-hairdryer {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -273px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-hairdryer {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -273px no-repeat;
-}
-
-.hotelpreferences li.icohp-garden {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -303px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-garden {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -303px no-repeat;
-}
-
-.hotelpreferences li.icohp-grill {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -333px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-grill {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -333px no-repeat;
-}
-
-.hotelpreferences li.icohp-kitchen {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -363px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-kitchen {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -363px no-repeat;
-}
-
-.hotelpreferences li.icohp-bar {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -393px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-bar {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -393px no-repeat;
-}
-
-.hotelpreferences li.icohp-living {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -423px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-living {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -423px no-repeat;
-}
-
-.hotelpreferences li.icohp-tv {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -453px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-tv {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -453px no-repeat;
-}
-
-.hotelpreferences li.icohp-fridge {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -483px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-fridge {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -483px no-repeat;
-}
-
-.hotelpreferences li.icohp-microwave {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -513px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-microwave {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -513px no-repeat;
-}
-
-.hotelpreferences li.icohp-washing {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -543px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-washing {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -543px no-repeat;
-}
-
-.hotelpreferences li.icohp-roomservice {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -573px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-roomservice {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -573px no-repeat;
-}
-
-.hotelpreferences li.icohp-safe {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -603px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-safe {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -603px no-repeat;
-}
-
-.hotelpreferences li.icohp-playground {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -633px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-playground {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -633px no-repeat;
-}
-
-.hotelpreferences li.icohp-conferenceroom {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -3px -663px no-repeat;
-}
-
-.hotelpreferences li:hover.icohp-conferenceroom {
-  background: url('../../images/hotelpref-ico.png') #fff scroll -33px -663px no-repeat;
-}
-
 /*PREFERENCE LIST GREEN VERSION*/
 ul.hotelpreferences2 {
   margin: 0px;
@@ -4221,193 +3931,6 @@ ul.hotelpreferences2 {
   /*-webkit-transition:.2s;-moz-transition:.2s;transition:.2s;	*/
 
   margin-top: 4px;
-}
-
-.hotelpreferences2 li:hover {
-}
-
-.hotelpreferences2 li.icohp-internet {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -3px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-internet {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -3px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-air {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -33px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-air {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -33px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-pool {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -63px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-pool {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -63px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-childcare {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -93px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-childcare {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -93px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-fitness {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -123px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-fitness {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -123px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-breakfast {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -153px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-breakfast {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -153px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-parking {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -183px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-parking {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -183px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-pets {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -213px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-pets {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -213px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-spa {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -243px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-spa {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -243px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-hairdryer {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -273px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-hairdryer {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -273px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-garden {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -303px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-garden {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -303px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-grill {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -333px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-grill {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -333px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-kitchen {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -363px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-kitchen {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -363px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-bar {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -393px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-bar {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -393px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-living {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -423px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-living {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -423px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-tv {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -453px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-tv {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -453px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-fridge {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -483px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-fridge {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -483px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-microwave {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -513px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-microwave {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -513px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-washing {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -543px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-washing {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -543px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-roomservice {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -573px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-roomservice {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -573px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-safe {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -603px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-safe {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -603px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-playground {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -633px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-playground {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -633px no-repeat;
-}
-
-.hotelpreferences2 li.icohp-conferenceroom {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -3px -663px no-repeat;
-}
-
-.hotelpreferences2 li:hover.icohp-conferenceroom {
-  background: url('../../images/hotelpref-ico-green.png') #72bf66 scroll -33px -663px no-repeat;
 }
 
 ul.hpref-text {
@@ -4477,7 +4000,6 @@ ul.hpref-text {
 span.icon-quote {
   width: 27px;
   height: 27px;
-  background: url('../../images/icon-quote.png') no-repeat;
   display: block;
   position: absolute;
   float: left;
@@ -4487,7 +4009,6 @@ span.icon-quote {
 span.icon-help {
   width: 24px;
   height: 24px;
-  background: url('../../images/icon-phone.png') no-repeat;
   display: block;
   position: absolute;
   float: left;
@@ -4497,7 +4018,6 @@ span.icon-help {
 span.icon-location {
   width: 17px;
   height: 24px;
-  background: url('../../images/icon-location.png') no-repeat;
   display: block;
   position: absolute;
   float: left;
@@ -4507,7 +4027,6 @@ span.icon-location {
 span.icon-lockk {
   width: 23px;
   height: 29px;
-  background: url('../../images/lock.png') no-repeat;
   display: block;
   position: absolute;
   float: left;
@@ -4700,7 +4219,6 @@ ul.checklist2 {
 .scircle {
   width: 62px;
   height: 65px;
-  background: url('../../images/circle.png') no-repeat;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 700;
@@ -4883,7 +4401,6 @@ ul.jslidetext2 {
 .login-fullwidith {
   width: 100%;
   height: 100%;
-  background: url('../../images/login-bg.jpg') #fff scroll center center no-repeat;
   position: relative;
 }
 
@@ -4978,7 +4495,6 @@ img.login-img {
 .login-c3 {
   width: 94%;
   height: 54px;
-  background: #006699 url(../../images/login-blue.png) repeat-y left;
   z-index: 10;
   margin-top: 221px;
   margin-left: 3%;
@@ -5021,7 +4537,6 @@ input.logpadding {
 .login-c3 .left span {
   width: 26px;
   height: 26px;
-  background: url('../../images/login-home.png') scroll 0 0 no-repeat;
   display: block;
   float: left;
   margin-top: -3px;
@@ -5632,7 +5147,6 @@ span.profile-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 0 no-repeat;
 }
 
 span.bookings-icon {
@@ -5640,7 +5154,6 @@ span.bookings-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -30px no-repeat;
 }
 
 span.wishlist-icon {
@@ -5648,7 +5161,6 @@ span.wishlist-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -60px no-repeat;
 }
 
 span.settings-icon {
@@ -5656,7 +5168,6 @@ span.settings-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -90px no-repeat;
 }
 
 span.history-icon {
@@ -5664,7 +5175,6 @@ span.history-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -120px no-repeat;
 }
 
 span.password-icon {
@@ -5672,7 +5182,6 @@ span.password-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -150px no-repeat;
 }
 
 span.newsletter-icon {
@@ -5680,7 +5189,6 @@ span.newsletter-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -180px no-repeat;
 }
 
 span.dashboard-icon {
@@ -5688,7 +5196,6 @@ span.dashboard-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -450px no-repeat;
 }
 
 span.posts-icon {
@@ -5696,7 +5203,6 @@ span.posts-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -210px no-repeat;
 }
 
 span.media-icon {
@@ -5704,7 +5210,6 @@ span.media-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -240px no-repeat;
 }
 
 span.pages-icon {
@@ -5712,7 +5217,6 @@ span.pages-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -270px no-repeat;
 }
 
 span.comments-icon {
@@ -5720,7 +5224,6 @@ span.comments-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -300px no-repeat;
 }
 
 span.forums-icon {
@@ -5728,7 +5231,6 @@ span.forums-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -330px no-repeat;
 }
 
 span.topics-icon {
@@ -5736,7 +5238,6 @@ span.topics-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -360px no-repeat;
 }
 
 span.replies-icon {
@@ -5744,7 +5245,6 @@ span.replies-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -390px no-repeat;
 }
 
 span.appearance-icon {
@@ -5752,7 +5252,6 @@ span.appearance-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -420px no-repeat;
 }
 
 span.tools-icon {
@@ -5760,7 +5259,6 @@ span.tools-icon {
   height: 30px;
   display: block;
   margin: 0 auto;
-  background: url('../../images/profile-icons.png') scroll 0 -480px no-repeat;
 }
 
 /*ABOUT PAGE*/
@@ -5827,7 +5325,6 @@ span.gcircle {
   bottom: -20px;
   width: 25px;
   height: 13px;
-  background: url('../../images/about-arrow.png') no-repeat;
 }
 
 .abover {
@@ -5851,42 +5348,36 @@ span.socials-twitter {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') 0 0 no-repeat;
 }
 
 span.socials-twitter:hover {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') 0 -18px no-repeat;
 }
 
 span.socials-facebook {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') -18px 0 no-repeat;
 }
 
 span.socials-facebook:hover {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') -18px -18px no-repeat;
 }
 
 span.socials-gplus {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') -36px 0 no-repeat;
 }
 
 span.socials-gplus:hover {
   width: 18px;
   height: 18px;
   display: block;
-  background: url('../../images/socials.png') -36px -18px no-repeat;
 }
 
 .socials-container {

@@ -35,6 +35,5 @@ module.exports = function (jQuery) {
       jQuery('html,body').animate({scrollTop: jQuery(this.hash).offset().top - body}, 1500);
     });
 
-
   });
 };

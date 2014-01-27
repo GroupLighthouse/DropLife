@@ -9,7 +9,6 @@ module.exports = function (gulp) {
   return  {
     name: name,
     fn: function () {
-
       return gulp.src(paths.src(name))
           .pipe(browserify({insertGlobals: true, debug: true, transform: ["debowerify"]}))
           .pipe(uglify())

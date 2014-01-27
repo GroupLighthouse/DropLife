@@ -15,20 +15,6 @@ module.exports = function () {
     autohidemode: false
   });
 
-  jQuery("#air").niceScroll({horizrailenabled: false});
-  jQuery("#hotel").niceScroll({horizrailenabled: false});
-  jQuery("#car").niceScroll({horizrailenabled: false});
-  jQuery("#vacations").niceScroll({horizrailenabled: false});
-  jQuery(".hotelstab").niceScroll({horizrailenabled: false});
-  jQuery(".flightstab").niceScroll({horizrailenabled: false});
-  jQuery(".vacationstab").niceScroll({horizrailenabled: false});
-  jQuery(".carstab").niceScroll({horizrailenabled: false});
-  jQuery(".cruisestab").niceScroll({horizrailenabled: false});
-  jQuery(".flighthotelcartab").niceScroll({horizrailenabled: false});
-  jQuery(".flighthoteltab").niceScroll({horizrailenabled: false});
-  jQuery(".flightcartab").niceScroll({horizrailenabled: false});
-  jQuery(".hotelcartab").niceScroll({horizrailenabled: false});
-
   jQuery('html').addClass('no-overflow-y');
 
 };

@@ -5,6 +5,8 @@ module.exports = function ($) {
   var $carousel = $('#carousel'),
       $pager = $('#pager');
 
+  addImages(window, $carousel, $pager);
+
   function getCenterThumb() {
     var $visible = $pager.triggerHandler('currentVisible');
     return Math.floor($visible.length / 2);
@@ -59,6 +61,15 @@ module.exports = function ($) {
   });
 };
 
+function addImages(window, carousel, pager){
+  var url = window.location.href.toString();
+  var product = url.substring(url.indexOf('_') + 1, url.indexOf('.', url.indexOf('_')));
+  var index;
+  for (index = 1; index <= 6; index++) {
+    carousel.append($('<img src="../../images/products/' + product + '/slide' + index + '.jpg" alt=""/>'));
+    pager.append($('<img src="../../images/products/' + product + '/slide' + index + '.jpg" width="120" height="68" alt=""/>'));
+  }
+}
 
 
 

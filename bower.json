@@ -22,7 +22,6 @@
     "html5shiv": "~3.7.0",
     "jquery.nicescroll": "*",
     "jquery.easing": "~1.3.0",
-    "jquery.customSelect": "*",
     "jquery-mousewheel": "~3.0.6",
     "jquery-touchswipe": "~1.6.4",
     "jquery.transit": "~0.9.9",
