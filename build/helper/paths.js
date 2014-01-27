@@ -3,7 +3,8 @@ const config = {
     folder: "src/",
     images: "images/**",
     libs: "libs/*",
-    scripts: "scripts/javascript/**/*.js",
+    lint: "scripts/javascript/**/*.js",
+    scripts: "scripts/javascript/entry-points/**/*.js",
     rsplugin: "scripts/javascript/rs-plugin/**",
     styles: "styles/css/**/*.css",
     views: "views/html/**/*.html"
@@ -12,7 +13,8 @@ const config = {
     folder: "release/",
     images: "images/",
     libs: "libs/",
-    scripts: "scripts/javascript/",
+    scripts: "scripts/javascript/entry-points/",
+    rsplugin: "scripts/javascript/rs-plugin/",
     styles: "styles/css/",
     views: "views/html/"
   }

@@ -1,10 +1,4 @@
 src/libs/
-public/
 release/
-index.html
-details_paintball.html
-details_rafting.html
-details_standup.html
-email.php
 node_modules
 *.log

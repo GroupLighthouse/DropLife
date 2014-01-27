@@ -7,9 +7,7 @@ module.exports = function (gulp) {
   return {
     name: name,
     fn: function () {
-      var exclude = paths.exclude("rsplugin");
-      console.log(exclude)
-      return gulp.src([paths.src("scripts"), exclude])
+      return gulp.src([paths.src(name), paths.exclude("rsplugin")])
           .pipe(jshint())
           .pipe(jshint.reporter('default'));
     },

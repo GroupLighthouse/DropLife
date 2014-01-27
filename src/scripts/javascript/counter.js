@@ -1,4 +1,4 @@
-(function ($) {
+module.exports = function ($) {
   $.fn.countTo = function (options) {
     // merge the default plugin settings with the custom options
     options = $.extend({}, $.fn.countTo.defaults, options || {});
@@ -43,4 +43,4 @@
     onUpdate: null,  // callback method for every time the element is updated,
     onComplete: null,  // callback method for when the element finishes updating
   };
-})(jQuery);
+};

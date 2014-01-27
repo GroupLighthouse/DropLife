@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+module.exports = function (jQuery) {
   "use strict";
 
   jQuery("#back-top").hide();
@@ -37,4 +37,4 @@ jQuery(document).ready(function () {
 
 
   });
-});
+};

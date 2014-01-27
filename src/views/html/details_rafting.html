@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DropLife - Vivendo a vida ao máximo</title>
+
+  <!-- Bootstrap -->
+  <link rel='stylesheet' type='text/css' href="../../styles/css/custom.bootstrap.css" media="screen">
+  <link rel='stylesheet' type='text/css' href="../../styles/css/custom.css" media="screen">
+
+  <link rel='stylesheet' type='text/css' href="../../styles/css/carousel.css">
+
+  <!--[if lt IE 9]>
+  <script type='text/javascript' src="../../libs/html5shiv/dist/html5shiv.js"></script>
+  <script type='text/javascript' src="../../libs/respond/dest/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Fonts -->
+  <link rel='stylesheet' type='text/css'
+        href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic'>
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" type="text/css" href="../../libs/font-awesome/css/font-awesome.css" media="screen"/>
+
+  <!-- REVOLUTION BANNER CSS SETTINGS -->
+  <link rel="stylesheet" type="text/css" href="../../styles/css/fullscreen.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="../../scripts/javascript/rs-plugin/css/settings.css" media="screen"/>
+
+  <!-- Picker UI-->
+  <link rel="stylesheet" type="text/css" href="../../styles/css/custom.jquery-ui.css"/>
+
+  <!-- bin/jquery.slider.min.css -->
+  <link rel="stylesheet" type="text/css" href="../../libs/jslider/css/jslider.css">
+  <link rel="stylesheet" type="text/css" href="../../styles/css/custom.jslider.round-blue.css">
+
+</head>
+<body id="top" class="thebg">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="navbar-wrapper2 navbar-fixed-top">
+  <div class="container">
+    <div class="navbar mtnav">
+
+      <div class="container offset-3">
+        <!-- Navigation-->
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand">
+            <span class="lato size28 slim caps orange">Drop</span><span class="lato size28 slim caps white">Life</span>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown active">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="index.html">Início</a>
+            </li>
+            <li style="display: none;"><a href="#">Experiências</a></li>
+            <li style="display: none;"><a href="#">Lifers</a></li>
+          </ul>
+        </div>
+        <!-- /Navigation-->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="container pagecontainer offset-0">
+
+    <!-- SLIDER -->
+    <div class="col-md-8 details-slider">
+
+      <div id="c-carousel">
+        <div id="wrapper">
+          <div id="inner">
+            <div id="caroufredsel_wrapper2">
+              <div id="carousel">
+              </div>
+            </div>
+            <div id="pager-wrapper">
+              <div id="pager">
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <button id="prev_btn2" class="prev2"><img src="../../images/spacer.png" alt=""/></button>
+          <button id="next_btn2" class="next2"><img src="../../images/spacer.png" alt=""/></button>
+
+        </div>
+      </div>
+      <!-- /c-carousel -->
+
+
+    </div>
+    <!-- END OF SLIDER -->
+
+    <!-- RIGHT INFO -->
+    <div class="col-md-4 detailsright offset-0">
+      <div class="padding10">
+        <h2 id="detail-title" class="opensans slim orange size30 hpadding10">Rafting</h2>
+
+        <h2 id="detail-subtitle" class="opensans slim size26 hpadding10">Seja radical</h2>
+      </div>
+
+      <div class="line3"></div>
+
+      <div class="hpadding20">
+        <h2 id="local" class="opensans slim size18">Três Coroas - RS</h2>
+      </div>
+
+      <div class="line3 margtop20"></div>
+
+      <div class="col-md-6 bordertype1 padding10">
+        <span id="old-price" class="opensans size30 bold through">R$ 75</span>
+      </div>
+
+      <div class="col-md-6 bordertype2 padding10">
+        <span id="price" class="opensans size30 bold green">R$ 50</span>
+      </div>
+
+      <div class="clearfix"></div>
+      <br/>
+
+      <div class="hpadding20">
+        <!-- Paypal -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+          ">
+
+          <!-- Botão customizado -->
+          <button class="button-buy button-success" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!"><span class="glyphicon glyphicon-shopping-cart"></span>Comprar Agora</button>
+
+        </form>
+      </div>
+    </div>
+    <!-- END OF RIGHT INFO -->
+
+  </div>
+  <!-- END OF container-->
+
+  <div class="container mt25 offset-0">
+
+    <div class="col-md-8 pagecontainer2 offset-0">
+      <div class="cstyle10"></div>
+
+      <ul class="nav nav-tabs">
+        <li class="lato caps">Visão Geral</li>
+      </ul>
+      <div class="tab-content4">
+        <div class="hpadding20">
+          <p>
+            "O rafting é a prática de descida em corredeiras em equipe utilizando botes infláveis(...)" - wikipedia
+          </p>
+          <P>
+              Precisamos falar mais alguma coisa ou ainda falta emoção? 
+          </P>
+
+          <div class="line4"></div>
+		
+        <!-- ABA: Sobre o sport  -->
+        <span class="collapsebtn2">
+          Sobre o Rafting
+        </span>
+
+          <div>
+            <div class="hpadding20">
+                <p>Todos aventureiros recebem os equipamentos de proteção individual (colete salva-vidas, capacete) e diregem-se até nosso transporte para translado até a cabeceira do rio, já fora do transporte com remos em mãos são passadas as instruções de segurança por um dos nossos guias habilitados que vão acompanhar o passeio (cada bote sai com um instrutor).</p>
+                <p>Já dentro dos botes começa o passeio e durante os 5km de descida em rio, realizamos diversas atividades extra como toboágua radical (trecho do rio que descemos apenas com auxilio do colete e capacete) salto da pedra (salto em uma pedra de 1,5 metros de altura em poço profundo) e alguns surfes de bote no qual o contato com a água torna-se evidente.</p>
+                <p>Ao final do passeio retornamos a nossa base operacional para deixar os equipamentos e conferir as fotos de todo o grupo, e dar muitas risadas juntos.</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="line4"></div>
+            
+        <!-- ABA: Organize-se  -->
+        <span class="collapsebtn2">
+          Organize-se
+        </span>
+
+          <div>
+            <div class="hpadding20">
+                <p>Parceiro: Eco Aventuras</p>
+                <p>Local da experiência: Três Coroas - RS</p>
+                <p>Datas: Todos os dias das 9:00 as 16:00</p>
+                <p>Duração: Cerca de 3 horas de duração</p>
+                <p>O que levar: Roupa para molhar!</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="line4"></div>
+							
+        <!-- ABA: O que está inclúso  -->
+        <span class="collapsebtn2">
+          O que está incluso
+        </span>
+
+          <div id="collapse6" class="collapse in">
+            <div class="hpadding20">
+              <div class="col-md-12">
+                <ul class="checklist">
+                    <li><span class="glyphicon glyphicon-ok"></span>Guias experientes</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>Material de proteção</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>O Bote :-)</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>NÃO ESTÁ INCLUÍDO AULA DE NATAÇÃO!!!</li>
+                </ul>
+              </div>
+              <!-- Espaço para mais colunas -->
+                
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- End of collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+
+    <!-- Depoimentos -->
+      <div class="pagecontainer2 testimonialbox">
+        <div class="cpadding0 mt-10">
+          <blockquote>
+            <p class="opensans size16 grey2">Rafting te proporciona uma adrenalina.<br/>
+              <span class="lato lblue bold size13"><i>by Lucas Koch</i></span></p>
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+<!-- END OF CONTENT -->
+
+
+<!-- FOOTER -->
+
+<div class="footerbgblack">
+  <div class="container">
+    <a href="#top" id="gotop2" class="gotop"><img src="../../images/spacer.png" alt=""/></a>
+
+      <footer>
+        <div class="footer">
+          <span class="fb-like" data-href="https://www.facebook.com/droplifers" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-width="167"></span>
+          <span class="offset-1"></span>
+          <span class="g-plusone" data-annotation="inline" data-width="38"></span>
+        </div>
+      </footer>
+  </div>
+</div>
+
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <span class="lblue"><b>Odiamos spam tanto quanto você!</b></span>
+        <br>Seu e-mail é apenas para informá-lo sobre este produto.
+        <div class="input-group">
+          <input id="input-email" type="text" class="form-control" placeholder="Seu e-mail aqui">
+          <span class="input-group-btn">
+            <button class="btn button-success" type="button" onclick="euQuero()">Enviar</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript' src="../../scripts/javascript/entry-points/globals.js"></script>
+
+<script type='text/javascript' src="../../libs/jslider/js/jshashtable-2.1_src.js"></script>
+<script type='text/javascript' src="../../libs/jslider/js/jquery.numberformatter-1.2.3.js"></script>
+<script type='text/javascript' src="../../libs/jslider/js/tmpl.js"></script>
+<script type='text/javascript' src="../../libs/jslider/js/draggable-0.1.js"></script>
+<script type='text/javascript' src="../../libs/jslider/js/jquery.slider.js"></script>
+
+<script type='text/javascript' src="../../scripts/javascript/entry-points/js-details.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46493116-3', 'droplife.com.br');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+</body>
+</html>

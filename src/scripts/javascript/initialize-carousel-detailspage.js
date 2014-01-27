@@ -1,4 +1,6 @@
-$(function () {
+require("../../libs/carouFredSel/jquery.carouFredSel-6.2.1-packed");
+
+module.exports = function ($) {
   "use strict";
   var $carousel = $('#carousel'),
       $pager = $('#pager');
@@ -35,7 +37,7 @@ $(function () {
     next: {
       button: "#next_btn2",
       key: "right"
-    },
+    }
   });
   $pager.carouFredSel({
     width: '100%',
@@ -55,7 +57,7 @@ $(function () {
     src = src.split('/small/').join('/large/');
     $carousel.trigger('slideTo', [ 'img[src="' + src + '"]' ]);
   });
-});
+};
 
 
 
