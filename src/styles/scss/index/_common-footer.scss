@@ -1,0 +1,26 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.message {
+  text-align: center;
+  font-family: Lato;
+  font-size: em(22);
+  font-weight: 300;
+  > p {
+    margin: 0.4em;
+  }
+}
+
+.social {
+  width: 100%;
+  padding: 1.4em 1em;
+  overflow: hidden;
+  color: #999;
+  background: #f2f2f2;
+  font-size: em(14);
+}

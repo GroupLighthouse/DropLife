@@ -1,22 +1,38 @@
 const config = {
+  watch: {
+    folder: "src/",
+    images: "images/**",
+    libs: "libs/*",
+    lint: "scripts/javascript/**/*.js",
+    javascript: "scripts/javascript/**/*.js",
+    rsplugin: "scripts/javascript/rs-plugin/**",
+    css: "styles/css/**/*.css",
+    sass: "styles/scss/**/*.scss",
+    html: "views/html/**/*.html",
+    newviews: "views/new/**/*.html"
+  },
   src: {
     folder: "src/",
     images: "images/**",
     libs: "libs/*",
     lint: "scripts/javascript/**/*.js",
-    scripts: "scripts/javascript/entry-points/**/*.js",
+    javascript: "scripts/javascript/entry-points/**/*.js",
     rsplugin: "scripts/javascript/rs-plugin/**",
-    styles: "styles/css/**/*.css",
-    views: "views/html/**/*.html"
+    css: "styles/css/**/*.css",
+    sass: "styles/scss/entry-points/**/*.scss",
+    html: "views/html/**/*.html",
+    newviews: "views/new/**/*.html"
   },
   release: {
     folder: "release/",
     images: "images/",
     libs: "libs/",
-    scripts: "scripts/javascript/entry-points/",
+    javascript: "scripts/javascript/entry-points/",
     rsplugin: "scripts/javascript/rs-plugin/",
-    styles: "styles/css/",
-    views: "views/html/"
+    css: "styles/css/",
+    sass: "styles/scss/entry-points/",
+    html: "views/html/",
+    newviews: "views/new/"
   }
 };
 
@@ -33,5 +49,8 @@ module.exports = {
   },
   release: function (type) {
     return get("release", type);
+  },
+  watch: function (type) {
+    return get("watch", type);
   }
 };

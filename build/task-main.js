@@ -16,7 +16,7 @@ function logtask(task) {
 module.exports = {
   configure: function (taskfn) {
     var task = taskfn(gulp);
-    var src = paths.src(task.name);
+    var src = paths.watch(task.name);
     var release = paths.release(task.name);
 
     gulp.task(task.name, task.fn);

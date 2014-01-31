@@ -1,0 +1,13 @@
+@import "../../../libs/modularized-normalize-scss/normalize";
+
+@import "../index/common-nav-bar";
+@import "../index/common-banner";
+@import "../index/common-product-card";
+@import "../index/common-footer";
+
+@import "../index/mobile-product-card";
+@import "../index/tablet-product-card";
+@import "../index/desktop-product-card";
+
+@import "../util";
+

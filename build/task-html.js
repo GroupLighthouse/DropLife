@@ -1,7 +1,7 @@
 const htmlmin = require('gulp-htmlmin');
 const paths = require('./helper/paths');
 
-const name = "views";
+const name = "html";
 
 module.exports = function (gulp) {
   return {

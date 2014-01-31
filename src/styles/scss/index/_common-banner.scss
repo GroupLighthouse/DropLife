@@ -1,0 +1,11 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+
+.banner {
+  > .product {
+    @include image-rendering(optimizeSpeed);
+    display: block;
+    height: 45.5em;
+    width: 100%;
+    position: relative;
+  }
+}

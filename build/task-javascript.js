@@ -2,7 +2,7 @@ const uglify = require('gulp-uglify');
 const paths = require('./helper/paths');
 const browserify = require("gulp-browserify");
 
-const name = "scripts";
+const name = "javascript";
 const rsplugin = "rsplugin";
 
 module.exports = function (gulp) {
