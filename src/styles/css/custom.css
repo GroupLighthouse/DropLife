@@ -213,7 +213,7 @@ span.through {
 }
 
 .navbar-collapse.collapse {
-  font-size: 16px;
+  font-size: small;
 }
 
 .navbar-toggle .icon-bar {
@@ -274,6 +274,10 @@ span.through {
 
 .caps {
   text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .relative {
@@ -519,7 +523,7 @@ span.through {
 }
 
 .orange {
-  color: #ff9900;
+  color: #ed6627;
 }
 
 button > .glyphicon {
@@ -689,13 +693,15 @@ a:hover.green2 {
 
 .ctitle {
   width: 100%;
-  height: 63px;
-  padding: 18px;
+  /*height: 63px;*/
+  padding: 10px;
   position: relative;
   font-family: Lato;
-  font-size: 20px;
-  color: #fff;
+  font-size: 18px;
+  color: #15262f;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
 }
 
 .ctitle > span {
@@ -4327,7 +4333,7 @@ ul.jslidetext2 {
 }
 
 .cstyle03 {
-  background: #fff;
+  background: #f2f2f2;
   margin-top: 800px;
   position: relative;
   z-index: 100;
@@ -4343,10 +4349,10 @@ ul.jslidetext2 {
   display: block;
   background: white;
   width: 100%;
-  height: 324px;
+  height: 355px;
   overflow: hidden;
   border: 1px solid #fff;
-  background-color: #15262f;
+  background-color: #fff;
 }
 
 .cstyle06 {
@@ -5646,3 +5652,6 @@ a:hover.xnext img {
   text-indent: 0px;
 }
 
+.fullscreen-banner {
+  background-color: #f2f2f2;
+}
