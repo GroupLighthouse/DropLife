@@ -1,0 +1,13 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+<polymer-element name="dl-product-card" attributes="image header location price" noscript>
+  <template>
+    <div class="card">
+      <img class="image" src="{{image}}" alt=""/>
+
+      <div class="header">{{header}}
+        <span class="sub-header"><br>{{location}}</span>
+        <span class="sub-header"><br>R$ {{price}}</span>
+      </div>
+    </div>
+  </template>
+</polymer-element>

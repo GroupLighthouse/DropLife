@@ -2,6 +2,7 @@
 @import "../../../libs/neat/app/assets/stylesheets/neat";
 
 $card-color: #15262f;
+$margin-left-for-big-devices: 0.8em;
 
 .main {
   @include outer-container;

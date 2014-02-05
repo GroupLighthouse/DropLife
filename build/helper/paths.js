@@ -9,6 +9,7 @@ const config = {
     css: "styles/css/**/*.css",
     sass: "styles/scss/**/*.scss",
     html: "views/html/**/*.html",
+    polymer: "views/polymer/**/*.html",
     newviews: "views/new/**/*.html"
   },
   src: {
@@ -21,6 +22,7 @@ const config = {
     css: "styles/css/**/*.css",
     sass: "styles/scss/entry-points/**/*.scss",
     html: "views/html/**/*.html",
+    polymer: "views/polymer/**/*.html",
     newviews: "views/new/**/*.html"
   },
   release: {
@@ -32,6 +34,7 @@ const config = {
     css: "styles/css/",
     sass: "styles/scss/entry-points/",
     html: "views/html/",
+    polymer: "views/polymer/",
     newviews: "views/new/"
   }
 };

@@ -7,6 +7,7 @@ gulp.configure(require("./build/task-javascript"));
 gulp.configure(require("./build/task-css"));
 gulp.configure(require("./build/task-html"));
 gulp.configure(require("./build/task-sass"));
+gulp.configure(require("./build/task-polymer"));
 gulp.configure(require("./build/task-new-views"));
 
 gulp.initialize();

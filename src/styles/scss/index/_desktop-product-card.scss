@@ -5,8 +5,10 @@
 .card {
   @include media($desktop) {
     @include span-columns(4);
+    margin-left: $margin-left-for-big-devices;
   }
   @include media($big-desktop) {
     @include span-columns(6);
+    margin-left: $margin-left-for-big-devices;
   }
 }

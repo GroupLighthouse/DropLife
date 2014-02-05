@@ -10,39 +10,19 @@
   <link rel='stylesheet' type='text/css'
         href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic'>
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic'>
+
+  <script src="../../libs/platform/platform.js"></script>
+  <link rel="import" href="../polymer/dl-product-card.html">
+  <link rel="import" href="../polymer/dl-nav-bar.html">
+  <link rel="import" href="../polymer/dl-footer.html">
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<!--######################################################################-->
 
+<dl-nav-bar home="index.html" first="DROP" second="LIFE"></dl-nav-bar>
 
-<nav class="nav-bar-header">
-
-  <!--######################################################################-->
-
-  <a href="index.html">
-    <span class="first">DROP</span><span class="second">LIFE</span>
-  </a>
-
-  <!--######################################################################-->
-
-  <button class="menu" style="display: none">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-
-  <!--######################################################################-->
-
-</nav>
+<!--######################################################################-->
 
 <section class="banner">
 
@@ -58,76 +38,30 @@
 
   <!--######################################################################-->
 
-  <div class="card">
-    <img class="image" src="../../images/products/rafting_detail.jpg" alt=""/>
-
-    <div class="header">Corredeira abaixo
-      <span class="sub-header"><br>Tres Coroas</span>
-      <span class="sub-header"><br>R$ 50</span>
-    </div>
-  </div>
+  <dl-product-card header="Corredeira abaixo" location="Tres Coroas" price="50"
+                   image="../../images/products/rafting_detail.jpg"></dl-product-card>
 
   <!--######################################################################-->
 
-  <div class="card">
-    <img class="image" src="../../images/products/paintball_detail.jpg" alt=""/>
-
-    <div class="header">Videogame na vida real
-      <span class="sub-header"><br>Porto Alegre</span>
-      <span class="sub-header"><br>R$ 50</span>
-    </div>
-  </div>
+  <dl-product-card header="Videogame na vida real" location="Porto Alegre" price="50"
+                   image="../../images/products/paintball_detail.jpg"></dl-product-card>
 
   <!--######################################################################-->
 
-  <div class="card">
-    <img class="image" src="../../images/products/standup_detail.jpg" alt=""/>
-
-    <div class="header">Remada pra relaxar!
-      <span class="sub-header"><br>Porto Alegre</span>
-      <span class="sub-header"><br>R$ 50</span>
-    </div>
-  </div>
+  <dl-product-card header="Remada pra relaxar!" location="Porto Alegre" price="50"
+                   image="../../images/products/standup_detail.jpg"></dl-product-card>
 
   <!--######################################################################-->
 
 </section>
 
-<footer class="footer">
+<!--######################################################################-->
 
-  <!--######################################################################-->
+<dl-footer></dl-footer>
 
-  <div class="message">
-    O <b>DropLife</b> acredita que:
-    <p>N&atilde;o devemos desperdi&ccedil;ar nossos dias tentando prolong&aacute;-los</p>
-
-    <p>A vida deve ser vivida com coragem e aud&aacute;cia</p>
-  </div>
-
-  <!--######################################################################-->
-
-  <div class="social">
-    <span class="fb-like" data-href="https://www.facebook.com/droplifers" data-layout="button_count"
-          data-action="like" data-show-faces="true" data-share="true" data-width="167"></span>
-    <span class="offset"></span>
-    <span class="g-plusone" data-annotation="inline" data-width="38"></span>
-  </div>
-
-  <!--######################################################################-->
-
-</footer>
+<!--######################################################################-->
 
 </body>
 <script type="text/javascript" src="../../scripts/javascript/entry-points/new-index.js"></script>
-<script type="text/javascript">
-  (function () {
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-  })();
-</script>
 
 </html>
