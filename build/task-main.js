@@ -35,7 +35,7 @@ module.exports = {
 
     gulp.task("default", function () {
       defaults.forEach(function (watch) {
-        gulp.watch(watch[1], watch[0]);
+        gulp.watch(watch[1], [watch[0]]);
       });
     });
 
