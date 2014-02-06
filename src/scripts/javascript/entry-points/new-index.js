@@ -7,7 +7,7 @@ $(document).ready(function () {
   $(".banner > .products > ul").responsiveSlides({
     auto: true,
     pager: false,
-    nav: true,
-    speed: 500
+    nav: false,
+    speed: 10000
   });
 });
