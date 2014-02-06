@@ -1,5 +1,10 @@
-@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
-@import "../../../libs/neat/app/assets/stylesheets/neat";
+body {
+  font-family: Lato;
+}
+
+a {
+  text-decoration: none;
+}
 
 .offset {
   padding: 0.5em;

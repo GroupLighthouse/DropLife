@@ -1,5 +1,7 @@
 @import "../../../libs/modularized-normalize-scss/normalize";
 
-@import "../common";
+@import "../index/common-nav-bar";
+@import "../index/common-footer";
 
 @import "../util";
+@import "../font";

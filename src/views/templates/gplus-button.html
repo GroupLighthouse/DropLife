@@ -1,0 +1,31 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+
+<polymer-element name="gplus-button" lightdom>
+    <template>
+        <div class="g-plusone"
+             data-annotation="{{annotation}}"
+             data-href="{{href}}"
+             data-width="{{width}}">
+        </div>
+    </template>
+
+    <!--#########################################################################-->
+
+    <script>
+        Polymer("gplus-button", {
+            annotation: "inline",
+            href: "http://droplife.com.br",
+            width: 38,
+            enteredView: function () {
+                var script = document.createElement("script"),
+                        body = document.body;
+
+                script.setAttribute("type", "text/javascript");
+                script.setAttribute("src", "https://apis.google.com/js/plusone.js");
+                script.setAttribute("async", true);
+
+                body.appendChild(script);
+            }
+        });
+    </script>
+</polymer-element>

@@ -24,7 +24,7 @@ $text-color: #636363;
   @include row();
 }
 
-.card {
+dl-product-card {
   @include span-columns(4);
   @include media($mobile) {
     @include span-columns(12);

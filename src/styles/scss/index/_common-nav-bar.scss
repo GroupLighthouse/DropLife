@@ -22,11 +22,11 @@ $menu-item-color: #acb0c0;
         margin-top: 0.2em;
       }
     }
-    > .submenu {
+    > .itens {
       float: right;
       padding: 1.5em 0.5em 0;
       @include media($mobile) {
-        width: 120px;
+        width: 115px;
         padding: 1em 1em 0;
       }
       > a {

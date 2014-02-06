@@ -24,17 +24,20 @@ $price-color: #f6ff00;
       width: 100%;
       > li {
         width: 100%;
-        > img {
-          position: absolute;
+        > dl-product-banner {
           width: 100%;
-          @include media($desktop) {
-            width: 130%;
-          }
-          @include media($tablet) {
-            width: 160%;
-          }
-          @include media($mobile) {
-            width: 170%;
+          > img {
+            position: absolute;
+            width: 100%;
+            @include media($desktop) {
+              width: 130%;
+            }
+            @include media($tablet) {
+              width: 160%;
+            }
+            @include media($mobile) {
+              width: 170%;
+            }
           }
         }
       }
@@ -48,7 +51,7 @@ $price-color: #f6ff00;
   color: $info-color;
   text-shadow: 2px 2px 0px $info-shadow;
   text-align: center;
-  > .city {
+  > .location {
     font-size: em(20);
     font-weight: 400;
     padding-top: 1.5em;
@@ -63,7 +66,7 @@ $price-color: #f6ff00;
     color: $price-color;
   }
   @include media($tablet) {
-    > .city {
+    > .location {
       font-size: em(15);
       padding-top: 4.5em;
     }
@@ -75,7 +78,7 @@ $price-color: #f6ff00;
     }
   }
   @include media($mobile) {
-    > .city {
+    > .location {
       font-size: em(10);
       padding-top: 6em;
     }

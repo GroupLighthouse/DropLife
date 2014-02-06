@@ -1,0 +1,18 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+
+<polymer-element name="dl-product-card" attributes="image event price location" noscript>
+    <template>
+        <!--###########################################################################-->
+
+        <img src="{{image}}" alt=""/>
+
+        <!--###########################################################################-->
+
+        <div class="header">{{event}}
+            <div class="sub-header">{{price}}</div>
+            <div class="sub-footer"><i class="fa fa-map-marker"></i> {{location}}</div>
+        </div>
+
+        <!--###########################################################################-->
+    </template>
+</polymer-element>
