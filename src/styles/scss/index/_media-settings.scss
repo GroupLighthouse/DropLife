@@ -1,7 +1,7 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
 
-$mobile:      new-breakpoint(min-width 0px, 1);
-$tablet:      new-breakpoint(min-width 600px 6);
-$desktop:     new-breakpoint(min-width 900px 12);
-$big-desktop: new-breakpoint(min-width 1200px 19);
+$mobile:      new-breakpoint(min-width 0px max-width 599px);
+$tablet:      new-breakpoint(min-width 600px max-width 899px);
+$desktop:     new-breakpoint(min-width 900px max-width 1199px);
+$big-desktop: new-breakpoint(min-width 1200px);

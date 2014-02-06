@@ -1,20 +1,19 @@
-require("../../libs/jquery.nicescroll/jquery.nicescroll.min.js");
+require("../../libs/jquery.nicescroll/jquery.nicescroll.min");
 
-module.exports = function (jQuery) {
+module.exports = function ($, selector) {
   "use strict";
 
-  jQuery("html").niceScroll({
+  $(selector).niceScroll({
+    zindex: "99",
     cursorcolor: "#ccc",
     cursorborder: "0px solid #fff",
     railpadding: {top: 0, right: 0, left: 0, bottom: 0},
-    cursorwidth: "5px",
-    cursorborderradius: "0px",
+    cursorwidth: "7px",
+    cursorborderradius: "5px",
     cursoropacitymin: 0,
     cursoropacitymax: 0.7,
     boxzoom: true,
     autohidemode: false
   });
-
-  jQuery('html').addClass('no-overflow-y');
 
 };

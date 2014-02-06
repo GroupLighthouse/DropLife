@@ -1,6 +1,13 @@
-var jQuery = require("../../../libs/jquery/jquery");
+var $ = require("../../../libs/jquery/jquery");
 var niceScroll = require("../nice-scroll");
+require("../responsiveslides");
 
-jQuery(document).ready(function () {
-  niceScroll(jQuery);
+$(document).ready(function () {
+  niceScroll($, "html");
+  $(".banner > .products > ul").responsiveSlides({
+    auto: true,
+    pager: false,
+    nav: true,
+    speed: 500
+  });
 });

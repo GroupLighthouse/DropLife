@@ -1,46 +1,41 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
 
-$nav-bar-color: #15262f;
+$nav-bar-color: #35373f;
+$menu-item-color: #acb0c0;
 
 .nav-bar-header {
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 3;
   width: 100%;
-  font-family: Lato;
-  font-size: em(26);
-  font-weight: 300;
-  padding: 0.3em 0.5em;
+  padding: 0.4em;
+  height: 4.2em;
   background-color: $nav-bar-color;
-  > a {
-    text-decoration: none;
-    > .first {
-      color: orange;
+  > .menu {
+    margin: 0 1em;
+    font-family: Lato;
+    font-size: em(13);
+    > a {
+      > img {
+        margin-top: 0.2em;
+      }
     }
-    > .second {
-      color: #fff;
+    > .submenu {
+      float: right;
+      padding: 1.5em 0.5em 0;
+      @include media($mobile) {
+        width: 120px;
+        padding: 1em 1em 0;
+      }
+      > a {
+        margin-left: 1em;
+        color: $menu-item-color;
+        &:hover {
+          color: lighten($menu-item-color, 10%)
+        }
+      }
     }
   }
 }
-
-.menu {
-  margin-top: 0.2em;
-  padding: 0em 0.5em;
-  border: 0;
-  background-color: $nav-bar-color;
-  float: right;
-  &:hover .icon-bar {
-    background-color: #fff;
-  }
-}
-
-.icon-bar {
-  display: block;
-  width: 0.9em;
-  height: 0.07em;
-  border-radius: 0.04em;
-  background-color: #495459;
-  margin-top: 0.15em;
-}
-

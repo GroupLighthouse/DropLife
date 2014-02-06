@@ -1,4 +1,5 @@
+.idea/
 src/libs/
 release/
-node_modules
+node_modules/
 *.log

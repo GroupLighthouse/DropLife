@@ -1,47 +1,71 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
 
-$card-color: #15262f;
+$card-color: #fff;
+$title-color: #35373f;
+$highlight-color: #ed6627;
+$text-color: #636363;
 
 .main {
   @include outer-container;
-  margin-top: -15em;
-  text-align: center;
+  @include media($mobile) {
+    padding: 0;
+    padding-top: 21em;
+  }
+  z-index: 2;
+  position: relative;
   padding: 0 flex-gutter($grid-columns);
+  padding-top: 25em;
+
+}
+
+.cards {
+  @include row();
 }
 
 .card {
-  &:hover {
-    background-color: lighten($card-color, 5%);
+  @include span-columns(4);
+  @include media($mobile) {
+    @include span-columns(12);
   }
-  margin-bottom: 1em;
-  font-family: Lato;
-  text-align: left;
-  background: $card-color;
-  z-index: 400;
-  position:relative
-}
-
-.image {
-  @include image-rendering(optimizeSpeed);
-  display: block;
-  height: 15em;
-  border: em(1) solid black;
-  border-bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+  text-align: center;
+  border: 1px solid $card-color;
+  background-color: $card-color;
+  &:hover {
+    border-color: darken($card-color, 3%);
+    background-color: darken($card-color, 3%);
+    cursor: pointer;
+  }
+  > img {
+    @include image-rendering(optimizeSpeed);
+    width: 100%;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .header {
-  display: block;
   height: 5.5em;
+  @include media($tablet) {
+    height: 6.7em;
+  }
   padding: 0.5em;
-  font-size: 0.85em;
-  border: em(1) solid white;
-  color: white;
+  color: $title-color;
+  font-weight: 600;
+  font-size: em(20);
   > .sub-header {
-    font-size: 1.2em;
-    color: #72bf66;
+    color: $highlight-color;
+    font-weight: 800;
+    font-size: em(22);
+  }
+  > .sub-footer {
+    color: $text-color;
+    font-weight: 400;
+    font-size: em(12);
+  }
+  > div {
+    margin: 0.2em;
   }
 }

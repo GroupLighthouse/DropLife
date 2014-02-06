@@ -1,16 +1,31 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$footer-color: #efeded;
+$social-color: #fff;
+$text-color: #363636;
 
 .footer {
+  z-index: 1;
+  position: absolute;
   width: 100%;
   overflow: hidden;
-  position: absolute;
+  color: $text-color;
+  background-color: $footer-color;
+  margin-top: -7.1em;
+  padding-top: 7.1em;
+  @include media($tablet) {
+    margin-top: -8.6em;
+    padding-top: 8.6em;
+  }
 }
 
 .message {
   text-align: center;
-  font-family: Lato;
   font-size: em(22);
   font-weight: 300;
+  margin: 2em;
   > p {
     margin: 0.4em;
   }
@@ -18,9 +33,10 @@
 
 .social {
   width: 100%;
-  padding: 1.4em 1em;
-  overflow: hidden;
-  color: #999;
-  background: #f2f2f2;
+  padding: 1em;
+  background-color: $social-color;
   font-size: em(14);
+  > .fb-like > span {
+    vertical-align: initial !important;
+  }
 }

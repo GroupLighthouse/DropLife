@@ -1,11 +1,89 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$info-color: #fff;
+$info-shadow: rgba(0, 0, 0, 0.5);
+$price-color: #f6ff00;
 
 .banner {
-  > .product {
-    @include image-rendering(optimizeSpeed);
-    display: block;
-    height: 45.5em;
+  > .products {
+    position: fixed;
+    z-index: 1;
     width: 100%;
-    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 4.2em;
+    float: left;
+    a {
+      display: none;
+    }
+    > ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      > li {
+        width: 100%;
+        > img {
+          position: absolute;
+          width: 100%;
+          @include media($desktop) {
+            width: 130%;
+          }
+          @include media($tablet) {
+            width: 160%;
+          }
+          @include media($mobile) {
+            width: 170%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info {
+  width: 100%;
+  position: absolute;
+  color: $info-color;
+  text-shadow: 2px 2px 0px $info-shadow;
+  text-align: center;
+  > .city {
+    font-size: em(20);
+    font-weight: 400;
+    padding-top: 1.5em;
+  }
+  > .event {
+    font-size: em(80);
+    font-family: Edo;
+  }
+  > .price {
+    font-size: em(24);
+    font-weight: 800;
+    color: $price-color;
+  }
+  @include media($tablet) {
+    > .city {
+      font-size: em(15);
+      padding-top: 4.5em;
+    }
+    > .event {
+      font-size: em(60);
+    }
+    > .price {
+      font-size: em(18);
+    }
+  }
+  @include media($mobile) {
+    > .city {
+      font-size: em(10);
+      padding-top: 6em;
+    }
+    > .event {
+      font-size: em(40);
+    }
+    > .price {
+      font-size: em(12);
+    }
   }
 }

@@ -1,6 +1,7 @@
-@import "../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
 
 .offset {
-  padding-left: em(5);
-  padding-right: em(5);
+  padding: 0.5em;
+  display: inline;
 }

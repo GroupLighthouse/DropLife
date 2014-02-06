@@ -8,6 +8,7 @@ const config = {
     rsplugin: "scripts/javascript/rs-plugin/**",
     css: "styles/css/**/*.css",
     sass: "styles/scss/**/*.scss",
+    fonts: "styles/fonts/**/*.*",
     html: "views/html/**/*.html",
     newviews: "views/new/**/*.html"
   },
@@ -20,6 +21,7 @@ const config = {
     rsplugin: "scripts/javascript/rs-plugin/**",
     css: "styles/css/**/*.css",
     sass: "styles/scss/entry-points/**/*.scss",
+    fonts: "styles/fonts/**/*.*",
     html: "views/html/**/*.html",
     newviews: "views/new/**/*.html"
   },
@@ -31,6 +33,7 @@ const config = {
     rsplugin: "scripts/javascript/rs-plugin/",
     css: "styles/css/",
     sass: "styles/scss/entry-points/",
+    fonts: "styles/fonts/",
     html: "views/html/",
     newviews: "views/new/"
   }
