@@ -1,9 +1,9 @@
 @import "../../../libs/modularized-normalize-scss/normalize";
 
-@import "../index/common-nav-bar";
-@import "../index/common-banner";
-@import "../index/common-product-card";
-@import "../index/common-footer";
+@import "../common/nav-bar";
+@import "../index/banner";
+@import "../index/product-card";
+@import "../common/footer";
 
 @import "../util";
 @import "../font";

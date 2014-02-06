@@ -1,6 +1,6 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
-@import "media-settings";
+@import "../common/media-settings";
 
 $card-color: #fff;
 $title-color: #35373f;
@@ -37,11 +37,13 @@ dl-product-card {
     background-color: darken($card-color, 3%);
     cursor: pointer;
   }
-  > img {
-    @include image-rendering(optimizeSpeed);
-    width: 100%;
-    &:hover {
-      opacity: 0.7;
+  > .card {
+    > img {
+      @include image-rendering(optimizeSpeed);
+      width: 100%;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
