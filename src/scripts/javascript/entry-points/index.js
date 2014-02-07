@@ -8,6 +8,6 @@ $(document).ready(function () {
         auto: true,
         pager: false,
         nav: false,
-        speed: 10000
+        timeout: 10000
     });
 });
