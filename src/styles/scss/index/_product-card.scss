@@ -3,9 +3,9 @@
 @import "../common/media-settings";
 
 $card-color: #fff;
-$title-color: #35373f;
-$highlight-color: #ed6627;
-$text-color: #636363;
+$event-color: #35373f;
+$price-color: #ed6627;
+$location-color: #636363;
 
 .main {
   @include outer-container;
@@ -17,7 +17,6 @@ $text-color: #636363;
   position: relative;
   padding: 0 flex-gutter($grid-columns);
   padding-top: 25em;
-
 }
 
 .cards {
@@ -48,22 +47,22 @@ dl-product-card {
   }
 }
 
-.header {
+.card-event {
   height: 5.5em;
   @include media($tablet) {
     height: 6.7em;
   }
   padding: 0.5em;
-  color: $title-color;
+  color: $event-color;
   font-weight: 600;
   font-size: em(20);
-  > .sub-header {
-    color: $highlight-color;
+  > .card-price {
+    color: $price-color;
     font-weight: 800;
     font-size: em(22);
   }
-  > .sub-footer {
-    color: $text-color;
+  > .card-location {
+    color: $location-color;
     font-weight: 400;
     font-size: em(12);
   }

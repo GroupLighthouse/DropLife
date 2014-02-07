@@ -1,0 +1,12 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "../common/media-settings";
+
+$main-color: #efeded;
+
+.main {
+  position: relative;
+  margin-top: 4.2em;
+  padding: 1em;
+  background-color: $main-color;
+}
