@@ -1,0 +1,10 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "../common/media-settings";
+
+google-maps {
+  #map {
+    width: 15em;
+    height: 15em;
+  }
+}

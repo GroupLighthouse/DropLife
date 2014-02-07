@@ -1,6 +1,6 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
-@import "../common/media-settings";
+@import "media-settings";
 
 $card-color: #fff;
 $card-shadow: rgba(0, 0, 0, 0.1);
@@ -8,20 +8,15 @@ $event-color: #35373f;
 $price-color: #ed6627;
 $location-color: #636363;
 
-.main {
-  @include outer-container;
-  @include media($mobile) {
-    padding: 0;
-    padding-top: 21em;
-  }
-  z-index: 2;
-  position: relative;
-  padding: 0 flex-gutter($grid-columns);
-  padding-top: 25em;
-}
-
 .cards {
   @include row();
+  margin-top: flex-gutter($grid-columns);
+  @include media($mobile) {
+    margin-top: 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 dl-product-card {

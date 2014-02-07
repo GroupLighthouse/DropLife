@@ -4,6 +4,6 @@ var responsiveSlides = require("../responsive-slides");
 
 
 $(document).ready(function () {
-  niceScroll($, "html");
-  responsiveSlides($, ".banner > .products > ul");
+    niceScroll($, "html");
+    responsiveSlides($, ".banner > .products > ul");
 });

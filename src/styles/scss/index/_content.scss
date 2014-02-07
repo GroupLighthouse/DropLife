@@ -1,0 +1,15 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "../common/media-settings";
+
+.main {
+  @include outer-container;
+  @include media($mobile) {
+    padding: 0;
+    padding-top: 21em;
+  }
+  z-index: 2;
+  position: relative;
+  padding: 0 flex-gutter($grid-columns);
+  padding-top: 25em;
+}
