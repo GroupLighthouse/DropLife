@@ -1,13 +1,9 @@
 var $ = require("../../../libs/jquery/jquery");
 var niceScroll = require("../nice-scroll");
-require("../../../libs/ResponsiveSlides.js/responsiveslides");
+var responsiveSlides = require("../responsive-slides");
+
 
 $(document).ready(function () {
-    niceScroll($, "html");
-    $(".banner > .products > ul").responsiveSlides({
-        auto: true,
-        pager: false,
-        nav: false,
-        timeout: 10000
-    });
+  niceScroll($, "html");
+  responsiveSlides($, ".banner > .products > ul");
 });
