@@ -1,0 +1,22 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$section-bar-color: #a7a7a7;
+$title-color: #fff;
+$title-shadow: rgba(0, 0, 0, 0.5);
+
+.dl-section-bar-header {
+  height: 6.5em;
+  position: relative;
+  margin-top: 4.2em;
+  padding: 1em 1.4em;
+  background: $section-bar-color;
+}
+
+.dl-section-bar-title {
+  font-family: Edo;
+  font-size: em(60);
+  color: $title-color;
+  text-shadow: 2px 2px 0px $title-shadow;
+}

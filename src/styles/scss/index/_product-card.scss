@@ -3,6 +3,7 @@
 @import "../common/media-settings";
 
 $card-color: #fff;
+$card-shadow: rgba(0, 0, 0, 0.1);
 $event-color: #35373f;
 $price-color: #ed6627;
 $location-color: #636363;
@@ -31,6 +32,7 @@ dl-product-card {
   text-align: center;
   border: 1px solid $card-color;
   background-color: $card-color;
+  box-shadow: 1px 1px 1px $card-shadow;
   &:hover {
     border-color: darken($card-color, 3%);
     background-color: darken($card-color, 3%);
