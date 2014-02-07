@@ -1,6 +1,6 @@
 var $ = require("../../../libs/jquery/jquery");
 var niceScroll = require("../nice-scroll");
-require("../responsiveslides");
+require("../../../libs/ResponsiveSlides.js/responsiveslides");
 
 $(document).ready(function () {
     niceScroll($, "html");

@@ -23,6 +23,7 @@
     "jquery.transit": "~0.9.9",
     "jquery-throttle-debounce": "*",
     "font-awesome": "~4.0.3",
+    "ResponsiveSlides.js": "*",
     "bourbon": "~3.1.8",
     "neat": "~1.5.0",
     "modularized-normalize-scss": "~3.0.0"
