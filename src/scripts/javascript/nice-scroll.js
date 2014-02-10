@@ -1,4 +1,4 @@
-require("../../libs/jquery.nicescroll/jquery.nicescroll.min");
+require("../../libs/jquery.nicescroll/jquery.nicescroll");
 
 module.exports = function ($, selector) {
     "use strict";

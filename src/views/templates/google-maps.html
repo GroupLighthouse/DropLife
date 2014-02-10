@@ -5,10 +5,14 @@
         <div id="map"></div>
     </template>
 
-    <!--#########################################################################-->
+    <!--#############################################################################-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    <!--#############################################################################-->
 
     <script>
-        Polymer('google-maps', {
+        Polymer("google-maps", {
             type: google.maps.MapTypeId.ROADMAP,
             zoom: 1,
             ready: function () {
@@ -23,7 +27,7 @@
                 this.resize();
             },
             resize: function () {
-                google.maps.event.trigger(this.map, 'resize');
+                google.maps.event.trigger(this.map, "resize");
                 this.updateCenter();
             },
             latitudeChanged: function () {
@@ -33,11 +37,11 @@
                 this.updateCenter();
             },
             tiltChanged: function () {
-                var tilt = this.getAttribute('tilt');
+                var tilt = this.getAttribute("tilt");
                 this.map.setTilt(+tilt);
             },
             typeChanged: function () {
-                var type = this.getAttribute('type');
+                var type = this.getAttribute("type");
                 this.map.setMapTypeId(type);
             },
             updateCenter: function (opt_lat, opt_long) {
@@ -47,7 +51,7 @@
                                 opt_long !== undefined ? opt_long : this.longitude));
             },
             zoomChanged: function () {
-                var zoom = this.getAttribute('zoom');
+                var zoom = this.getAttribute("zoom");
                 this.map.setZoom(+zoom);
             }
         });

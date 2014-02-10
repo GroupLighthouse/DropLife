@@ -10,11 +10,10 @@
     <link rel='stylesheet' type='text/css' href="../../styles/scss/entry-points/detail.css"/>
     <link rel='stylesheet' type='text/css' href="../../libs/font-awesome/css/font-awesome.css"/>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
     <script src="../../libs/platform/platform.js"></script>
     <link rel="import" href="../templates/dl-nav-bar.html">
     <link rel="import" href="../templates/dl-section-bar.html">
+    <link rel="import" href="../templates/blueimp-gallery.html">
     <link rel="import" href="../templates/google-maps.html">
     <link rel="import" href="../templates/dl-footer.html">
 </head>
@@ -35,7 +34,12 @@
 <!--#######################-->
 
 <section class="main">
-    CONTEÚDO
+    <blueimp-gallery path="../../images/products/galleries/standup"
+                     width="700px"
+                     height="400px"
+                     numberSlides="6">
+    </blueimp-gallery>
+
     <google-maps latitude="-30.049445"
                  longitude="-51.229316"
                  zoom="17"
@@ -52,11 +56,9 @@
 </body>
 
 <!--#######################################################-->
-
 <script type="text/javascript"
         src="../../scripts/javascript/entry-points/detail.js">
 </script>
-
 <!--#######################################################-->
 
 </html>

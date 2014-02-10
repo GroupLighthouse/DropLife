@@ -22,6 +22,7 @@
     "jquery-touchswipe": "~1.6.4",
     "jquery.transit": "~0.9.9",
     "jquery-throttle-debounce": "*",
+    "blueimp-gallery": "*",
     "font-awesome": "~4.0.3",
     "ResponsiveSlides.js": "*",
     "bourbon": "~3.1.8",

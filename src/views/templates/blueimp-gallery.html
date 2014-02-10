@@ -1,0 +1,46 @@
+<link rel="import" href="../../libs/polymer/polymer.html"/>
+
+<polymer-element name="blueimp-gallery" attributes="path width height numberSlides">
+    <template>
+        <div id="gallery"
+             style="width: {{width}}; padding-bottom: {{height}};"
+             class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+            <div class="slides"></div>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <ol class="indicator"></ol>
+        </div>
+    </template>
+
+    <!--############################################################################-->
+
+    <script src="../../libs/blueimp-gallery/js/blueimp-gallery.js"></script>
+
+    <!--############################################################################-->
+
+    <script src="../../libs/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+
+    <!--############################################################################-->
+
+    <script>
+        Polymer("blueimp-gallery", {
+            ready: function () {
+                var list = [];
+                for (var index = 1; index <= Number(this.numberSlides); index++) {
+                    list.push({
+                        href: this.path + "/image_" + index + ".jpg",
+                        thumbnail: this.path + "/thumbnail_" + index + ".jpg"
+                    });
+                }
+
+                var options = {
+                    container: this.$.gallery,
+                    carousel: true,
+                    slideshowInterval: 5000
+                };
+
+                blueimp.Gallery(list, options);
+            }
+        });
+    </script>
+</polymer-element>
