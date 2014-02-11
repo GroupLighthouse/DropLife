@@ -15,6 +15,7 @@
     <script src="../../libs/platform/platform.js"></script>
     <link rel="import" href="../templates/dl-nav-bar.html">
     <link rel="import" href="../templates/dl-section-bar.html">
+    <link rel="import" href="../templates/dl-box.html">
     <link rel="import" href="../templates/blueimp-gallery.html">
     <link rel="import" href="../templates/google-maps.html">
     <link rel="import" href="../templates/dl-footer.html">
@@ -30,24 +31,90 @@
 
 <!--#######################-->
 
-<dl-section-bar name="DETALHE"
-                image="../../images/section_1.jpg">
+<dl-section-bar name="CAMINHE SOBRE A ÁGUA"
+                image="../../images/section_3.jpg">
 </dl-section-bar>
 
 <!--#######################-->
 
 <section class="main">
-    <blueimp-gallery path="../../images/products/galleries/standup"
-                     width="700px"
-                     height="400px"
-                     numberSlides="6">
-    </blueimp-gallery>
+    <div class="container">
+        <div class="leftColumn">
+            <blueimp-gallery path="../../images/products/galleries/standup"
+                             numberSlides="6">
+            </blueimp-gallery>
 
-    <google-maps latitude="-30.049445"
-                 longitude="-51.229316"
-                 zoom="17"
-                 type="hybrid">
-    </google-maps>
+            <dl-box name="VISÃO GERAL"
+                    iconClass="fa-info-circle">
+                <span>Faça stand up paddle e tenha a experiência incrível da simplicidade em uma prancha, um remo e o explendor do pôr-do-sol no lago do Guaíba.</span>
+            </dl-box>
+
+            <dl-box name="DURAÇÃO"
+                    iconClass="fa fa-clock-o">
+
+            </dl-box>
+
+            <dl-box name="O QUE ESTÁ INCLUSO"
+                    iconClass="fa-check-circle">
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+                <div>
+                    <i class="fa fa-check"></i> Item 1
+                </div>
+            </dl-box>
+        </div>
+
+        <div class="rightColumn">
+            <dl-box name="TICKET"
+                    iconClass="fa-ticket">
+
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+
+                <div class="card-event">DESÇA A CORREDEIRA
+                    <div class="card-price">R$ 500,00</div>
+                    <div class="card-location"><i class="fa fa-map-marker"></i> Porto Alegre</div>
+                </div>
+
+                <button><i class="fa fa-shopping-cart"></i> Comprar Agora</button>
+
+            </dl-box>
+
+            <dl-box name="LOCALIZAÇÃO"
+                    iconClass="fa-map-marker">
+                <google-maps latitude="-30.049445"
+                             longitude="-51.229316"
+                             zoom="15"
+                             type="roadmap">
+                </google-maps>
+            </dl-box>
+
+            <dl-box name="DEPOIMENTOS"
+                    iconClass="fa fa-comment-o">
+                <span>
+                    <i class="fa fa-quote-left"></i>
+                    Aqui vai um depoimento de algumas linhas sobre o produto
+                    <i class="fa fa-quote-right"></i>
+                </span>
+            </dl-box>
+        </div>
+    </div>
+
 </section>
 
 <!--################-->

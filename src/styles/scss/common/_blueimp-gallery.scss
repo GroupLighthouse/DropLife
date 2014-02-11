@@ -7,12 +7,69 @@
   -moz-backface-visibility: hidden
 }
 
+@media (max-width: 400px) {
+  .blueimp-gallery>.prev,
+  .blueimp-gallery>.next {
+    width: 30px;
+    height: 30px;
+    font-size: 45px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 400px) {
+  .blueimp-gallery>.prev,
+  .blueimp-gallery>.next {
+    width: 40px;
+    height: 40px;
+    font-size: 60px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .blueimp-gallery {
+    height: 150px;
+  }
+  .blueimp-gallery>.indicator>li {
+    width: 28px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .blueimp-gallery {
+    height: 200px;
+  }
+  .blueimp-gallery>.indicator>li {
+    width: 42px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .blueimp-gallery {
+    height: 250px;
+  }
+  .blueimp-gallery>.indicator>li {
+    width: 60px;
+    height: 31px;
+  }
+}
+
+@media (min-width: 600px) {
+  .blueimp-gallery {
+    height: 300px;
+  }
+  .blueimp-gallery>.indicator>li {
+    width: 78px;
+    height: 45px;
+  }
+}
+
 .blueimp-gallery>.slides>.slide>.slide-content {
-  margin: auto;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  margin: 0;
+  width: 100%;
   opacity: 1
 }
 
@@ -21,8 +78,8 @@
   z-index: 999999;
   overflow: hidden;
   width: 100%;
-  background: #000;
-  background: rgba(0, 0, 0, .9);
+  border: 1px solid #adadad;
+  background: rgba(0, 0, 0, .1);
   opacity: 0;
   display: none;
   direction: ltr;
@@ -32,9 +89,7 @@
 .blueimp-gallery-carousel {
   position: relative;
   z-index: auto;
-  margin: 1em auto;
-  padding-bottom: 100%;
-  box-shadow: 0 0 10px #000
+  margin: 0
 }
 
 .blueimp-gallery-display {
@@ -84,13 +139,9 @@
   position: absolute;
   top: 50%;
   left: 15px;
-  width: 40px;
-  height: 40px;
   margin-top: -23px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 60px;
   font-weight: 100;
-  line-height: 30px;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 0 2px #000;
@@ -191,8 +242,6 @@ body:last-child .blueimp-gallery-playing>.play-pause {
 
 .blueimp-gallery>.indicator>li {
   display: inline-block;
-  width: 100px;
-  height: 57px;
   margin: 10px 6px 0px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

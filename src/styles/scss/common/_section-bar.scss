@@ -7,18 +7,31 @@ $title-color: #fff;
 $title-shadow: rgba(0, 0, 0, 0.5);
 
 .dl-section-bar-header {
+  overflow: hidden;
   height: 6.5em;
+  @include media($tablet) {
+    height: 5.5em;
+  }
+  @include media($mobile) {
+    height: 4.0em;
+  }
   position: relative;
   margin-top: 4.2em;
-  padding: 1em 1.4em;
+  padding: 1.1em 1.4em;
   background: $section-bar-color;
   > .dl-section-bar-title {
     position: absolute;
     z-index: 1;
     font-family: Edo;
-    font-size: em(60);
     color: $title-color;
     text-shadow: 2px 2px 0px $title-shadow;
+    font-size: em(60);
+    @include media($tablet) {
+      font-size: em(45);
+    }
+    @include media($mobile) {
+      font-size: em(25);
+    }
   }
   > img {
     position: absolute;

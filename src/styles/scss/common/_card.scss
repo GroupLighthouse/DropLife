@@ -1,0 +1,32 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$event-color: #35373f;
+$price-color: #ed6627;
+$location-color: #636363;
+
+.card-event {
+  height: 5.5em;
+  @include media($tablet) {
+    height: 6.7em;
+  }
+  padding: 0.5em;
+  color: $event-color;
+  text-align: center;
+  font-weight: 600;
+  font-size: em(20);
+  > .card-price {
+    color: $price-color;
+    font-weight: 800;
+    font-size: em(22);
+  }
+  > .card-location {
+    color: $location-color;
+    font-weight: 400;
+    font-size: em(12);
+  }
+  > div {
+    margin: 0.2em;
+  }
+}

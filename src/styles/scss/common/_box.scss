@@ -1,0 +1,35 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$text-color: #636363;
+$title-color: #353739;
+$border-color: #adadad;
+$background-color: #fafafa;
+
+:first-child > .dl-box-header {
+  margin-top: 0;
+}
+
+.dl-box-header {
+  color: $text-color;
+  border: 1px solid $border-color;
+  background-color: $background-color;
+  overflow: hidden;
+  padding: 1.4em;
+  margin-top: 1em;
+  font-family: Lato;
+  font-weight: 300;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  > .dl-box-title {
+    margin: 0 0 10px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: $title-color;
+    border-bottom: 1px solid $border-color;
+    font-family: Edo;
+    font-weight: 800;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+  }
+}
+

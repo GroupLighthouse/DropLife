@@ -1,0 +1,25 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+
+<polymer-element name="dl-box" attributes="name iconClass" noscript lightdom>
+    <template>
+        <div class="dl-box-header">
+
+            <!--##################################################################-->
+
+            <div class="dl-box-title"><i class="fa {{iconClass}}"></i> {{name}}</div>
+
+            <!--##################################################################-->
+
+        </div>
+    </template>
+
+    <script>
+        Polymer("dl-box", {
+            ready: function () {
+                for (var index = this.children.length - 1; index > 0; index--) {
+                    this.children[index].appendChild(this.children[0]);
+                }
+            }
+        });
+    </script>
+</polymer-element>

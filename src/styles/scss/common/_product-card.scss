@@ -1,12 +1,10 @@
 @import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
 @import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "card";
 @import "media-settings";
 
 $card-color: #fff;
 $card-shadow: rgba(0, 0, 0, 0.1);
-$event-color: #35373f;
-$price-color: #ed6627;
-$location-color: #636363;
 
 .cards {
   @include row();
@@ -24,7 +22,6 @@ dl-product-card {
   @include media($mobile) {
     @include span-columns(12);
   }
-  text-align: center;
   border: 1px solid $card-color;
   background-color: $card-color;
   box-shadow: 1px 1px 1px $card-shadow;
@@ -41,29 +38,5 @@ dl-product-card {
         opacity: 0.7;
       }
     }
-  }
-}
-
-.card-event {
-  height: 5.5em;
-  @include media($tablet) {
-    height: 6.7em;
-  }
-  padding: 0.5em;
-  color: $event-color;
-  font-weight: 600;
-  font-size: em(20);
-  > .card-price {
-    color: $price-color;
-    font-weight: 800;
-    font-size: em(22);
-  }
-  > .card-location {
-    color: $location-color;
-    font-weight: 400;
-    font-size: em(12);
-  }
-  > div {
-    margin: 0.2em;
   }
 }
