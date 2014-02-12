@@ -11,6 +11,7 @@ dl-button {
   > .button-container {
     position: relative;
     min-height: 3.1em;
+    margin: auto;
     > .button {
       position: absolute;
       cursor: pointer;
@@ -22,6 +23,10 @@ dl-button {
       font-weight: 400;
       padding: 1em;
       width: 100%;
+      &:hover,
+      &:active {
+        background-color: lighten($background-color, 2%);
+      }
       &:active {
         margin-top: 0.1em;
         padding-top: 0.9em;
@@ -38,4 +43,3 @@ dl-button {
     }
   }
 }
-

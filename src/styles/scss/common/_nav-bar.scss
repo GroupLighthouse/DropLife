@@ -33,7 +33,7 @@ $menu-item-color: #acb0c0;
         margin-left: 1em;
         color: $menu-item-color;
         &:hover {
-          color: lighten($menu-item-color, 10%)
+          color: lighten($menu-item-color, 10%);
         }
       }
     }

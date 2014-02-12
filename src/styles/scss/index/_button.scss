@@ -1,0 +1,15 @@
+@import "../common/button";
+
+dl-button {
+  > .button-container {
+    margin: 1.4em 20% 0 20%;
+    @include media($tablet) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+    @include media($mobile) {
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+  }
+}
