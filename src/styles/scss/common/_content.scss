@@ -8,4 +8,10 @@ $main-color: #efeded;
   position: relative;
   padding: 1.4em;
   background-color: $main-color;
+  @include media($tablet) {
+    padding: 0;
+  }
+  @include media($mobile) {
+    padding: 0;
+  }
 }
