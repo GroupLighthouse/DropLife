@@ -4,8 +4,9 @@
 
 $text-color: #636363;
 $title-color: #353739;
-$border-color: #adadad;
+$border-color: #e2e2e2;
 $background-color: #fafafa;
+$box-shadow-color: rgba(0, 0, 0, .1);
 
 :first-child > .dl-box-header {
   margin-top: 0;
@@ -19,7 +20,7 @@ $background-color: #fafafa;
   margin-top: 1.4em;
   font-family: Lato;
   font-weight: 300;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  box-shadow: 1px 1px 1px $box-shadow-color;
   > .dl-box-title {
     margin: 0 0 10px;
     font-size: 30px;

@@ -20,9 +20,18 @@
     @include span-columns(4);
     @include media($tablet) {
       @include span-columns(12);
+      > :first-child > .dl-box-header {
+        margin-top: 1.4em;
+      }
     }
     @include media($mobile) {
       @include span-columns(12);
+      > :first-child > .dl-box-header {
+        margin-top: 1.4em;
+      }
+      > :last-child > .dl-box-header {
+        margin-bottom: 1.4em;
+      }
     }
   }
 }

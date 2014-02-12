@@ -29,14 +29,16 @@ dl-product-card {
     border-color: darken($card-color, 3%);
     background-color: darken($card-color, 3%);
     cursor: pointer;
+    > .card {
+      > img {
+        opacity: 0.7;
+      }
+    }
   }
   > .card {
     > img {
       @include image-rendering(optimizeSpeed);
       width: 100%;
-      &:hover {
-        opacity: 0.7;
-      }
     }
   }
 }
