@@ -10,8 +10,7 @@ const config = {
     sass: "styles/scss/**/*.scss",
     fonts: "styles/fonts/**/*.*",
     html: "views/html/**/*.html",
-    templates: "views/templates/**/*.html",
-    newviews: "views/new/**/*.html"
+    templates: "views/templates/**/*.html"
   },
   src: {
     folder: "src/",
@@ -24,8 +23,7 @@ const config = {
     sass: "styles/scss/entry-points/**/*.scss",
     fonts: "styles/fonts/**/*.*",
     html: "views/html/**/*.html",
-    templates: "views/templates/**/*.html",
-    newviews: "views/new/**/*.html"
+    templates: "views/templates/**/*.html"
   },
   release: {
     folder: "release/",
@@ -37,8 +35,7 @@ const config = {
     sass: "styles/scss/entry-points/",
     fonts: "styles/fonts/",
     html: "views/html/",
-    templates: "views/templates/",
-    newviews: "views/new/"
+    templates: "views/templates/"
   }
 };
 

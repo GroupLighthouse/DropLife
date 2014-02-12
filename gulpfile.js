@@ -9,6 +9,5 @@ gulp.configure(require("./build/task-html"));
 gulp.configure(require("./build/task-sass"));
 gulp.configure(require("./build/task-fonts"));
 gulp.configure(require("./build/task-templates"));
-gulp.configure(require("./build/task-new-views"));
 
 gulp.initialize();
