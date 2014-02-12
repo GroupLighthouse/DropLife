@@ -7,30 +7,6 @@
 @import "../common/blueimp-gallery";
 @import "../common/google-maps";
 @import "../common/footer";
+@import "../detail/container";
 @import "../util";
 @import "../font";
-
-.container {
-  @include outer-container;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  .leftColumn {
-    @include span-columns(8);
-    @include media($tablet) {
-      @include span-columns(12);
-    }
-    @include media($mobile) {
-      @include span-columns(12);
-    }
-  }
-  .rightColumn {
-    @include span-columns(4);
-    @include media($tablet) {
-      @include span-columns(12);
-    }
-    @include media($mobile) {
-      @include span-columns(12);
-    }
-  }
-}

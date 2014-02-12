@@ -1,0 +1,28 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "../common/media-settings";
+
+.container {
+  @include outer-container;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  .leftColumn {
+    @include span-columns(8);
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+  .rightColumn {
+    @include span-columns(4);
+    @include media($tablet) {
+      @include span-columns(12);
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+}
