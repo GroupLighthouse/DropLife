@@ -19,6 +19,12 @@
                 for (var index = this.children.length - 1; index > 0; index--) {
                     this.children[index].appendChild(this.children[0]);
                 }
+                if (!this.name) {
+                    var boxHeader = this.children[0];
+                    var boxTitle = boxHeader.children[0];
+                    boxHeader.removeChild(boxTitle);
+                }
+                console.log(this);
             }
         });
     </script>

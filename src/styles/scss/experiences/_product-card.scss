@@ -1,0 +1,8 @@
+@import "../common/product-card";
+
+dl-product-card {
+  @include span-columns(3);
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+}
