@@ -40,15 +40,9 @@ $location-color: #636363;
         @include span-columns(12);
       }
       padding: 1.4em;
-      > div {
+      .location, .price {
         margin-bottom: 0.75em;
         text-align: center;
-      }
-      .experience {
-        text-align: left;
-      }
-      .description {
-
       }
       .location {
         color: $location-color;
