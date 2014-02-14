@@ -1,0 +1,43 @@
+<link rel="import" href="../../libs/polymer/polymer.html"/>
+
+<polymer-element name="dl-list" attributes="iconTitleClass iconItemClass">
+    <template>
+        <!--#########################################################-->
+
+        <template id="templateTitle" repeat="{{item in titles}}">
+            <div class="dl-list-title">
+                <i class="fa {{iconTitleClass}}"></i> {{item.innerHTML}}
+            </div>
+        </template>
+
+        <!--#########################################################-->
+
+        <template id="templateItems" repeat="{{item in items}}">
+            <div class="dl-list-item">
+                <i class="fa {{iconItemClass}}"></i> {{item.innerHTML}}
+            </div>
+        </template>
+
+        <!--#########################################################-->
+
+        <content id="contentTitle" select="title"></content>
+        <content id="contentItems" select="item"></content>
+
+        <!--#########################################################-->
+    </template>
+
+    <script>
+        Polymer("dl-list", {
+            ready: function () {
+                this.$.templateTitle.model = {
+                    titles: this.$.contentTitle.getDistributedNodes()
+                };
+                this.$.templateItems.model = {
+                    items: this.$.contentItems.getDistributedNodes()
+                };
+                this.$.contentTitle.parentNode.removeChild(this.$.contentTitle);
+                this.$.contentItems.parentNode.removeChild(this.$.contentItems);
+            }
+        });
+    </script>
+</polymer-element>

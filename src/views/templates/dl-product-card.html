@@ -1,8 +1,8 @@
 <link rel="import" href="../../libs/polymer/polymer.html">
 
-<polymer-element name="dl-product-card" attributes="image event price location url" noscript>
+<polymer-element name="dl-product-card" attributes="image event price location url" on-click="detailProduct">
     <template>
-        <div class="card" onclick="window.location.href = '{{url}}'">
+        <div class="card">
 
             <!--###########################################################################-->
 
@@ -19,4 +19,12 @@
 
         </div>
     </template>
+
+    <script>
+        Polymer('dl-product-card', {
+            detailProduct: function() {
+                window.location.href = this.url;
+            }
+        });
+    </script>
 </polymer-element>

@@ -1,0 +1,43 @@
+<link rel="import" href="../../libs/polymer/polymer.html"/>
+
+<polymer-element name="dl-comments">
+    <template>
+        <!--##############################################################-->
+        <div class="dl-comments-header">
+            <template id="templateComments" repeat="{{comment, commentIndex in comments}}">
+                <!--##############################-->
+
+                <template if="{{commentIndex}}">
+                    <hr>
+                </template>
+
+                <!--##############################-->
+
+                <div class="dl-comments-text">
+                    <i class="fa fa-quote-left"></i>
+                    {{comment.innerHTML}}
+                    <i class="fa fa-quote-right"></i>
+                </div>
+
+                <!--##############################-->
+            </template>
+        </div>
+
+        <!--##############################################################-->
+
+        <content id="contentComments" select="comment"></content>
+
+        <!--##############################################################-->
+    </template>
+
+    <script>
+        Polymer("dl-comments", {
+            ready: function () {
+                this.$.templateComments.model = {
+                    comments: this.$.contentComments.getDistributedNodes()
+                };
+                this.$.contentComments.parentNode.removeChild(this.$.contentComments);
+            }
+        });
+    </script>
+</polymer-element>

@@ -1,30 +1,19 @@
 <link rel="import" href="../../libs/polymer/polymer.html">
 
-<polymer-element name="dl-box" attributes="name iconClass" lightdom>
+<polymer-element name="dl-box" attributes="name iconClass" noscript>
     <template>
         <div class="dl-box-header">
 
-            <!--##################################################################-->
+            <!--######################################################################-->
 
-            <div class="dl-box-title"><i class="fa {{iconClass}}"></i> {{name}}</div>
+            <template if="{{name}}">
+                <div class="dl-box-title"><i class="fa {{iconClass}}"></i> {{name}}</div>
+            </template>
 
-            <!--##################################################################-->
+            <content></content>
+
+            <!--######################################################################-->
 
         </div>
     </template>
-
-    <script>
-        Polymer("dl-box", {
-            ready: function () {
-                for (var index = this.children.length - 1; index > 0; index--) {
-                    this.children[index].appendChild(this.children[0]);
-                }
-                if (!this.name) {
-                    var boxHeader = this.children[0];
-                    var boxTitle = boxHeader.children[0];
-                    boxHeader.removeChild(boxTitle);
-                }
-            }
-        });
-    </script>
 </polymer-element>

@@ -1,12 +1,12 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="dl-button" attributes="name url" noscript>
+<polymer-element name="dl-button" attributes="url" noscript>
     <template>
         <!--#################################-->
 
         <div class="button-container">
             <a class="button" href="{{url}}">
-                {{name}}
+                <content></content>
             </a>
         </div>
 

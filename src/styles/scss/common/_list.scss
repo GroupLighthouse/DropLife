@@ -1,0 +1,12 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+.dl-list-title {
+  font-family: Edo;
+  font-weight: 600;
+}
+
+.dl-list-item {
+  margin: 0.25em 0.25em 0.25em 0.50em;
+}

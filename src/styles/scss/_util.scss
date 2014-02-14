@@ -1,9 +1,18 @@
+$hr-color: #e2e2e2;
+
 body {
   font-family: Lato;
 }
 
 a {
   text-decoration: none;
+}
+
+hr {
+  border: none;
+  background-color: $hr-color;
+  margin: 0.75em 0 0.75em 0;
+  height: 1px;
 }
 
 .offset {

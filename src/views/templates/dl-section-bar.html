@@ -1,12 +1,14 @@
 <link rel="import" href="../../libs/polymer/polymer.html">
 
-<polymer-element name="dl-section-bar" attributes="image name" noscript>
+<polymer-element name="dl-section-bar" attributes="image" noscript>
     <template>
-        <div id="section" class="dl-section-bar-header">
+        <div class="dl-section-bar-header">
 
             <!--###########################################-->
 
-            <span class="dl-section-bar-title">{{name}}</span>
+            <span class="dl-section-bar-title">
+                <content></content>
+            </span>
 
             <!--###########################################-->
 

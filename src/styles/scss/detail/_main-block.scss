@@ -1,0 +1,65 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "../common/media-settings";
+
+$price-color: #ed6627;
+$location-color: #636363;
+
+.main-block {
+  @include outer-container;
+  margin: 0 0 1em 0;
+  padding: 0;
+  max-width: 100%;
+  > dl-box > .dl-box-header {
+    padding: 0;
+    > .gallery {
+      @include media($big-desktop) {
+        @include span-columns(8, block-collapse);
+      }
+      @include media($desktop) {
+        @include span-columns(8, block-collapse);
+      }
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+    }
+    > .info {
+      @include media($big-desktop) {
+        @include span-columns(4, block-collapse);
+      }
+      @include media($desktop) {
+        @include span-columns(4, block-collapse);
+      }
+      @include media($tablet) {
+        @include span-columns(12);
+      }
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      padding: 1.4em;
+      > div {
+        margin-bottom: 0.75em;
+        text-align: center;
+      }
+      .experience {
+        text-align: left;
+      }
+      .description {
+
+      }
+      .location {
+        color: $location-color;
+        font-weight: 400;
+        font-size: em(18);
+      }
+      .price {
+        color: $price-color;
+        font-weight: 800;
+        font-size: em(24);
+      }
+    }
+  }
+}
