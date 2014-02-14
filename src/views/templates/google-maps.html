@@ -12,11 +12,16 @@
             type: google.maps.MapTypeId.ROADMAP,
             zoom: 1,
             ready: function () {
+                var position = new google.maps.LatLng(this.latitude, this.longitude);
                 this.map = new google.maps.Map(this.$.map, {
-                    center: new google.maps.LatLng(this.latitude, this.longitude),
+                    center: position,
                     mapTypeId: this.type,
                     tilt: this.tilt,
                     zoom: this.zoom
+                });
+                new google.maps.Marker({
+                    position: position,
+                    map: this.map
                 });
             },
             enteredDocument: function () {
