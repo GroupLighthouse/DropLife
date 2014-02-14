@@ -1,6 +1,6 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="blueimp-gallery" attributes="path numberSlides">
+<polymer-element name="blueimp-gallery" attributes="path name description numberSlides">
     <template>
         <div id="gallery"
              class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
@@ -27,15 +27,20 @@
                 var list = [];
                 for (var index = 1; index <= Number(this.numberSlides); index++) {
                     list.push({
-                        href: this.path + "/image_" + index + ".jpg",
-                        thumbnail: this.path + "/thumbnail_" + index + ".jpg"
+                        href: this.path + "/" + this.name + "/" + this.name + "-" + index + ".jpg",
+                        thumbnail: this.path + "/" + this.name + "/thumb-" + this.name + "-" + index + ".jpg"
                     });
                 }
+
+                //utilizar atributo description
 
                 var options = {
                     container: this.$.gallery,
                     carousel: true,
-                    slideshowInterval: 5000
+                    slideshowInterval: 5000,
+                    onslide: function () {
+                        $(window).trigger("resize");
+                    }
                 };
 
                 blueimp.Gallery(list, options);
