@@ -15,7 +15,7 @@ dl-button, dl-button-pag-seguro {
     text-align: left;
     > .button {
       position: absolute;
-      cursor: pointer;
+
       border: none;
       color: $text-color;
       background-color: $background-color;
@@ -25,17 +25,24 @@ dl-button, dl-button-pag-seguro {
       font-weight: 400;
       padding: 1em;
       width: 100%;
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: lighten($background-color, 3%);
-        outline: none;
+      &:disabled {
+        background-color: $box-shadow-color;
+        box-shadow: 0 5px 0 darken($box-shadow-color, 6%);
       }
-      &:active {
-        margin-top: 0.1em;
-        padding-top: 0.9em;
-        padding-bottom: 1.1em;
-        box-shadow: 0 3px 0 $box-shadow-color;
+      &:not(:disabled) {
+        cursor: pointer;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: lighten($background-color, 3%);
+          outline: none;
+        }
+        &:active {
+          margin-top: 0.1em;
+          padding-top: 0.9em;
+          padding-bottom: 1.1em;
+          box-shadow: 0 3px 0 $box-shadow-color;
+        }
       }
       > i {
         margin-right: 0.5em
@@ -49,6 +56,9 @@ dl-button, dl-button-pag-seguro {
 }
 
 dl-button-pag-seguro {
+  > input[type='checkbox'] {
+    margin-bottom: 0.5em;
+  }
   .payWith {
     float: right;
     margin: 0.5em 0.2em 0 0;

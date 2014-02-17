@@ -4,6 +4,14 @@
     <template>
         <!--####################################################################################-->
 
+        <input id="checkboxTermosUso"
+               type="checkbox"
+               onclick="javascript:aceitarTermosUso();"/>
+
+        <a onclick="javascript:lerTermosUso();">Li e aceito os termos de uso</a>
+
+        <!--####################################################################################-->
+
         <form id="form-pagseguro"
               target="pagseguro"
               action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
@@ -18,12 +26,14 @@
             <!--################################################################################-->
 
             <div class="button-container">
-                <input type="submit"
+                <input id="buttonComprarAgora"
+                       type="submit"
                        name="submit"
                        class="button"
                        alt="Pague com PagSeguro - é rápido, grátis e seguro!"
                        onclick="javascript:comprarAgora();"
-                       value="COMPRAR AGORA"/>
+                       value="COMPRAR AGORA"
+                       disabled/>
             </div>
 
             <!--################################################################################-->
@@ -41,10 +51,27 @@
         <!--####################################################################################-->
     </template>
 
+    <!--########################################################################################-->
+
     <script type="text/javascript">
+        function lerTermosUso() {
+            openWindow("termosUso.html", "termosUso");
+        }
+        function aceitarTermosUso() {
+            var checkboxTermosUso = document.getElementById("checkboxTermosUso");
+            var buttonComprarAgora = document.getElementById("buttonComprarAgora");
+            if (checkboxTermosUso.checked) {
+                buttonComprarAgora.removeAttribute("disabled");
+            } else {
+                buttonComprarAgora.setAttribute("disabled", "");
+            }
+        }
         function comprarAgora() {
-            window.open("", "pagseguro", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
+            openWindow("", "pagseguro");
             document.getElementById("form-pagseguro").submit();
+        }
+        function openWindow(url, target) {
+            window.open(url, target, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
         }
     </script>
 </polymer-element>
