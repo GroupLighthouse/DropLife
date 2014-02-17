@@ -1,7 +1,7 @@
 @import "../common/button";
 
 dl-button {
-  > .button-container {
+  .button-container {
     margin: 1.4em 20% 0 20%;
     @include media($tablet) {
       margin-right: 15%;

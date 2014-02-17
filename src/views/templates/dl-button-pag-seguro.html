@@ -1,0 +1,77 @@
+<link rel="import" href="../../libs/polymer/polymer.html"/>
+
+<polymer-element name="dl-button-pag-seguro" attributes="code" noscript>
+    <template>
+        <!--####################################################################################-->
+
+        <input id="checkboxTermosUso"
+               type="checkbox"
+               onclick="javascript:aceitarTermosUso();"/>
+
+        <a onclick="javascript:lerTermosUso();">Li e aceito os termos de uso</a>
+
+        <!--####################################################################################-->
+
+        <form id="form-pagseguro"
+              target="pagseguro"
+              action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
+              method="post">
+
+            <!--################################################################################-->
+
+            <input type="hidden"
+                   name="code"
+                   value="{{code}}"/>
+
+            <!--################################################################################-->
+
+            <div class="button-container">
+                <input id="buttonComprarAgora"
+                       type="submit"
+                       name="submit"
+                       class="button"
+                       alt="Pague com PagSeguro - é rápido, grátis e seguro!"
+                       onclick="javascript:comprarAgora();"
+                       value="COMPRAR AGORA"
+                       disabled/>
+            </div>
+
+            <!--################################################################################-->
+
+            <div class="payWith">
+                <span>Pague com</span>
+                <img src="../../images/pag-seguro.png"
+                     alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+            </div>
+
+            <!--################################################################################-->
+
+        </form>
+
+        <!--####################################################################################-->
+    </template>
+
+    <!--########################################################################################-->
+
+    <script type="text/javascript">
+        function lerTermosUso() {
+            openWindow("termosUso.html", "termosUso");
+        }
+        function aceitarTermosUso() {
+            var checkboxTermosUso = document.getElementById("checkboxTermosUso");
+            var buttonComprarAgora = document.getElementById("buttonComprarAgora");
+            if (checkboxTermosUso.checked) {
+                buttonComprarAgora.removeAttribute("disabled");
+            } else {
+                buttonComprarAgora.setAttribute("disabled", "");
+            }
+        }
+        function comprarAgora() {
+            openWindow("", "pagseguro");
+            document.getElementById("form-pagseguro").submit();
+        }
+        function openWindow(url, target) {
+            window.open(url, target, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
+        }
+    </script>
+</polymer-element>

@@ -9,4 +9,7 @@
 
 .dl-list-item {
   margin: 0.25em 0.25em 0.25em 0.50em;
+  > i {
+    font-size: em(13);
+  }
 }
