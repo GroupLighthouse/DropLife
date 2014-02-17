@@ -1,13 +1,19 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="dl-button-pag-seguro" attributes="itemCode" noscript>
+<polymer-element name="dl-button-pag-seguro" attributes="code" noscript>
     <template>
         <!--####################################################################################-->
 
-        <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
+        <form id="form-pagseguro"
+              target="pagseguro"
+              action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
+              method="post">
+
+            <!--################################################################################-->
+
             <input type="hidden"
-                   name="itemCode"
-                   value="{{itemCode}}"/>
+                   name="code"
+                   value="{{code}}"/>
 
             <!--################################################################################-->
 
@@ -16,15 +22,29 @@
                        name="submit"
                        class="button"
                        alt="Pague com PagSeguro - é rápido, grátis e seguro!"
+                       onclick="javascript:comprarAgora();"
                        value="COMPRAR AGORA"/>
             </div>
 
             <!--################################################################################-->
 
-            <img src="../../images/pag-seguro.png"
-                 alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+            <div class="payWith">
+                <span>Pague com</span>
+                <img src="../../images/pag-seguro.png"
+                     alt="Pague com PagSeguro - é rápido, grátis e seguro!"/>
+            </div>
+
+            <!--################################################################################-->
+
         </form>
 
         <!--####################################################################################-->
     </template>
+
+    <script type="text/javascript">
+        function comprarAgora() {
+            window.open("", "pagseguro", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
+            document.getElementById("form-pagseguro").submit();
+        }
+    </script>
 </polymer-element>
