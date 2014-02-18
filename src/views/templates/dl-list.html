@@ -2,41 +2,48 @@
 
 <polymer-element name="dl-list" attributes="iconTitleClass iconItemClass">
     <template>
-        <!--#########################################################-->
+        <!--######################################################################################-->
 
-        <template id="templateTitle" repeat="{{item in titles}}">
-            <div class="dl-list-title">
-                <i class="fa {{iconTitleClass}}"></i> {{item.innerHTML}}
-            </div>
-        </template>
-
-        <!--#########################################################-->
-
-        <template id="templateItems" repeat="{{item in items}}">
-            <div class="dl-list-item">
-                <i class="fa {{iconItemClass}}"></i> {{item.innerHTML}}
-            </div>
-        </template>
-
-        <!--#########################################################-->
+        <div id="targetTitle"></div>
+        <div id="targetItems"></div>
 
         <content id="contentTitle" select="title"></content>
         <content id="contentItems" select="item"></content>
 
-        <!--#########################################################-->
+        <!--######################################################################################-->
     </template>
 
     <script>
         Polymer("dl-list", {
             ready: function () {
-                this.$.templateTitle.model = {
-                    titles: this.$.contentTitle.getDistributedNodes()
-                };
-                this.$.templateItems.model = {
-                    items: this.$.contentItems.getDistributedNodes()
-                };
-                this.$.contentTitle.parentNode.removeChild(this.$.contentTitle);
-                this.$.contentItems.parentNode.removeChild(this.$.contentItems);
+                this.createElement({
+                    target: this.$.targetTitle,
+                    content: this.$.contentTitle,
+                    styleClass: "dl-list-title",
+                    iconClass: this.iconTitleClass
+                });
+
+                this.createElement({
+                    target: this.$.targetItems,
+                    content: this.$.contentItems,
+                    styleClass: "dl-list-item",
+                    iconClass: this.iconItemClass
+                });
+            },
+            createElement: function(options) {
+                options.content.getDistributedNodes().forEach(function (node) {
+                    var div = document.createElement("div");
+                    div.className = options.styleClass;
+
+                    var icon = document.createElement("i");
+                    icon.className = "fa " + options.iconClass;
+
+                    div.appendChild(icon);
+                    div.innerHTML += " " + node.innerHTML;
+
+                    options.target.appendChild(div);
+                });
+                options.content.parentNode.removeChild(options.content);
             }
         });
     </script>

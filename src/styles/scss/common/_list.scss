@@ -2,9 +2,12 @@
 @import "../../../libs/neat/app/assets/stylesheets/neat";
 @import "media-settings";
 
+$title-color: #31425e;
+
 .dl-list-title {
   font-family: Edo;
   font-weight: 600;
+  color: $title-color;
 }
 
 .dl-list-item {
