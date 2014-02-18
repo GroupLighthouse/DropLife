@@ -32,8 +32,7 @@
             </dl-alert>
 
             <div class="button-container">
-                <input id="buttonBuyNow"
-                       type="submit"
+                <input type="submit"
                        name="submit"
                        class="button"
                        alt="Pague com PagSeguro - é rápido, grátis e seguro!"
@@ -64,28 +63,21 @@
                 self.$.linkTermsOfUse.addEventListener('click', function() {
                     self.readTermsOfUse(self);
                 });
-                self.$.buttonBuyNow.addEventListener('click', function() {
-                   self.buyNow(self);
-                });
                 self.$.formPagSeguro.addEventListener('submit', function(event) {
-                    if (!self.isValid(self)) {
-                        event.preventDefault();
-                    }
+                    self.buyNow(self, event);
                 });
-            },
-            isValid: function(context) {
-               return context.$.checkTermsOfUse.checked;
             },
             readTermsOfUse: function(context) {
                 context.openWindow("terms-of-use.html", "terms-of-use");
             },
-            buyNow: function(context) {
-                if (context.isValid(context)) {
+            buyNow: function(context, event) {
+                if (context.$.checkTermsOfUse.checked) {
                     context.$.alertTermsOfUse.style.display = "none";
                     context.openWindow("", "pagSeguro");
                 } else {
                     context.$.checkTermsOfUse.focus();
                     context.$.alertTermsOfUse.style.display = "block";
+                    event.preventDefault();
                 }
             },
             openWindow: function(url, target) {
