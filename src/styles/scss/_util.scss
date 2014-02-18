@@ -1,5 +1,5 @@
 $hr-color: #e2e2e2;
-$link-color: #e75613;
+$link-color: #b8420f;
 
 body {
   font-family: Lato;
@@ -10,7 +10,7 @@ a {
   cursor: pointer;
   color: $link-color;
   &:hover {
-    color: darken($link-color, 10%);
+    color: lighten($link-color, 10%);
   }
 }
 

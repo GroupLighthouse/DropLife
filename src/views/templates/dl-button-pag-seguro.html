@@ -1,19 +1,17 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="dl-button-pag-seguro" attributes="code" noscript>
+<polymer-element name="dl-button-pag-seguro" attributes="code">
     <template>
         <!--####################################################################################-->
 
-        <input id="checkboxTermosUso"
-               type="checkbox"
-               onclick="javascript:aceitarTermosUso();"/>
+        <input id="checkTermsOfUse"
+               type="checkbox"/>
 
-        <a onclick="javascript:lerTermosUso();">Li e aceito os termos de uso</a>
+        <a id="linkTermsOfUse">Li e aceito os termos de uso</a>
 
         <!--####################################################################################-->
 
-        <form id="form-pagseguro"
-              target="pagseguro"
+        <form target="pagSeguro"
               action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
               method="post">
 
@@ -26,14 +24,13 @@
             <!--################################################################################-->
 
             <div class="button-container">
-                <input id="buttonComprarAgora"
+                <input id="buttonBuyNow"
                        type="submit"
                        name="submit"
                        class="button"
                        alt="Pague com PagSeguro - é rápido, grátis e seguro!"
-                       onclick="javascript:comprarAgora();"
                        value="COMPRAR AGORA"
-                       disabled/>
+                       disabled="disabled"/>
             </div>
 
             <!--################################################################################-->
@@ -53,25 +50,33 @@
 
     <!--########################################################################################-->
 
-    <script type="text/javascript">
-        function lerTermosUso() {
-            openWindow("terms-of-use.html", "terms-of-use");
-        }
-        function aceitarTermosUso() {
-            var checkboxTermosUso = document.getElementById("checkboxTermosUso");
-            var buttonComprarAgora = document.getElementById("buttonComprarAgora");
-            if (checkboxTermosUso.checked) {
-                buttonComprarAgora.removeAttribute("disabled");
-            } else {
-                buttonComprarAgora.setAttribute("disabled", "");
+    <script>
+        var self;
+        Polymer("dl-button-pag-seguro", {
+            ready: function() {
+                self = this;
+                self.$.checkTermsOfUse.addEventListener('click', this.acceptTermsOfUse);
+                self.$.linkTermsOfUse.addEventListener('click', this.readTermsOfUse);
+                self.$.buttonBuyNow.addEventListener('click', this.buyNow);
+            },
+            readTermsOfUse: function(event) {
+                self.openWindow("terms-of-use.html", "terms-of-use");
+            },
+            acceptTermsOfUse: function(event) {
+                if (event.target.checked) {
+                    self.$.buttonBuyNow.removeAttribute("disabled");
+                } else {
+                    self.$.buttonBuyNow.setAttribute("disabled", "disabled");
+                }
+            },
+            buyNow: function(event) {
+                if (!event.target.getAttribute("disabled")) {
+                    self.openWindow("", "pagSeguro");
+                }
+            },
+            openWindow: function(url, target) {
+                window.open(url, target, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
             }
-        }
-        function comprarAgora() {
-            openWindow("", "pagseguro");
-            document.getElementById("form-pagseguro").submit();
-        }
-        function openWindow(url, target) {
-            window.open(url, target, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
-        }
+        });
     </script>
 </polymer-element>
