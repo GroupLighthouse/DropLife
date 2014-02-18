@@ -1,5 +1,5 @@
 $hr-color: #e2e2e2;
-$link-color: #8B3811;
+$link-color: #e75613;
 
 body {
   font-family: Lato;
@@ -10,7 +10,7 @@ a {
   cursor: pointer;
   color: $link-color;
   &:hover {
-    color: lighten($link-color, 15%);
+    color: darken($link-color, 10%);
   }
 }
 
@@ -28,8 +28,4 @@ h1, h2, h3, h4, h5, h6 {
 .offset {
   padding: 0.5em;
   display: inline;
-}
-
-em {
-  color: orange;
 }
