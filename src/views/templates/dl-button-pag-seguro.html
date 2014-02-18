@@ -1,4 +1,5 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
+<link rel="import" href="dl-alert.html"/>
 
 <polymer-element name="dl-button-pag-seguro" attributes="code">
     <template>
@@ -7,11 +8,12 @@
         <input id="checkTermsOfUse"
                type="checkbox"/>
 
-        <a id="linkTermsOfUse">Li e aceito os termos de uso</a>
+        <a id="linkTermsOfUse">Li e aceito os <span class="underline">termos de uso</span></a>
 
         <!--####################################################################################-->
 
-        <form target="pagSeguro"
+        <form id="formPagSeguro"
+              target="pagSeguro"
               action="https://pagseguro.uol.com.br/checkout/v2/payment.html"
               method="post">
 
@@ -23,14 +25,19 @@
 
             <!--################################################################################-->
 
+            <dl-alert id="alertTermsOfUse"
+                      style="display: none;"
+                      type="warn">
+                Você precisa concordar com os termos de uso
+            </dl-alert>
+
             <div class="button-container">
                 <input id="buttonBuyNow"
                        type="submit"
                        name="submit"
                        class="button"
                        alt="Pague com PagSeguro - é rápido, grátis e seguro!"
-                       value="COMPRAR AGORA"
-                       disabled="disabled"/>
+                       value="COMPRAR AGORA"/>
             </div>
 
             <!--################################################################################-->
@@ -51,27 +58,34 @@
     <!--########################################################################################-->
 
     <script>
-        var self;
         Polymer("dl-button-pag-seguro", {
             ready: function() {
-                self = this;
-                self.$.checkTermsOfUse.addEventListener('click', this.acceptTermsOfUse);
-                self.$.linkTermsOfUse.addEventListener('click', this.readTermsOfUse);
-                self.$.buttonBuyNow.addEventListener('click', this.buyNow);
+                var self = this;
+                self.$.linkTermsOfUse.addEventListener('click', function() {
+                    self.readTermsOfUse(self);
+                });
+                self.$.buttonBuyNow.addEventListener('click', function() {
+                   self.buyNow(self);
+                });
+                self.$.formPagSeguro.addEventListener('submit', function(event) {
+                    if (!self.isValid(self)) {
+                        event.preventDefault();
+                    }
+                });
             },
-            readTermsOfUse: function(event) {
-                self.openWindow("terms-of-use.html", "terms-of-use");
+            isValid: function(context) {
+               return context.$.checkTermsOfUse.checked;
             },
-            acceptTermsOfUse: function(event) {
-                if (event.target.checked) {
-                    self.$.buttonBuyNow.removeAttribute("disabled");
+            readTermsOfUse: function(context) {
+                context.openWindow("terms-of-use.html", "terms-of-use");
+            },
+            buyNow: function(context) {
+                if (context.isValid(context)) {
+                    context.$.alertTermsOfUse.style.display = "none";
+                    context.openWindow("", "pagSeguro");
                 } else {
-                    self.$.buttonBuyNow.setAttribute("disabled", "disabled");
-                }
-            },
-            buyNow: function(event) {
-                if (!event.target.getAttribute("disabled")) {
-                    self.openWindow("", "pagSeguro");
+                    context.$.checkTermsOfUse.focus();
+                    context.$.alertTermsOfUse.style.display = "block";
                 }
             },
             openWindow: function(url, target) {

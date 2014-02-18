@@ -1,0 +1,57 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$warn-text-color: #c09853;
+$warn-background-color: #fcf8e3;
+$warn-border-color: #fbeed5;
+
+$error-text-color: #b94a48;
+$error-background-color: #f2dede;
+$error-border-color: #eed3d7;
+
+$info-text-color: #3a87ad;
+$info-background-color: #d9edf7;
+$info-border-color: #bce8f1;
+
+$link-color: #000;
+
+dl-alert {
+  > .dl-alert-header {
+    padding: 0.5em 0.5em 0.5em 1em;
+    border: 1px solid transparent;
+    text-align: left;
+    margin-bottom: 0.5em;
+    > a {
+      float: right;
+      font-weight: 800;
+      padding-left: 0.3em;
+      margin-top: -0.3em;
+      color: $link-color;
+      opacity: 0.2;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+    &.warn {
+      color: $warn-text-color;
+      background-color: $warn-background-color;
+      border-color: $warn-border-color;
+    }
+    &.error {
+      color: $error-text-color;
+      background-color: $error-background-color;
+      border-color: $error-border-color;
+    }
+    &.info {
+      color: $info-text-color;
+      background-color: $info-background-color;
+      border-color: $info-border-color;
+    }
+    @include border-top-radius(0.3em);
+    @include border-bottom-radius(0.3em);
+    @include border-left-radius(0.3em);
+    @include border-right-radius(0.3em);
+  }
+}
+

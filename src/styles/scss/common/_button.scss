@@ -6,6 +6,7 @@ $text-color: #fff;
 $text-shadow: rgba(0, 0, 0, .2);
 $background-color: #ed6627;
 $box-shadow-color: #c95118;
+$link-color: #363633;
 
 dl-button, dl-button-pag-seguro {
   .button-container {
@@ -15,7 +16,6 @@ dl-button, dl-button-pag-seguro {
     text-align: left;
     > .button {
       position: absolute;
-
       border: none;
       color: $text-color;
       background-color: $background-color;
@@ -58,6 +58,12 @@ dl-button, dl-button-pag-seguro {
 dl-button-pag-seguro {
   > input[type='checkbox'] {
     margin-bottom: 0.5em;
+  }
+  a {
+    color: $link-color;
+    &:hover {
+      color: darken($link-color, 20%);
+    }
   }
   .payWith {
     float: right;

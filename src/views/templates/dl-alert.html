@@ -1,0 +1,35 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+
+<polymer-element name="dl-alert" attributes="type">
+    <template>
+        <div class="dl-alert-header {{type}}">
+
+            <!--#####################################################-->
+
+            <a id="linkClose">×</a>
+
+            <!--#####################################################-->
+
+            <content></content>
+
+            <!--#####################################################-->
+
+        </div>
+    </template>
+
+    <!--#############################################################-->
+
+    <script>
+        Polymer("dl-alert", {
+            ready: function() {
+                var self = this;
+                self.$.linkClose.addEventListener('click', function() {
+                    self.hide(self);
+                });
+            },
+            hide: function(context) {
+                context.style.display = "none";
+            }
+        });
+    </script>
+</polymer-element>
