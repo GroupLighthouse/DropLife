@@ -2,41 +2,51 @@
 
 <polymer-element name="dl-comments">
     <template>
-        <!--##############################################################-->
-        <div class="dl-comments-header">
-            <template id="templateComments" repeat="{{comment, commentIndex in comments}}">
-                <!--##############################-->
+        <!--################################################################-->
 
-                <template if="{{commentIndex}}">
-                    <hr>
-                </template>
-
-                <!--##############################-->
-
-                <div class="dl-comments-text">
-                    <i class="fa fa-quote-left"></i>
-                    {{comment.innerHTML}}
-                    <i class="fa fa-quote-right"></i>
-                </div>
-
-                <!--##############################-->
-            </template>
+        <div id="targetComments" class="dl-comments-header">
         </div>
 
-        <!--##############################################################-->
+        <!--################################################################-->
 
         <content id="contentComments" select="comment"></content>
 
-        <!--##############################################################-->
+        <!--################################################################-->
     </template>
 
     <script>
         Polymer("dl-comments", {
             ready: function () {
-                this.$.templateComments.model = {
-                    comments: this.$.contentComments.getDistributedNodes()
-                };
-                this.$.contentComments.parentNode.removeChild(this.$.contentComments);
+                this.createElement({
+                    target: this.$.targetComments,
+                    content: this.$.contentComments
+                });
+            },
+            createElement: function(options) {
+                var index = 0;
+                options.content.getDistributedNodes().forEach(function (node) {
+                    var div = document.createElement("div");
+                    div.className = "dl-comments-text";
+
+                    var iconLeft = document.createElement("i");
+                    iconLeft.className = "fa fa-quote-left";
+
+                    var iconRight = document.createElement("i");
+                    iconRight.className = "fa fa-quote-right";
+
+                    div.appendChild(iconLeft);
+                    div.innerHTML += node.innerHTML;
+                    div.appendChild(iconRight);
+
+                    if (index > 0) {
+                        var hr = document.createElement("hr");
+                        options.target.appendChild(hr);
+                    }
+
+                    options.target.appendChild(div);
+                    index++;
+                });
+                options.content.parentNode.removeChild(options.content);
             }
         });
     </script>
