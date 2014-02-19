@@ -1,6 +1,6 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="blueimp-gallery" attributes="path name description numberSlides">
+<polymer-element name="blueimp-gallery" attributes="path numberSlides description">
     <template>
         <div id="gallery"
              class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
@@ -24,26 +24,52 @@
     <script>
         Polymer("blueimp-gallery", {
             ready: function () {
-                var list = [];
-                for (var index = 1; index <= Number(this.numberSlides); index++) {
-                    list.push({
-                        href: this.path + "/" + this.name + "/" + this.name + "-" + index + ".jpg",
-                        thumbnail: this.path + "/" + this.name + "/thumb-" + this.name + "-" + index + ".jpg"
+                this.init(this);
+            },
+            init: function (context) {
+                context.dispatchResizeEvent = true;
+
+                var gallery = blueimp.Gallery(context.images(context), context.options(context));
+                gallery.slides.forEach(function (slide) {
+                    slide.children[0].setAttribute("alt", context.description);
+                });
+            },
+            images: function (context) {
+                var images = [];
+                for (var index = 1; index <= Number(context.numberSlides); index++) {
+                    images.push({
+                        href: context.fullPath(context, index),
+                        thumbnail: context.fullPath(context, index, "thumb")
                     });
                 }
-
-                //utilizar atributo description
-
-                var options = {
-                    container: this.$.gallery,
+                return images;
+            },
+            options: function (context) {
+                return {
+                    container: context.$.gallery,
                     carousel: true,
                     slideshowInterval: 5000,
                     onslide: function () {
-                        $(window).trigger("resize");
+                        if (context.dispatchResizeEvent) {
+                            window.dispatchEvent(new Event('resize'));
+                            context.dispatchResizeEvent = false;
+                        }
                     }
                 };
-
-                blueimp.Gallery(list, options);
+            },
+            fullPath: function (context, index, prefix) {
+                var fullPath = context.path;
+                var name = fullPath.substring(fullPath.lastIndexOf('/') + 1);
+                fullPath += "/";
+                if (prefix) {
+                    fullPath += prefix;
+                    fullPath += "-";
+                }
+                fullPath += name;
+                fullPath += "-";
+                fullPath += index;
+                fullPath += ".jpg";
+                return fullPath;
             }
         });
     </script>
