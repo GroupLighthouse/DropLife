@@ -51,42 +51,31 @@ $price-color: #f6ff00;
   color: $info-color;
   text-shadow: 2px 2px 0px $info-shadow;
   text-align: center;
-  > .location {
+  > .caption {
     font-size: em(20);
     font-weight: 400;
     padding-top: 1.5em;
   }
-  > .event {
+  > .title {
     font-size: em(80);
     font-family: Edo;
   }
-  > .price {
-    font-size: em(24);
-    font-weight: 800;
-    color: $price-color;
-  }
   @include media($tablet) {
-    > .location {
+    > .caption {
       font-size: em(15);
       padding-top: 4.5em;
     }
-    > .event {
+    > .title {
       font-size: em(60);
-    }
-    > .price {
-      font-size: em(18);
     }
   }
   @include media($mobile) {
-    > .location {
+    > .caption {
       font-size: em(10);
       padding-top: 6em;
     }
-    > .event {
+    > .title {
       font-size: em(40);
-    }
-    > .price {
-      font-size: em(12);
     }
   }
 }

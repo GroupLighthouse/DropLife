@@ -1,6 +1,6 @@
 <link rel="import" href="../../libs/polymer/polymer.html">
 
-<polymer-element name="dl-product-banner" attributes="image eventFirstRow eventSecondRow price location" noscript>
+<polymer-element name="dl-product-banner" attributes="image caption titleFirstRow titleSecondRow" noscript>
     <template>
         <!--#############################################################-->
 
@@ -10,9 +10,8 @@
 
 
         <div class="info">
-            <div class="location">{{location}}</div>
-            <div class="event">{{eventFirstRow}}<br>{{eventSecondRow}}</div>
-            <div class="price">{{price}}</div>
+            <div class="caption">{{caption}}</div>
+            <div class="title">{{titleFirstRow}}<br>{{titleSecondRow}}</div>
         </div>
 
         <!--#############################################################-->
