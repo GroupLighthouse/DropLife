@@ -60,6 +60,7 @@ dl-button-pag-seguro {
     margin-bottom: 0.5em;
   }
   a {
+    text-decoration: underline;
     color: $link-color;
     &:hover {
       color: darken($link-color, 20%);
