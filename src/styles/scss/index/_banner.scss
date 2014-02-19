@@ -30,12 +30,15 @@ $price-color: #f6ff00;
             position: absolute;
             width: 100%;
             @include media($desktop) {
+              right: -15%;
               width: 130%;
             }
             @include media($tablet) {
+              right: -30%;
               width: 160%;
             }
             @include media($mobile) {
+              right: -35%;
               width: 170%;
             }
           }
@@ -47,35 +50,38 @@ $price-color: #f6ff00;
 
 .info {
   width: 100%;
-  position: absolute;
+  position: relative;
   color: $info-color;
   text-shadow: 2px 2px 0px $info-shadow;
   text-align: center;
+  padding-top: 2.2em;
   > .caption {
-    font-size: em(20);
+    font-size: em(23);
+    height: 1em;
     font-weight: 400;
-    padding-top: 1.5em;
   }
   > .title {
-    font-size: em(80);
+    font-size: em(120);
     font-family: Edo;
+    line-height: em(15);
   }
   @include media($tablet) {
+    padding-top: 5em;
     > .caption {
-      font-size: em(15);
-      padding-top: 4.5em;
+      font-size: em(16);
     }
     > .title {
-      font-size: em(60);
+      font-size: em(84);
     }
   }
   @include media($mobile) {
+    padding-top: 4.8em;
     > .caption {
-      font-size: em(10);
-      padding-top: 6em;
+      font-size: em(9);
+      height: 2em;
     }
     > .title {
-      font-size: em(40);
+      font-size: em(48);
     }
   }
 }

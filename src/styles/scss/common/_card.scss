@@ -7,9 +7,9 @@ $price-color: #ed6627;
 $location-color: #636363;
 
 .card-event {
-  height: 5.5em;
+  min-height: 5.5em;
   @include media($tablet) {
-    height: 6.7em;
+    min-height: 6.7em;
   }
   padding: 0.5em;
   color: $event-color;

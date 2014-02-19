@@ -3,7 +3,7 @@
 dl-product-card {
   @include span-columns(4);
   @include media($big-desktop) {
-    @include span-columns(3);
+    @include span-columns(4);
   }
   @include media($mobile) {
     @include span-columns(12);

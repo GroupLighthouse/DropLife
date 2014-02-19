@@ -12,11 +12,10 @@ $menu-item-color: #acb0c0;
   width: 100%;
   padding: 0.4em;
   height: 4.2em;
-  background-color: $nav-bar-color;
   > .menu {
     margin: 0 1em;
     font-family: Lato;
-    font-size: em(13);
+    font-size: em(12);
     > a {
       > img {
         margin-top: 0.2em;
@@ -24,13 +23,19 @@ $menu-item-color: #acb0c0;
     }
     > .itens {
       float: right;
-      padding: 1.5em 0.5em 0;
+      margin-top: 1em;
       @include media($mobile) {
-        width: 115px;
-        padding: 1em 1em 0;
+        margin-left: 1em;
+        width: 7.5em;
+        > img {
+          display: none;
+        }
+      }
+      > img {
+        vertical-align: middle;
       }
       > a {
-        margin-left: 1em;
+        vertical-align: middle;
         color: $menu-item-color;
         &:hover {
           color: lighten($menu-item-color, 10%);
@@ -38,4 +43,5 @@ $menu-item-color: #acb0c0;
       }
     }
   }
+  @include linear-gradient(center top, lighten($nav-bar-color, 10%), $nav-bar-color);
 }
