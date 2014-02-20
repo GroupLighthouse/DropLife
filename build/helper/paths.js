@@ -36,6 +36,18 @@ const config = {
     fonts: "styles/fonts/",
     html: "views/html/",
     templates: "views/templates/"
+  },
+  temp: {
+    folder: "temp/",
+    images: "images/",
+    libs: "libs/",
+    javascript: "scripts/javascript/entry-points/",
+    rsplugin: "scripts/javascript/rs-plugin/",
+    css: "styles/css/",
+    sass: "styles/scss/entry-points/",
+    fonts: "styles/fonts/",
+    html: "views/html/",
+    templates: "views/templates/"
   }
 };
 
@@ -49,6 +61,9 @@ module.exports = {
   },
   src: function (type) {
     return  get("src", type);
+  },
+  temp: function (type) {
+    return get("temp", type);
   },
   release: function (type) {
     return get("release", type);

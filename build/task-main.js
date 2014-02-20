@@ -1,4 +1,3 @@
-const gulp = require("gulp");
 const clean = require('gulp-clean');
 const paths = require('./helper/paths');
 
@@ -14,7 +13,7 @@ function logtask(task) {
 }
 
 module.exports = {
-  configure: function (taskfn) {
+  configure: function (gulp, taskfn) {
     var task = taskfn(gulp);
     var src = paths.watch(task.name);
     var release = paths.release(task.name);
@@ -31,7 +30,7 @@ module.exports = {
 
     compileTasks.push(task.name);
   },
-  initialize: function () {
+  initialize: function (gulp) {
 
     gulp.task("default", function () {
       defaults.forEach(function (watch) {
@@ -45,5 +44,6 @@ module.exports = {
     });
 
     gulp.task('compile', compileTasks);
+
   }
 };

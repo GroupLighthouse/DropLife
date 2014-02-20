@@ -3,3 +3,4 @@ src/libs/
 release/
 node_modules/
 *.log
+temp

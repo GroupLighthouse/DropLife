@@ -24,6 +24,7 @@
     "gulp-browserify": "~0.4.2",
     "debowerify": "~0.5.2",
     "gulp-sass": "~0.6.0",
-    "gulp-concat": "~2.1.7"
+    "gulp-concat": "~2.1.7",
+    "gulp-vulcanize": "~0.1.1"
   }
 }
