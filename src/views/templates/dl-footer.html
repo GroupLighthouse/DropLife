@@ -2,19 +2,68 @@
 <link rel="import" href="gplus-button.html"/>
 <link rel="import" href="facebook-button.html"/>
 
-<polymer-element name="dl-footer" noscript lightdom>
+<polymer-element name="dl-footer">
     <template>
+
+        <content></content>
+
         <footer class="footer">
 
-            <!--#################################-->
+            <!--##################################################################################-->
 
-            <div class="social">
-                <facebook-button></facebook-button>
-                <gplus-button></gplus-button>
+            <div class="left-footer">
+                <div class="foundation">
+                    Feito com paixão pela
+                    <strong><a href="http://grouplighthouse.com/" target="_blank">Lighthouse</a></strong>.<br>
+                    Av. Borges de Medeiros, 2500, Praia de Belas Prime Offices, Sala 1909<br>
+                    Porto Alegre, RS, CEP 90110-150
+                </div>
             </div>
 
-            <!--#################################-->
+            <!--##################################################################################-->
+
+            <div class="right-footer">
+                <div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/droplifers" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="https://plus.google.com/+DroplifeBrasil" target="_blank">
+                            <i class="fa fa-google-plus-square"></i>
+                        </a>
+                    </div>
+
+                    <!--##########################################################################-->
+
+                    <div class="support">
+                        <div class="title">
+                            <i class="fa fa-user"></i> Atendimento ao Cliente
+                        </div>
+                        <div>
+                            <a id="phone">
+                                <i class="fa fa-phone"></i> +55 (51) 3013 9030
+                            </a>
+                        </div>
+                        <div>
+                            <a id="mail">
+                                <i class="fa fa-envelope-o"></i> contato@droplife.com.br
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--##################################################################################-->
 
         </footer>
     </template>
+
+    <script>
+        Polymer("dl-footer", {
+            ready: function () {
+                this.$.phone.href = "tel:555130139030";
+                this.$.mail.href = "mailto:contato@droplife.com.br";
+            }
+        });
+    </script>
 </polymer-element>

@@ -2,26 +2,91 @@
 @import "../../../libs/neat/app/assets/stylesheets/neat";
 @import "media-settings";
 
-$social-color: #fff;
+$footer-color: #d2cece;
+$footer-border-color: #bdb9b9;
+$support-color: #efeded;
+$link-color: #363633;
+$icon-color: #949494;
 
 dl-footer {
-  z-index: 1;
-  position: absolute;
+  position: relative;
   width: 100%;
   overflow: hidden;
-}
-
-.social {
-  width: 100%;
-  padding: 1em;
-  background-color: $social-color;
-  font-size: em(14);
-  > .fb-like > span {
-    vertical-align: initial !important;
+  .footer {
+    @include row();
+    font-weight: 300;
+    font-size: 0.8em;
+    background-color: $footer-color;
+    border-top: 1px solid $footer-border-color;
+    min-height: 4em;
+    .left-footer {
+      @include span-columns(7);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      .foundation {
+        padding: 1em;
+      }
+    }
+    .right-footer {
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      > div {
+        width: 100%;
+        float: right;
+        @include media($mobile) {
+          float: left;
+        }
+        .social {
+          position: absolute;
+          right: 18em;
+          margin-top: 1.6em;
+          @include media($mobile) {
+            position: relative;
+            width: 100%;
+            right: 0;
+            margin: 0em 0em 1em 1em;
+          }
+          i {
+            margin-right: 0.1em;
+            font-size: 2.5em;
+            color: $icon-color;
+            &:hover {
+              color: darken($icon-color, 10%);
+            }
+          }
+        }
+        .support {
+          position: absolute;
+          right: 0;
+          width: 15em;
+          margin: -2.5em 2em 0 0;
+          padding: 1em;
+          background-color: lighten($support-color, 5%);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          border-radius: 0.5em;
+          @include media($mobile) {
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+            margin-top: 0;
+          }
+          > .title {
+            font-weight: 400;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.25em;
+            border-bottom: 1px solid $support-color;
+          }
+        }
+      }
+    }
   }
-}
-
-iframe {
-  height: 1.5em;
-  width: 6.5em;
+  a {
+    color: $link-color;
+    &:hover {
+      color: darken($link-color, 20%);
+    }
+  }
 }

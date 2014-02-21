@@ -2,19 +2,12 @@
 @import "../../../libs/neat/app/assets/stylesheets/neat";
 @import "../common/media-settings";
 
-$message-color: #efeded;
-$message-text-color: #363636;
+$message-color: #363636;
 
-dl-footer {
-  background-color: $message-color;
-  margin-top: -7.1em;
-  padding-top: 7.1em;
-  @include media($tablet) {
-    margin-top: -8.6em;
-    padding-top: 8.6em;
-  }
-  .message {
-    color: $message-text-color;
+.message {
+  width: 100%;
+  .words {
+    color: $message-color;
     text-align: center;
     font-size: em(22);
     font-weight: 300;

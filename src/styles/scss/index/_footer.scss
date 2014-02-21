@@ -1,0 +1,15 @@
+@import "../common/footer";
+
+$footer-color: #efeded;
+
+dl-footer {
+  position: absolute;
+  z-index: 1;
+  background-color: $footer-color;
+  margin-top: -7.1em;
+  padding-top: 7.1em;
+  @include media($tablet) {
+    margin-top: -8.6em;
+    padding-top: 8.6em;
+  }
+}
