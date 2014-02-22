@@ -27,10 +27,8 @@ module.exports = {
     if (task.watch && src) {
       compileTasks.push(task.name);
       if(task.parent){
-        console.log(task);
         defaults.push([src, task.parent]);  
       } else {
-        console.log(task);
         defaults.push([src, task.name]);  
       }
     }
@@ -40,7 +38,6 @@ module.exports = {
 
     gulp.task("default", function () {
       defaults.forEach(function (watch) {
-        console.log(watch);
         gulp.watch(watch[0], [watch[1]]);
       });
     });
