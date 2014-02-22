@@ -7,7 +7,6 @@ module.exports = function (gulp) {
   return {
     name: "minify-html",
     fn: function () {
-    	console.log(paths.temp(name))
       return gulp.src(paths.temp(name))
       .pipe(htmlmin({ removeComments: true, collapseWhitespace: true, removeCommentsFromCDATA: true}))
       .pipe(gulp.dest(paths.release(name)));

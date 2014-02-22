@@ -9,6 +9,7 @@ module.exports = function (gulp) {
       return gulp.src(paths.src(name))
           .pipe(gulp.dest(paths.release(name)));
     },
-    watch: true
+    watch: true,
+    parent: "html"
   };
 };

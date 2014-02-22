@@ -1,8 +1,8 @@
 const clean = require('gulp-clean');
+const gulp = require('gulp');
 const paths = require('./helper/paths');
 
 const defaults = [];
-const cleanSrcs = [];
 const compileTasks = [];
 
 function logtask(task) {
@@ -13,33 +13,40 @@ function logtask(task) {
 }
 
 module.exports = {
-  configure: function (gulp, taskfn) {
+  configure: function (taskfn) {
     var task = taskfn(gulp);
     var src = paths.watch(task.name);
     var release = paths.release(task.name);
 
-    gulp.task(task.name, task.fn);
-
+    if(task.dependencies){
+      gulp.task(task.name, task.dependencies, task.fn);  
+    } else {
+      gulp.task(task.name, task.fn);  
+    }
+    
     if (task.watch && src) {
-      defaults.push([task.name, src]);
+      compileTasks.push(task.name);
+      if(task.parent){
+        console.log(task);
+        defaults.push([src, task.parent]);  
+      } else {
+        console.log(task);
+        defaults.push([src, task.name]);  
+      }
     }
 
-    if (release) {
-      cleanSrcs.push(release);
-    }
-
-    compileTasks.push(task.name);
   },
-  initialize: function (gulp) {
+  initialize: function () {
 
     gulp.task("default", function () {
       defaults.forEach(function (watch) {
-        gulp.watch(watch[1], [watch[0]]);
+        console.log(watch);
+        gulp.watch(watch[0], [watch[1]]);
       });
     });
 
     gulp.task('clean', function () {
-      return gulp.src([].concat.apply([], cleanSrcs), {read: false})
+      return gulp.src("release/", {read: false})
           .pipe(clean());
     });
 

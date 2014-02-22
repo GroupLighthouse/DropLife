@@ -12,6 +12,7 @@ module.exports = function (gulp) {
       .pipe(gulp.dest(paths.release(name)))
       .pipe(vulcanize({dest: paths.release(name)}))
     },
-    watch: true
+    watch: true,
+    dependencies: ["libs", "templates"]
   };
 };
