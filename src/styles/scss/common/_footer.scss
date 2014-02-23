@@ -4,13 +4,12 @@
 
 $footer-color: #d2cece;
 $footer-border-color: #bdb9b9;
+$icon-color: #949494;
 $support-color: #efeded;
 $link-color: #363633;
-$icon-color: #949494;
 
 dl-footer {
   position: relative;
-  width: 100%;
   overflow: hidden;
   .footer {
     @include row();
@@ -18,9 +17,8 @@ dl-footer {
     font-size: 0.8em;
     background-color: $footer-color;
     border-top: 1px solid $footer-border-color;
-    min-height: 4em;
     .left-footer {
-      @include span-columns(7);
+      @include span-columns(6);
       @include media($mobile) {
         @include span-columns(12);
       }
@@ -29,28 +27,27 @@ dl-footer {
       }
     }
     .right-footer {
-      @include span-columns(5);
+      @include span-columns(6);
       @include media($mobile) {
         @include span-columns(12);
       }
       > div {
-        width: 100%;
         float: right;
+        display: -webkit-box;
+        display: flex;
         @include media($mobile) {
+          width: 100%;
           float: left;
+          display: block;
         }
         .social {
-          position: absolute;
-          right: 18em;
-          margin-top: 1.6em;
+          margin-top: 1.5em;
           @include media($mobile) {
-            position: relative;
             width: 100%;
-            right: 0;
-            margin: 0em 0em 1em 1em;
+            margin: 0 0 1em 1em;
           }
           i {
-            margin-right: 0.1em;
+            margin-right: 0.15em;
             font-size: 2.5em;
             color: $icon-color;
             &:hover {
@@ -59,19 +56,16 @@ dl-footer {
           }
         }
         .support {
-          position: absolute;
-          right: 0;
           width: 15em;
-          margin: -2.5em 2em 0 0;
+          margin: -2.5em 1.5em 0 1em;
           padding: 1em;
           background-color: lighten($support-color, 5%);
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
           border-radius: 0.5em;
           @include media($mobile) {
-            position: relative;
             width: 100%;
+            margin: 0;
             border-radius: 0;
-            margin-top: 0;
           }
           > .title {
             font-weight: 400;
