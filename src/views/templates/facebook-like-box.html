@@ -1,0 +1,44 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+
+<polymer-element name="facebook-like-box" attributes="href height">
+    <template>
+
+        <!--##########################################################-->
+
+        <style>
+            :host .like-box {
+                background-color: #fff;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                padding: 3px 0px 7px 2px;
+            }
+            :host .like-box iframe {
+                border: none;
+                overflow: hidden;
+                width: 100%;
+            }
+        </style>
+
+        <!--##########################################################-->
+
+        <div class="like-box">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href={{href}}&amp;height={{height * 3}}&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false"
+                    scrolling="no"
+                    frameborder="0"
+                    style="height:{{height}}px;"
+                    allowTransparency="true">
+            </iframe>
+        </div>
+
+        <!--##########################################################-->
+
+    </template>
+
+    <!--##############################################################-->
+
+    <script>
+        Polymer("facebook-like-box", {
+            href: "https://www.facebook.com/droplifers",
+            height: "417"
+        });
+    </script>
+</polymer-element>
