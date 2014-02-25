@@ -17,6 +17,9 @@ dl-footer {
     font-size: 0.8em;
     background-color: $footer-color;
     border-top: 1px solid $footer-border-color;
+    @include media($mobile) {
+      overflow: hidden;
+    }
     .left-footer {
       @include span-columns(6);
       @include media($mobile) {
