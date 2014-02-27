@@ -66,17 +66,10 @@ dl-button-pag-seguro {
       color: darken($link-color, 20%);
     }
   }
-  .payWith {
-    float: right;
-    margin: 0.5em 0.2em 0 0;
-    > span {
-      font-size: em(13);
-      position: relative;
-      top: -0.6em;
-      margin-right: 0.2em;
-    }
+  .payment-methods {
+    margin-top: 1em;
     > img {
-      width: 7.5em;
+      width: 12em;
     }
   }
 }
