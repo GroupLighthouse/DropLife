@@ -1,39 +1,54 @@
 <link rel="import" href="../../libs/polymer/polymer.html">
 
-<polymer-element name="dl-nav-bar" noscript>
+<polymer-element name="dl-nav-bar">
     <template>
         <nav class="nav-bar-header">
 
-            <!--#########################################-->
+            <!--#############################################-->
+
+            <a class="logo" href="../html/index.html">
+                <img src="../../images/logo-top.png"/>
+            </a>
+
+            <!--#############################################-->
 
             <div class="menu">
 
-                <!--#####################################-->
+                <!--#########################################-->
 
-                <a href="../html/index.html">
-                    <img src="../../images/logo-top.png"/>
+                <a href="../html/experiences.html">
+                    <i class="fa fa-plus"></i> MAIS EXPERIÊNCIAS
                 </a>
 
-                <!--#####################################-->
+                <!--#########################################-->
 
-                <div class="itens">
-                    <a href="../html/experiences.html">
-                        EXPERIÊNCIAS
-                    </a>
+                <a href="../html/about.html">
+                    <i class="fa fa-info-circle"></i> SOBRE NÓS
+                </a>
 
-                    <img src="../../images/separator.png"/>
-
-                    <a href="../html/about.html">
-                        SOBRE NÓS
-                    </a>
-                </div>
-
-                <!--#####################################-->
+                <!--#########################################-->
 
             </div>
 
-            <!--#########################################-->
+            <!--#############################################-->
+
+            <div class="phone">
+                <div>Fale Conosco:</div>
+                <a id="phone">
+                    +55 (51) 3013 9030
+                </a>
+            </div>
+
+            <!--#############################################-->
 
         </nav>
     </template>
+
+    <script>
+        Polymer("dl-nav-bar", {
+            ready: function () {
+                this.$.phone.href = "tel:555130139030";
+            }
+        });
+    </script>
 </polymer-element>

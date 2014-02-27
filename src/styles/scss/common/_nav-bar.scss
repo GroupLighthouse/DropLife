@@ -4,6 +4,9 @@
 
 $nav-bar-color: #35373f;
 $menu-item-color: #acb0c0;
+$phone-background-color: rgba(0, 0, 0, 0.2);
+$phone-border-color: rgba(255, 255, 255, 0.4);
+$phone-link-color: #acb0c0;
 
 .nav-bar-header {
   position: fixed;
@@ -12,34 +15,40 @@ $menu-item-color: #acb0c0;
   width: 100%;
   padding: 0.4em;
   height: 4.2em;
-  > .menu {
-    margin: 0 1em;
+  .logo {
+    position: absolute;
+    margin: 0.2em;
+  }
+  .menu {
+    position: absolute;
+    display: inline-block;
+    margin: 1.2em 0 0 12.5em;
     font-family: Lato;
-    font-size: em(12);
+    font-size: em(14);
     > a {
-      > img {
-        margin-top: 0.2em;
+      margin-left: 0.5em;
+      padding: 0.6em;
+      color: $menu-item-color;
+      &:hover {
+        color: lighten($menu-item-color, 10%);
       }
     }
-    > .itens {
-      float: right;
-      margin-top: 1em;
-      @include media($mobile) {
-        margin-left: 1em;
-        width: 7.5em;
-        > img {
-          display: none;
-        }
-      }
-      > img {
-        vertical-align: middle;
-      }
-      > a {
-        vertical-align: middle;
-        color: $menu-item-color;
-        &:hover {
-          color: lighten($menu-item-color, 10%);
-        }
+  }
+  .phone {
+    position: absolute;
+    right: 0;
+    background-color: $phone-background-color;
+    border: 1px solid $phone-border-color;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0.45em 1em;
+    font-size: em(12);
+    text-align: center;
+    color: $phone-link-color;
+    > a {
+      color: $phone-link-color;
+      &:hover {
+        color: lighten($phone-link-color, 10%);
       }
     }
   }
