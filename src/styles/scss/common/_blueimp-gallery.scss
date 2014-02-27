@@ -255,29 +255,29 @@ body:last-child .blueimp-gallery-playing > .play-pause {
 
 @media (max-width: 400px) {
   .blueimp-gallery>.indicator>li {
-    width: 28px;
-    height: 16px;
+    width: 30px;
+    height: 20px;
   }
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
   .blueimp-gallery>.indicator>li {
-    width: 42px;
-    height: 24px;
+    width: 40px;
+    height: 27px;
   }
 }
 
 @media (min-width: 500px) and (max-width: 600px) {
   .blueimp-gallery>.indicator>li {
     width: 60px;
-    height: 31px;
+    height: 40px;
   }
 }
 
 @media (min-width: 600px) {
   .blueimp-gallery>.indicator>li {
-    width: 78px;
-    height: 45px;
+    width: 80px;
+    height: 54px;
   }
 }
 
@@ -313,13 +313,13 @@ body:last-child .blueimp-gallery-playing > .play-pause {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border: 1px solid transparent;
   background: #ccc;
   background: rgba(255, 255, 255, .25) center no-repeat;
   border-radius: 5px;
   box-shadow: 0 0 2px #000;
   opacity: .5;
   cursor: pointer;
+  background-size: cover;
 }
 
 .blueimp-gallery>.indicator>li:hover, .blueimp-gallery>.indicator>.active {
