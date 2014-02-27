@@ -5,12 +5,60 @@
 $footer-color: #d2cece;
 $footer-border-color: #bdb9b9;
 $icon-color: #949494;
+$payment-color: #fff;
 $support-color: #efeded;
 $link-color: #363633;
+$box-shadow-color: rgba(0, 0, 0, 0.5);
 
 dl-footer {
   position: relative;
   overflow: hidden;
+  .payment {
+    @include row();
+    font-weight: 400;
+    background-color: $payment-color;
+    box-shadow: 1px 1px 2px $box-shadow-color;
+    padding: 1em;
+    @include media($mobile) {
+      text-align: center;
+    }
+    .methods {
+      @include span-columns(6);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      font-size: 0.7em;
+      > div {
+        margin-left: 0.5em;
+        @include media($mobile) {
+          margin-left: 0;
+        }
+      }
+      img {
+        padding: 0.7em;
+        width: 25em;
+      }
+    }
+    .gateway {
+      @include span-columns(6);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      font-size: 0.6em;
+      .pag-seguro {
+        text-align: center;
+        margin-right: 3.1em;
+        float: right;
+        @include media($mobile) {
+          float: none;
+        }
+        img {
+          padding: 0.2em;
+          width: 11em;
+        }
+      }
+    }
+  }
   .footer {
     @include row();
     font-weight: 300;
@@ -44,7 +92,7 @@ dl-footer {
           display: block;
         }
         .social {
-          margin-top: 1.5em;
+          margin-top: 1.6em;
           @include media($mobile) {
             width: 100%;
             margin: 0 0 1em 1em;
@@ -63,7 +111,7 @@ dl-footer {
           margin: -2.5em 1.5em 0 1em;
           padding: 1em;
           background-color: lighten($support-color, 5%);
-          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px $box-shadow-color;
           border-radius: 0.5em;
           @include media($mobile) {
             width: 100%;
