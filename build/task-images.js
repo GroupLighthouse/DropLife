@@ -8,7 +8,7 @@ module.exports = function (gulp) {
     name: name,
     fn: function () {
       return gulp.src(paths.src(name))
-          .pipe(imagemin())
+          //.pipe(imagemin())
           .pipe(gulp.dest(paths.release(name)));
     },
     watch: true
