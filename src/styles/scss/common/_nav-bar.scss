@@ -3,7 +3,8 @@
 @import "media-settings";
 
 $nav-bar-color: #35373f;
-$menu-item-color: #acb0c0;
+$menu-color: #acb0c0;
+$menu-anchor-shadow-color: rgba(0, 0, 0, 0.4);
 $phone-background-color: rgba(0, 0, 0, 0.2);
 $phone-border-color: rgba(255, 255, 255, 0.4);
 $phone-link-color: #acb0c0;
@@ -25,13 +26,46 @@ $phone-link-color: #acb0c0;
     margin: 1.2em 0 0 12.5em;
     font-family: Lato;
     font-size: em(14);
+    &.active {
+      @include media($mobile) {
+        display: block;
+      }
+    }
+    @include media($mobile) {
+      display: none;
+      width: 100%;
+      right: 0;
+      padding: 0.4em;
+      margin-top: 4.3em;
+      background: lighten($nav-bar-color, 3%);
+    }
     > a {
       margin-left: 0.5em;
       padding: 0.6em;
-      color: $menu-item-color;
+      color: $menu-color;
       &:hover {
-        color: lighten($menu-item-color, 10%);
+        color: lighten($menu-color, 10%);
       }
+      @include media($mobile) {
+        display: block;
+        padding: 0.4em;
+        margin: 0;
+      }
+    }
+  }
+  .menu-anchor {
+    display: none;
+    float: right;
+    cursor: pointer;
+    font-size: 1.8em;
+    margin: .3em .5em;
+    color: $menu-color;
+    text-shadow: 1px 1px 1px $menu-anchor-shadow-color;
+    &:hover {
+      color: lighten($menu-color, 10%);
+    }
+    @include media($mobile) {
+      display: block;
     }
   }
   .phone {
@@ -50,6 +84,9 @@ $phone-link-color: #acb0c0;
       &:hover {
         color: lighten($phone-link-color, 10%);
       }
+    }
+    @include media($mobile) {
+      display: none;
     }
   }
   @include linear-gradient(center top, lighten($nav-bar-color, 10%), $nav-bar-color);
