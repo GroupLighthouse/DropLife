@@ -43,7 +43,7 @@
                     slideshowInterval: 5000,
                     onslide: function () {
                         if (context.dispatchResizeEvent) {
-                            window.dispatchEvent(new Event('resize'));
+                            window.dispatchEvent(new Event("resize"));
                             context.dispatchResizeEvent = false;
                         }
                     }
@@ -51,7 +51,7 @@
             },
             fullPath: function (context, index, prefix) {
                 var fullPath = context.path;
-                var name = fullPath.substring(fullPath.lastIndexOf('/') + 1);
+                var name = fullPath.substring(fullPath.lastIndexOf("/") + 1);
                 fullPath += "/";
                 if (prefix) {
                     fullPath += prefix;

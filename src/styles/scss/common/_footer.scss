@@ -19,6 +19,7 @@ dl-footer {
     background-color: $payment-color;
     box-shadow: 1px 1px 2px $box-shadow-color;
     padding: 1em;
+    min-height: 6.95em;
     @include media($mobile) {
       text-align: center;
     }
@@ -47,10 +48,11 @@ dl-footer {
       font-size: 0.6em;
       .pag-seguro {
         text-align: center;
-        margin-right: 3.1em;
         float: right;
+        margin-right: 3.1em;
         @include media($mobile) {
           float: none;
+          margin-right: 0;
         }
         img {
           padding: 0.2em;
