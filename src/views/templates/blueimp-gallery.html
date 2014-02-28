@@ -19,8 +19,6 @@
                 this.init(this);
             },
             init: function (context) {
-                context.dispatchResizeEvent = true;
-
                 var gallery = blueimp.Gallery(context.images(context), context.options(context));
                 gallery.slides.forEach(function (slide) {
                     slide.children[0].setAttribute("alt", context.description);
@@ -40,13 +38,7 @@
                 return {
                     container: context.$.gallery,
                     carousel: true,
-                    slideshowInterval: 5000,
-                    onslide: function () {
-                        if (context.dispatchResizeEvent) {
-                            window.dispatchEvent(new Event("resize"));
-                            context.dispatchResizeEvent = false;
-                        }
-                    }
+                    slideshowInterval: 5000
                 };
             },
             fullPath: function (context, index, prefix) {
