@@ -1,11 +1,43 @@
 @import "../common/product-card";
 
 dl-product-card {
-  @include span-columns(4);
+  margin-bottom: flex-gutter($grid-columns);
   @include media($big-desktop) {
+    @include span-columns(3);
+    &:nth-child(4n+0) {
+      margin-right: 0;
+    }
+    &:nth-child(4n+1) {
+      clear: both;
+    }
+  }
+  @include media($desktop) {
     @include span-columns(4);
+    &:nth-child(3n+0) {
+      margin-right: 0;
+    }
+    &:nth-child(3n+1) {
+      clear: both;
+    }
+  }
+  @include media($tablet) {
+    @include span-columns(6);
+    &:nth-child(2n+0) {
+      margin-right: 0;
+    }
+    &:nth-child(2n+1) {
+      clear: both;
+    }
   }
   @include media($mobile) {
     @include span-columns(12);
+    margin: 0;
+  }
+}
+
+.cards {
+  margin-bottom: -(flex-gutter($grid-columns));
+  @include media($mobile) {
+    margin-bottom: 0;
   }
 }
