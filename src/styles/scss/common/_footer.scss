@@ -66,8 +66,10 @@ dl-footer {
     font-size: 0.8em;
     background-color: $footer-color;
     border-top: 1px solid $footer-border-color;
+    min-height: 7.5em;
     @include media($mobile) {
       overflow: hidden;
+      min-height: initial;
     }
     .left-footer {
       @include span-columns(6);
@@ -135,5 +137,14 @@ dl-footer {
     &:hover {
       color: darken($link-color, 20%);
     }
+  }
+}
+
+#livechat-compact-container,
+#livechat-full {
+  right: 1.1em !important;
+  display: block;
+  @include media($mobile) {
+    display: none;
   }
 }
