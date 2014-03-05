@@ -139,12 +139,3 @@ dl-footer {
     }
   }
 }
-
-#livechat-compact-container,
-#livechat-full {
-  right: 1.1em !important;
-  display: block;
-  @include media($mobile) {
-    display: none;
-  }
-}

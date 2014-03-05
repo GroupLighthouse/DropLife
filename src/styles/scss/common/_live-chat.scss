@@ -1,0 +1,12 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+#livechat-compact-container,
+#livechat-full {
+  right: 1.1em !important;
+  display: block !important;
+  @include media($mobile) {
+    display: none !important;
+  }
+}
