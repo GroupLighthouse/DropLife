@@ -104,7 +104,7 @@
                 this.$.phone.href = "tel:555130139030";
                 this.$.mail.href = "mailto:contato@droplife.com.br";
             },
-            created: function () {
+            attached: function () {
                 this.async(function () {
                     window.dispatchEvent(new Event("footer-to-bottom"));
                 });
