@@ -258,12 +258,22 @@ body:last-child .blueimp-gallery-playing > .play-pause {
     width: 30px;
     height: 20px;
   }
+
+  .blueimp-gallery.large>.indicator>li {
+    width: 18px;
+    height: 12px;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
   .blueimp-gallery>.indicator>li {
     width: 40px;
     height: 27px;
+  }
+
+  .blueimp-gallery.large>.indicator>li {
+    width: 24px;
+    height: 16px;
   }
 }
 
@@ -272,12 +282,22 @@ body:last-child .blueimp-gallery-playing > .play-pause {
     width: 60px;
     height: 40px;
   }
+
+  .blueimp-gallery.large>.indicator>li {
+    width: 36px;
+    height: 24px;
+  }
 }
 
 @media (min-width: 600px) {
   .blueimp-gallery>.indicator>li {
     width: 80px;
     height: 54px;
+  }
+
+  .blueimp-gallery.large>.indicator>li {
+    width: 47px;
+    height: 32px;
   }
 }
 
