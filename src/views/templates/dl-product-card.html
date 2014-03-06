@@ -22,8 +22,12 @@
 
     <script>
         Polymer("dl-product-card", {
-            detailProduct: function() {
-                window.location.href = this.url;
+            detailProduct: function () {
+                var urls = this.url.split(",");
+                var min = 0;
+                var max = urls.length - 1;
+                var index = Math.floor(Math.random() * (max - min + 1)) + min;
+                window.location.href = urls[index];
             }
         });
     </script>
