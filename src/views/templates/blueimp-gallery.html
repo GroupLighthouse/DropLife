@@ -3,7 +3,7 @@
 <polymer-element name="blueimp-gallery" attributes="path numberSlides description">
     <template>
         <div id="gallery"
-             class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
+             class="blueimp-gallery {{numberSlides > 5 ? 'large' : ''}} blueimp-gallery-carousel blueimp-gallery-controls">
             <div class="slides"></div>
             <a class="prev">‹</a>
             <a class="next">›</a>
@@ -19,10 +19,7 @@
                 this.init(this);
             },
             init: function (context) {
-                var gallery = blueimp.Gallery(context.images(context), context.options(context));
-                gallery.slides.forEach(function (slide) {
-                    slide.children[0].setAttribute("alt", context.description);
-                });
+                blueimp.Gallery(context.images(context), context.options(context));
             },
             images: function (context) {
                 var images = [];
@@ -38,7 +35,10 @@
                 return {
                     container: context.$.gallery,
                     carousel: true,
-                    slideshowInterval: 5000
+                    slideshowInterval: 5000,
+                    onslide: function (index, slide) {
+                        slide.children[0].setAttribute("alt", context.description);
+                    }
                 };
             },
             fullPath: function (context, index, prefix) {

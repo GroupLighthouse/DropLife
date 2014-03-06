@@ -19,7 +19,6 @@ dl-footer {
     background-color: $payment-color;
     box-shadow: 1px 1px 2px $box-shadow-color;
     padding: 1em;
-    min-height: 6.95em;
     @include media($mobile) {
       text-align: center;
     }
@@ -67,8 +66,10 @@ dl-footer {
     font-size: 0.8em;
     background-color: $footer-color;
     border-top: 1px solid $footer-border-color;
+    min-height: 7.5em;
     @include media($mobile) {
       overflow: hidden;
+      min-height: initial;
     }
     .left-footer {
       @include span-columns(6);
