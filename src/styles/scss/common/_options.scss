@@ -1,0 +1,37 @@
+@import "../../../libs/bourbon/app/assets/stylesheets/bourbon";
+@import "../../../libs/neat/app/assets/stylesheets/neat";
+@import "media-settings";
+
+$border-color: #e2e2e2;
+$background-color: #f7f7f7;
+
+dl-options {
+  .dl-options-header {
+    text-align: left;
+    font-size: 14px;
+    width: 94%;
+    margin: 1em auto;
+    .dl-options-heading {
+      font-weight: 400;
+      margin: 0 0 0.5em 0.1em;
+    }
+    .dl-options-box {
+      border: 1px solid $border-color;
+      background-color: $background-color;
+      border-radius: 5px;
+      padding: 1em;
+      .dl-options-option {
+        margin-top: 0.5em;
+        &:first-child {
+          margin-top: 0;
+        }
+        input[type=radio] {
+          margin-right: 0.5em;
+        }
+        .additional-description {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

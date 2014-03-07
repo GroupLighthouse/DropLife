@@ -1,0 +1,72 @@
+<link rel="import" href="../../libs/polymer/polymer.html"/>
+
+<polymer-element name="dl-options">
+    <template>
+        <!--############################################################################-->
+
+        <div id="targetHeading" class="dl-options-header">
+            <div id="targetOptions" class="dl-options-box">
+            </div>
+        </div>
+
+        <content id="contentHeading" select="heading"></content>
+        <content id="contentOptions" select="option"></content>
+
+        <!--############################################################################-->
+    </template>
+
+    <script>
+        Polymer("dl-options", {
+            ready: function () {
+                this.createElement({
+                    target: this.$.targetHeading,
+                    content: this.$.contentHeading,
+                    styleClass: "dl-options-heading"
+                });
+
+                this.createElement({
+                    target: this.$.targetOptions,
+                    content: this.$.contentOptions,
+                    styleClass: "dl-options-option"
+                });
+            },
+            createElement: function (options) {
+                options.content.getDistributedNodes().forEach(function (node) {
+                    var div = document.createElement("div");
+                    div.className = options.styleClass;
+
+                    if (options.styleClass == "dl-options-option") {
+                        var input = document.createElement("input");
+                        input.type = "radio";
+                        input.name = "options";
+
+                        for (propertyName in node.dataset) {
+                            input.dataset[propertyName] = node.dataset[propertyName];
+                        }
+
+                        div.appendChild(input);
+
+                        div.innerHTML += node.dataset.description;
+                        if (node.dataset.additionalDescription) {
+                            div.innerHTML += " - ";
+
+                            var span = document.createElement("span");
+                            span.className = "additional-description";
+                            span.innerHTML += node.dataset.additionalDescription;
+
+                            div.appendChild(span);
+                        }
+
+                        options.target.appendChild(div);
+                    } else {
+                        div.innerHTML += node.innerHTML;
+
+                        options.target.insertBefore(div, options.target.firstChild);
+                    }
+
+                });
+                options.content.parentNode.removeChild(options.content);
+            }
+        });
+    </script>
+</polymer-element>
