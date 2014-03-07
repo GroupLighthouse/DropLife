@@ -1,7 +1,7 @@
 module.exports = function ($) {
     "use strict";
 
-    window.addEventListener("polymer-ready", function() {
+    window.addEventListener("polymer-ready", function () {
         var $options = $((document.querySelector("dl-options") || {}).impl).find("input[type=radio]");
         $options.on("click", function () {
             var $option = $(this);

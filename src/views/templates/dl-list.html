@@ -1,13 +1,13 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="dl-list" attributes="iconTitleClass iconItemClass">
+<polymer-element name="dl-list" attributes="iconHeadingClass iconItemClass">
     <template>
         <!--######################################################################################-->
 
-        <div id="targetTitle"></div>
+        <div id="targetHeading"></div>
         <div id="targetItems"></div>
 
-        <content id="contentTitle" select="title"></content>
+        <content id="contentHeading" select="heading"></content>
         <content id="contentItems" select="item"></content>
 
         <!--######################################################################################-->
@@ -17,10 +17,10 @@
         Polymer("dl-list", {
             ready: function () {
                 this.createElement({
-                    target: this.$.targetTitle,
-                    content: this.$.contentTitle,
-                    styleClass: "dl-list-title",
-                    iconClass: this.iconTitleClass
+                    target: this.$.targetHeading,
+                    content: this.$.contentHeading,
+                    styleClass: "dl-list-heading",
+                    iconClass: this.iconHeadingClass
                 });
 
                 this.createElement({
