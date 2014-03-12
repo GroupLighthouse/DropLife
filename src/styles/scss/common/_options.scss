@@ -18,7 +18,6 @@ dl-options {
     .dl-options-box {
       border: 1px solid $border-color;
       background-color: $background-color;
-      border-radius: 5px;
       padding: 1em;
       .dl-options-option {
         margin-top: 0.5em;
@@ -32,6 +31,10 @@ dl-options {
           font-weight: 400;
         }
       }
+      @include border-top-radius(0.5em);
+      @include border-bottom-radius(0.5em);
+      @include border-left-radius(0.5em);
+      @include border-right-radius(0.5em);
     }
   }
 }

@@ -66,7 +66,7 @@ dl-footer {
     font-size: 0.8em;
     background-color: $footer-color;
     border-top: 1px solid $footer-border-color;
-    min-height: 7.5em;
+    min-height: 10em;
     @include media($mobile) {
       overflow: hidden;
       min-height: initial;
@@ -95,8 +95,8 @@ dl-footer {
           display: block;
         }
         .social {
-          width: 8em;
-          margin-top: 1.6em;
+          width: 8.1em;
+          margin-top: 1.3em;
           @include media($mobile) {
             width: 100%;
             margin: 0 0 1em 1em;
@@ -111,22 +111,38 @@ dl-footer {
           }
         }
         .support {
-          width: 15em;
+          width: 18.5em;
           margin: -2.5em 1.5em 0 1em;
           padding: 1em;
           background-color: lighten($support-color, 5%);
           box-shadow: 1px 1px 2px $box-shadow-color;
-          border-radius: 0.5em;
+          @include border-top-radius(0.5em);
+          @include border-bottom-radius(0.5em);
+          @include border-left-radius(0.5em);
+          @include border-right-radius(0.5em);
           @include media($mobile) {
             width: 100%;
             margin: 0;
-            border-radius: 0;
+            @include border-top-radius(0);
+            @include border-bottom-radius(0);
+            @include border-left-radius(0);
+            @include border-right-radius(0);
           }
           > .title {
             font-weight: 400;
             margin-bottom: 0.5em;
             padding-bottom: 0.25em;
             border-bottom: 1px solid $support-color;
+          }
+          > .opening-hours {
+            margin-top: 0.7em;
+            padding: 0.3em;
+            background-color: $support-color;
+            text-align: center;
+            @include border-top-radius(0.5em);
+            @include border-bottom-radius(0.5em);
+            @include border-left-radius(0.5em);
+            @include border-right-radius(0.5em);
           }
         }
       }
