@@ -10,4 +10,3 @@ $(document).ready(function () {
     menu($);
     footerBottom($);
 });
-
