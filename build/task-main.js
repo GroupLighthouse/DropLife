@@ -44,10 +44,10 @@ module.exports = {
     });
 
     gulp.task('sitemap', compileTasks, function () {
-        gulp.src('release/**/*.html', {
+        gulp.src('release/views/html/*.html', {
             read: false
         }).pipe(sitemap({
-          siteUrl: 'http://www.droplife.com.br'
+          siteUrl: 'http://www.droplife.com.br/views/html'
         }))
         .pipe(gulp.dest('release/'));
     });
