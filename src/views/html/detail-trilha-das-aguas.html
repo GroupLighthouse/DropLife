@@ -24,6 +24,7 @@
     <link rel="import" href="../templates/dl-section-bar.html">
     <link rel="import" href="../templates/blueimp-gallery.html">
     <link rel="import" href="../templates/dl-box.html">
+    <link rel="import" href="../templates/dl-options.html">
     <link rel="import" href="../templates/dl-list.html">
     <link rel="import" href="../templates/dl-comments.html">
     <link rel="import" href="../templates/dl-button-pag-seguro.html">
@@ -80,8 +81,8 @@
                 <!--#################################################################################################-->
 
                 <p>
-                    Passeio de 40km de bicicleta com destino à Cachoeira dos Venâncios e ao Lajeado da Margarida,
-                    atravessando o Rio Camisas
+                    Trilha de 40km de bicicleta com destino à Cachoeira dos Venâncios e Lajeado da Margarida,
+                    atravessando duas vezes o Rio Camisas
                 </p>
 
                 <hr>
@@ -89,7 +90,7 @@
                 <!--#################################################################################################-->
 
                 <p>
-                    Voucher para uma pessoa. Um dia inteiro, com saídas diárias
+                    Passeio com saídas diárias às 9h. Retorno às 16h
                 </p>
 
                 <!--#################################################################################################-->
@@ -98,10 +99,31 @@
 
                 <!--#################################################################################################-->
 
-                <div class="location"><i class="fa fa-map-marker"></i> Cambará do Sul</div>
-                <div class="price">R$ </div>
-                <dl-button-pag-seguro code="62C93385DDDD272BB4AE8FB325F76F1C">
-                </dl-button-pag-seguro>
+                <dl-options>
+                    <heading>Selecione uma opção</heading>
+                    <option data-value="C6BA5B583E3E222EE42D1F9E2E9B392A"
+                            data-description="Para 1 pessoa"
+                            data-additional-description="R$ 271,00"/>
+
+                    <option data-value="60E0F0155454881774DA9FA9472377E0"
+                            data-description="Para 2 pessoas"
+                            data-additional-description="R$ 346,00 (36% OFF)"/>
+
+                    <option data-value="380B8C07B4B49FD554E29F83B3A62AA1"
+                            data-description="Para 5 pessoas"
+                            data-additional-description="R$ 625,00 (54% OFF)"/>
+
+                    <option data-value="1B1BF3EB8080EE0334F0BF8E2AFC3E44"
+                            data-description="Para 8 pessoas"
+                            data-additional-description="R$ 1000,00 (54% OFF)"/>
+
+                </dl-options>
+
+                <!--#################################################################################################-->
+
+                <div class="location"><i class="fa fa-map-marker"></i> Cambará do Sul/RS</div>
+                <div class="price"></div>
+                <dl-button-pag-seguro></dl-button-pag-seguro>
 
                 <!--#################################################################################################-->
 
@@ -119,15 +141,17 @@
                 <p>
                     Com um percurso de 40km, a Trilha das Águas inicia na cidade e segue com destino à Cachoeira dos Venâncios e ao Lajeado da Margarida, atravessando por duas vezes o Rio Camisas.
                     <br>
-                    Pra você que não está familiarizado com esses lugares, o Droplife e seu parceiro Cânion Turismo
-                    separaram algumas imagens lindíssimas, ali em cima.
-                    <br>
                     Num visual de extrema beleza, o pedal acontece em meio à campos de altitude, matas de araucária, turfeiras e rio.
-                    Em dias quentes, é possível tomar um belo banho, deliciando-se nas quedas d’água, que funcionam como um relaxante natural, recuperando as energias do grupo.
+                    Em dias quentes, é possível tomar um bom banho, deliciando-se nas piscinas naturais e quedas d’água, que funcionam como um relaxante natural, recuperando as energias do grupo.
+                    <br>
+                    Durante toda a experiência, um guia acompanhará a equipe, prestando suporte, contando histórias e explicando sobre a fauna, flora e geologia do local.
                     <br>
                     O trecho possui partes planas, subidas curtas e longas. A estrada não é pavimentada, tornando a aventura ainda mais desafiadora.
                     <br>
-                    Curta este pedal maravilhoso, pensado para bikers apreciadores de lugares muito especiais!
+                    <strong>Muito importante:</strong> O aventureiro precisa levar seu lanche e comida.
+                    Por ser uma trilha de um dia todo, também recomenda-se levar bastante água.
+                    <br>
+                    Curta este pedal maravilhoso, pensado para bikers apreciadores de lugares especiais!
                 </p>
 
                 <!--#################################################################################################-->
@@ -140,7 +164,7 @@
                     <heading>O que levar</heading>
                     <item>Toalha</item>
                     <item>Protetor Solar</item>
-                    <item>Lanche</item>
+                    <item>Comida e lanche reforçado</item>
                     <item>Repelente</item>
                     <item>Roupa de banho</item>
                     <item>Água</item>
@@ -154,7 +178,7 @@
 
                 <dl-list iconHeadingClass="fa-clock-o" iconItemClass="fa-angle-right">
                     <heading>Duração</heading>
-                    <item>Um dia inteiro. Saída às 8h e chegada às 18h, com paradas</item>
+                    <item>Aproximadamente 7h</item>
                 </dl-list>
 
                 <!--#################################################################################################-->
@@ -164,8 +188,9 @@
                 <dl-box name="Termos de uso"
                         iconClass="fa-file-text-o">
                     <dl-list iconItemClass="fa-angle-right">
-                        <item>O voucher é para uma pessoa</item>
-                        <item>Após a confirmação do pagamento, o agendamento deve ser feito com o Droplife</item>
+                        <item>O número de pessoas que o voucher compreende, depende da opção escolhida</item>
+                        <item>No momento do agendamento, o número de pessoas deve ser informado</item>
+                        <item>Após a confirmação do pagamento, o agendamento deve ser feito com o nosso parceiro</item>
                         <item>Sua experiência deve ser agendada com no mínimo sete dias de antecedência</item>
                         <item>Esta experiência é produzida pela Cânion Turismo Viagens e Aventuras</item>
                     </dl-list>
@@ -195,11 +220,13 @@
                 <!--#################################################################################################-->
 
                 <dl-list iconItemClass="fa-check">
-                    <item>Bike (uma MTB)</item>
+                    <item>Bike</item>
+                    <item>Guia</item>
                     <item>Capacete</item>
                     <item>Luvas</item>
                     <item>Ingresso do parque</item>
                     <item>Seguro de acidentes (ecotrip)</item>
+                    <item>Água (garrafa 500ml)</item>
                 </dl-list>
 
                 <!--#################################################################################################-->
