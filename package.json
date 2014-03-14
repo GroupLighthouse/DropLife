@@ -25,6 +25,7 @@
     "debowerify": "~0.5.2",
     "gulp-sass": "~0.6.0",
     "gulp-concat": "~2.1.7",
-    "gulp-vulcanize": "~0.1.1"
+    "gulp-vulcanize": "~0.1.1",
+    "gulp-sitemap": "^0.1.3"
   }
 }
