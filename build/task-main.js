@@ -44,12 +44,12 @@ module.exports = {
     });
 
     gulp.task('sitemap', compileTasks, function () {
-        gulp.src('release/views/html/*.html', {
+        gulp.src('release/**/*.html', {
             read: false
         }).pipe(sitemap({
-          siteUrl: 'http://www.droplife.com'
+          siteUrl: 'http://www.droplife.com.br'
         }))
-            .pipe(gulp.dest('release/'));
+        .pipe(gulp.dest('release/'));
     });
 
     gulp.task('clean', function () {
