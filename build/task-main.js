@@ -1,6 +1,7 @@
 const clean = require('gulp-clean');
 const gulp = require('gulp');
 const paths = require('./helper/paths');
+const sitemap = require('gulp-sitemap');
 
 const defaults = [];
 const compileTasks = [];
@@ -19,17 +20,17 @@ module.exports = {
     var release = paths.release(task.name);
 
     if(task.dependencies){
-      gulp.task(task.name, task.dependencies, task.fn);  
+      gulp.task(task.name, task.dependencies, task.fn);
     } else {
-      gulp.task(task.name, task.fn);  
+      gulp.task(task.name, task.fn);
     }
-    
+
     if (task.watch && src) {
       compileTasks.push(task.name);
       if(task.parent){
-        defaults.push([src, task.parent]);  
+        defaults.push([src, task.parent]);
       } else {
-        defaults.push([src, task.name]);  
+        defaults.push([src, task.name]);
       }
     }
 
@@ -42,12 +43,21 @@ module.exports = {
       });
     });
 
+    gulp.task('sitemap', compileTasks, function () {
+        gulp.src('release/views/html/*.html', {
+            read: false
+        }).pipe(sitemap({
+          siteUrl: 'http://www.droplife.com'
+        }))
+            .pipe(gulp.dest('release/'));
+    });
+
     gulp.task('clean', function () {
       return gulp.src("release/", {read: false})
           .pipe(clean());
     });
 
-    gulp.task('compile', compileTasks);
+    gulp.task('compile', ["sitemap"]);
 
   }
 };
