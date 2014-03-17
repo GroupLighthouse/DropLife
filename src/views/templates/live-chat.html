@@ -1,17 +1,21 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="live-chat" noscript>
-    <script type="text/javascript">
+<polymer-element name="live-chat">
+    <script>
         var __lc = {};
         __lc.license = 4023351;
 
-        (function () {
-            var lc = document.createElement('script');
-            lc.type = 'text/javascript';
-            lc.async = true;
-            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(lc, s);
-        })();
+        Polymer("live-chat", {
+            created: function () {
+                (function () {
+                    var lc = document.createElement('script');
+                    lc.type = 'text/javascript';
+                    lc.async = true;
+                    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(lc, s);
+                })();
+            }
+        });
     </script>
 </polymer-element>
