@@ -1,7 +1,7 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 <link rel="import" href="dl-alert.html"/>
 
-<polymer-element name="dl-button-pag-seguro" attributes="code">
+<polymer-element name="dl-button-pag-seguro" attributes="partner item description amount quantity">
     <template>
         <!--####################################################################################-->
 
@@ -20,9 +20,19 @@
 
             <!--################################################################################-->
 
-            <input type="hidden"
-                   name="code"
-                   value="{{code}}"/>
+            <!-- Código de referência do pagamento -->
+            <input name="reference" type="hidden" value="{{partner}}">
+
+            <!-- Itens do pagamento -->
+            <input name="itemId1" type="hidden" value="{{item}}">
+            <input name="itemDescription1" type="hidden" value="{{description}}">
+            <input name="itemAmount1" type="hidden" value="{{amount}}">
+            <input name="itemQuantity1" type="hidden" value="{{quantity}}">
+
+            <!-- Campos obrigatórios -->
+            <input name="receiverEmail" type="hidden" value="cadastros@grouplighthouse.com">
+            <input name="currency" type="hidden" value="BRL">
+            <input name="encoding" type="hidden" value="UTF-8">
 
             <!--################################################################################-->
 
@@ -57,19 +67,21 @@
 
     <script>
         Polymer("dl-button-pag-seguro", {
-            ready: function() {
+            quantity: 1,
+            ready: function () {
                 var self = this;
-                self.$.linkTermsOfUse.addEventListener('click', function() {
+                self.item = this.item();
+                self.$.linkTermsOfUse.addEventListener('click', function () {
                     self.readTermsOfUse(self);
                 });
-                self.$.formPagSeguro.addEventListener('submit', function(event) {
+                self.$.formPagSeguro.addEventListener('submit', function (event) {
                     self.buyNow(self, event);
                 });
             },
-            readTermsOfUse: function(context) {
+            readTermsOfUse: function (context) {
                 context.openWindow("terms-of-use.html", "terms-of-use");
             },
-            buyNow: function(context, event) {
+            buyNow: function (context, event) {
                 if (context.$.checkTermsOfUse.checked) {
                     context.$.alertTermsOfUse.style.display = "none";
                     context.openWindow("", "pagSeguro");
@@ -79,8 +91,12 @@
                     event.preventDefault();
                 }
             },
-            openWindow: function(url, target) {
+            openWindow: function (url, target) {
                 window.open(url, target, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no");
+            },
+            item: function() {
+               var url = window.location.href;
+               return url.substring(url.lastIndexOf("/") + 1, url.lastIndexOf("."));
             }
         });
     </script>
