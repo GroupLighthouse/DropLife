@@ -10,6 +10,13 @@ $title-color: #31425e;
   color: $title-color;
 }
 
+.dl-list-subheading {
+  margin: 0.25em 0.25em 0.25em 0.50em;
+  > i {
+    font-size: em(13);
+  }
+}
+
 .dl-list-item {
   margin: 0.25em 0.25em 0.25em 0.50em;
   > i {

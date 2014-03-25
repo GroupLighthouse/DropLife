@@ -1,13 +1,23 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 
-<polymer-element name="dl-list" attributes="iconHeadingClass iconItemClass">
+<polymer-element name="dl-list" attributes="iconHeadingClass iconSubHeadingClass iconItemClass">
     <template>
         <!--######################################################################################-->
 
-        <div id="targetHeading"></div>
-        <div id="targetItems"></div>
+        <template repeat="{{ heading in headings }}">
+            <div class="dl-list-heading"><i class="fa {{iconHeadingClass}}"></i> {{heading}}</div>
+        </template>
+
+        <template repeat="{{ subheading in subheadings }}">
+            <div class="dl-list-subheading"><i class="fa {{iconSubHeadingClass}}"></i><strong>{{subheading}}</strong></div>
+        </template>
+
+        <template repeat="{{ item in items }}">
+            <div class="dl-list-item"><i class="fa {{iconItemClass}}"></i> {{item}}</div>
+        </template>
 
         <content id="contentHeading" select="heading"></content>
+        <content id="contentSubHeading" select="subheading"></content>
         <content id="contentItems" select="item"></content>
 
         <!--######################################################################################-->
@@ -15,35 +25,18 @@
 
     <script>
         Polymer("dl-list", {
-            ready: function () {
-                this.createElement({
-                    target: this.$.targetHeading,
-                    content: this.$.contentHeading,
-                    styleClass: "dl-list-heading",
-                    iconClass: this.iconHeadingClass
-                });
+            enteredView: function (){
+                var toHtml = function(node){
+                    return " " + node.innerHTML;
+                }
 
-                this.createElement({
-                    target: this.$.targetItems,
-                    content: this.$.contentItems,
-                    styleClass: "dl-list-item",
-                    iconClass: this.iconItemClass
-                });
-            },
-            createElement: function(options) {
-                options.content.getDistributedNodes().forEach(function (node) {
-                    var div = document.createElement("div");
-                    div.className = options.styleClass;
+                this.headings = this.$.contentHeading.getDistributedNodes().map(toHtml);
+                this.subheadings = this.$.contentSubHeading.getDistributedNodes().map(toHtml);
+                this.items = this.$.contentItems.getDistributedNodes().map(toHtml);
 
-                    var icon = document.createElement("i");
-                    icon.className = "fa " + options.iconClass;
-
-                    div.appendChild(icon);
-                    div.innerHTML += " " + node.innerHTML;
-
-                    options.target.appendChild(div);
-                });
-                options.content.parentNode.removeChild(options.content);
+                this.$.contentHeading.parentNode.removeChild(this.$.contentHeading);
+                this.$.contentSubHeading.parentNode.removeChild(this.$.contentSubHeading);
+                this.$.contentItems.parentNode.removeChild(this.$.contentItems);
             }
         });
     </script>
