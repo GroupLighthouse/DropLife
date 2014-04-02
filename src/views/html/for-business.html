@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Droplife.com.br">
+    <meta property="og:image" content="http://www.droplife.com.br/images/logo.png" />
+
+    <title>
+        Para empresas
+    </title>
+
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link rel='stylesheet' type='text/css' href="../../styles/scss/entry-points/business.css"/>
+    <link rel='stylesheet' type='text/css' href="../../libs/font-awesome/css/font-awesome.css"/>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    <script src="../../libs/platform/platform.js"></script>
+    <link rel="import" href="../templates/dl-nav-bar.html">
+    <link rel="import" href="../templates/dl-section-bar.html">
+    <link rel="import" href="../templates/dl-box.html">
+    <link rel="import" href="../templates/dl-list.html">
+    <link rel="import" href="../templates/dl-footer.html">
+    <link rel="import" href="../templates/live-chat.html">
+    <link rel="import" href="../templates/crazy-egg.html">
+    <link rel="import" href="../templates/google-analytics.html">
+</head>
+
+<body unresolved>
+
+<!--##############################-->
+<google-analytics></google-analytics>
+<!--##############################-->
+
+<!--##################-->
+
+<dl-nav-bar></dl-nav-bar>
+
+<!--##################-->
+
+<!--############################################-->
+
+<dl-section-bar image="../../images/section_3.jpg">
+    <h1>PARA EMPRESAS</h1>
+</dl-section-bar>
+
+<!--############################################-->
+
+<section class="main">
+    <div class="container">
+
+        <div class="halfColumn">
+
+            <h1>Leve experiências incríveis para a sua empresa</h1>
+            <p>O Droplife oferece uma série de atividades que podem ser feitas em grupo
+               e com elas incentivar seus colaboradores a obter reconhecimento e ótimos resultados.</p>
+
+            <h2>Benefícios:</h2>
+
+            <dl-list iconItemClass="fa-check">
+                <item>Condições especiais para grupos corporativos</item>
+                <item>Atendimento personalizado à disposição da sua empresa</item>
+                <item>Os melhores parceiros da região</item>
+                <item>Flexibilidade no pagamento</item>
+            </dl-list>
+
+
+        </div>
+
+        <div class="halfColumn">
+
+          <dl-box name="SOLICITE ORÇAMENTO" iconClass="fa-info-circle">
+
+
+              <!--############################################-->
+              <form>
+
+                <div class="fullColumn">
+                      <input type="text" placeholder="Nome" id="nome">
+                </div>
+
+                  <div class="row">
+                      <div class="halfColumn">
+                            <input type="text" placeholder="Telefone" id="telefone">
+                      </div>
+
+                      <div class="halfColumn">
+                            <input type="text" placeholder="Email" id="email">
+                      </div>
+                  </div>
+
+                <div class="fullColumn">
+                      <input type="text" placeholder="Empresa" id="empresa">
+                </div>
+
+                <div class="fullColumn">
+                      <select class="fullColumn" id="conheceu">
+                          <option selected="selected">Como você conheceu o Droplife?</option>
+                          <option>Google</option>
+                          <option>Facebook</option>
+                          <option>Jornal/rádio/TV</option>
+                          <option>Indicação</option>
+                          <option>Outro</option>
+                      </select>
+                </div>
+
+                <div class="fullColumn">
+                      <textarea rows="4" class="fullColumn" placeholder="Mensagem" id="submit"></textarea>
+                </div>
+
+                <div class="fullColumn submit">
+                  <div class="button-container">
+                      <input type="submit"
+                             name="submit"
+                             onclick="euQuero()"
+                             class="button"
+                             value="ENVIAR AGORA"/>
+                  </div>
+                </div>
+
+              </form>
+
+              <!--############################################-->
+
+          </dl-box>
+
+        </div>
+    </div>
+
+</section>
+
+<!--################-->
+
+<dl-footer></dl-footer>
+
+<!--################-->
+
+<live-chat></live-chat>
+
+<!--##################-->
+
+<crazy-egg></crazy-egg>
+
+<!--##################-->
+
+</body>
+
+<!--#######################################################-->
+<script type="text/javascript"
+        src="../../scripts/javascript/entry-points/business.js">
+</script>
+<!--#######################################################-->
+
+</html>
