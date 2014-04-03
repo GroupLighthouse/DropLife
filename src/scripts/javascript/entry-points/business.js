@@ -7,11 +7,10 @@ $(document).ready(function () {
     niceScroll($, "html");
     menu($);
     footerBottom($);
+    $("#form-button").click(euQuero);
 });
 
 function euQuero() {
-  console.log(subject());
-  console.log(message());
   sendEmail(subject(), message());
 }
 
@@ -32,5 +31,7 @@ function callbackSendEmail() {
   $('#telefone').val('');
   $('#email').val('');
   $('#empresa').val('');
-  $('#conheceu').val('');
+  $('#conheceu').val("default");
+  $('#mensagem').val('');
+  $('#alert').show();
 }

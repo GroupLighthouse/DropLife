@@ -24,6 +24,7 @@
     <link rel="import" href="../templates/dl-section-bar.html">
     <link rel="import" href="../templates/dl-box.html">
     <link rel="import" href="../templates/dl-list.html">
+    <link rel="import" href="../templates/dl-alert.html">
     <link rel="import" href="../templates/dl-footer.html">
     <link rel="import" href="../templates/live-chat.html">
     <link rel="import" href="../templates/crazy-egg.html">
@@ -56,8 +57,9 @@
         <div class="halfColumn">
 
             <h1>Leve experiências incríveis para a sua empresa</h1>
-            <p>O Droplife oferece uma série de atividades que podem ser feitas em grupo
-               e com elas incentivar seus colaboradores a obter reconhecimento e ótimos resultados.</p>
+            <p>O Droplife oferece uma série de atividades que podem ser feitas em grupo.
+               Incentive ou reconheça sua equipe de colaboradores.
+            </p>
 
             <h2>Benefícios:</h2>
 
@@ -74,7 +76,11 @@
         <div class="halfColumn">
 
           <dl-box name="SOLICITE ORÇAMENTO" iconClass="fa-info-circle">
-
+              <dl-alert id="alert"
+                      style="display: none;"
+                      type="info">
+                      Obrigado!
+              </dl-alert>
 
               <!--############################################-->
               <form>
@@ -99,24 +105,24 @@
 
                 <div class="fullColumn">
                       <select class="fullColumn" id="conheceu">
-                          <option selected="selected">Como você conheceu o Droplife?</option>
-                          <option>Google</option>
-                          <option>Facebook</option>
-                          <option>Jornal/rádio/TV</option>
-                          <option>Indicação</option>
-                          <option>Outro</option>
+                          <option value="default" selected="selected">Como você conheceu o Droplife?</option>
+                          <option value="Google">Google</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="Jornal/rádio/TV">Jornal/rádio/TV</option>
+                          <option value="Indicação">Indicação</option>
+                          <option value="Outro">Outro</option>
                       </select>
                 </div>
 
                 <div class="fullColumn">
-                      <textarea rows="4" class="fullColumn" placeholder="Mensagem" id="submit"></textarea>
+                      <textarea rows="4" class="fullColumn" placeholder="Mensagem" id="mensagem"></textarea>
                 </div>
 
                 <div class="fullColumn submit">
                   <div class="button-container">
-                      <input type="submit"
-                             name="submit"
-                             onclick="euQuero()"
+                      <input name="submit"
+                             type="button"
+                             id="form-button"
                              class="button"
                              value="ENVIAR AGORA"/>
                   </div>
