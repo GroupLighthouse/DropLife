@@ -57,7 +57,7 @@
 
 .leftColumn {
     padding: 4px;
-    @include span-columns(3);
+    @include span-columns(4);
     @include media($tablet) {
       @include span-columns(12);
     }
@@ -68,7 +68,7 @@
 
   .rightColumn {
       padding: 4px;
-      @include span-columns(9);
+      @include span-columns(8);
       @include media($tablet) {
         @include span-columns(12);
       }
