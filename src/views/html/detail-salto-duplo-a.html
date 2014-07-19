@@ -28,6 +28,7 @@
     <link rel="import" href="../templates/blueimp-gallery.html">
     <link rel="import" href="../templates/dl-box.html">
     <link rel="import" href="../templates/dl-list.html">
+    <link rel="import" href="../templates/dl-options.html">
     <link rel="import" href="../templates/dl-comments.html">
     <link rel="import" href="../templates/dl-button-pag-seguro.html">
     <link rel="import" href="../templates/google-maps.html">
@@ -103,12 +104,25 @@
 
                 <!--#################################################################################################-->
 
-                <div class="location"><i class="fa fa-map-marker"></i> Novo Hamburgo</div>
+                <dl-options>
+                    <heading>Selecione uma opção</heading>
+
+                    <option data-pag-seguro-partner="CENTRO_GAUCHO_PARAQUEDISMO"
+                            data-pag-seguro-description="Salto Duplo sem filmagem"
+                            data-pag-seguro-amount="490.00"
+                            data-description="Sem fotos/filmagem"
+                            data-additional-description="R$ 490,00"/>
+
+                    <option data-pag-seguro-partner="CENTRO_GAUCHO_PARAQUEDISMO"
+                            data-pag-seguro-description="Salto Duplo com filmagem e fotos"
+                            data-pag-seguro-amount="690.00"
+                            data-description="Com fotos/filmagem"
+                            data-additional-description="R$ 690,00"/>
+                </dl-options>
+
+                <div class="location"><i class="fa fa-map-marker"></i> Novo Hamburgo/RS</div>
                 <div class="price"></div>
-                <dl-button-pag-seguro partner="CENTRO_GAUCHO_PARAQUEDISMO"
-                                      description="Salto duplo - Novo Hamburgo"
-                                      amount="490.00">
-                </dl-button-pag-seguro>
+                <dl-button-pag-seguro></dl-button-pag-seguro>
 
                 <!--#################################################################################################-->
 
