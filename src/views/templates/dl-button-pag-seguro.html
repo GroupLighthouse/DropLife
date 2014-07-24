@@ -1,7 +1,7 @@
 <link rel="import" href="../../libs/polymer/polymer.html"/>
 <link rel="import" href="dl-alert.html"/>
 
-<polymer-element name="dl-button-pag-seguro" attributes="partner item description amount quantity">
+<polymer-element name="dl-button-pag-seguro" attributes="partner item description amount quantity disabled label">
     <template>
         <!--####################################################################################-->
 
@@ -43,10 +43,11 @@
             </dl-alert>
 
             <div class="button-container">
-                <input type="submit"
+                <input id="button"
+                       type="submit"
                        name="submit"
                        class="button"
-                       value="COMPRAR AGORA"/>
+                       value="{{label}}"/>
             </div>
 
             <!--################################################################################-->
@@ -71,6 +72,15 @@
             ready: function () {
                 var self = this;
                 self.item = this.item();
+
+                if (!self.label) {
+                  self.label = "COMPRAR AGORA";
+                }
+
+                if (self.disabled) {
+                  self.$.button.disabled = "disabled";
+                }
+
                 self.$.linkTermsOfUse.addEventListener('click', function () {
                     self.readTermsOfUse(self);
                 });
