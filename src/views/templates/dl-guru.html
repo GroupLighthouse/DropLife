@@ -1,0 +1,17 @@
+<link rel="import" href="../../libs/polymer/polymer.html">
+<link rel="import" href="dl-box.html">
+
+<polymer-element name="dl-guru" attributes="name iconClass image description" noscript>
+    <template>
+
+        <dl-box name="{{name}}"
+                iconClass="{{iconClass}}">
+
+            <img src="{{image}}" alt="{{name}}">
+            <p>
+                {{description}}
+            </p>
+        </dl-box>
+
+    </template>
+</polymer-element>
